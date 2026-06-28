@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>School Examination Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+        <!-- Decorative animated background blobs — purely visual, sits behind everything -->
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <!-- Canvas for the interactive particle network effect -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- HEADER: Shows school name and portal title at the top -->
+    <header id="site-header">
+        <h1>Galaxy Gems School</h1>
+        <h2>Online Examination Portal</h2>
+    </header>
+
+    <!-- WELCOME / INSTRUCTIONS: Short message telling students what to do -->
+    <section id="welcome">
+        <p>Welcome! Please select your class below to begin your exam. Read all questions carefully before answering.</p>
+    </section>
+
+    <!-- CLASS SELECTION: Where the student picks which class/grade exam to take -->
+    <section id="class-selection">
+        <h3>Select Your Class</h3>
+        <!-- This empty div is where JavaScript will insert class cards -->
+        <div id="class-list"></div>
+    </section>
+
+
+    <!-- EXAM SECTION: Where the actual exam questions will appear -->
+   <section id="exam" style="display: none;">
+    <h3 id="exam-class-title">Subjects</h3>
+
+    <!-- EXAM INSTRUCTIONS: simple static reminders shown before a subject is picked -->
+    <div id="exam-instructions">
+        <h4>Before You Begin</h4>
+        <ul>
+            <li>Select the subject you want to be examined on.</li>
+            <li>Each subject opens in a new tab as a Google Form.</li>
+            <li>Make sure you have a stable internet connection.</li>
+            <li>Submit your form before the time runs out.</li>
+        </ul>
+    </div>
+
+    <button id="back-button">Back to Classes</button>
+    <input type="text" id="subject-search" placeholder="Search for a subject...">
+
+    <!-- we'll add the search bar here next -->
+
+    <div id="subject-list"></div>
+</section>
+
+    <!-- FOOTER: Bottom of the page, usually for copyright or contact info -->
+    <footer>
+        <p>Galaxy Gems School</p>
+        <p>&copy; 2026 Galaxy Gems School. All rights reserved.</p>
+        <p>For help, contact your exam supervisor or class teacher.</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>

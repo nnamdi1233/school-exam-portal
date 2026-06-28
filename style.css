@@ -1,0 +1,461 @@
+/* ============================
+   CSS VARIABLES (our color theme)
+   Defining colors once here means we can reuse them
+   everywhere below, and change the whole theme easily later.
+   ============================ */
+:root {
+    --primary-color: #6B4CDE;      /* vibrant purple */
+    --primary-dark: #5A3FC0;       /* darker purple for hover */
+    --background-color: #0B0A1A;   /* deep space navy background */
+    --card-background: #15132B;    /* dark slate-purple cards */
+    --text-color: #FFFFFF;         /* white text, readable on dark bg */
+    --light-text: #A0A0C0;         /* muted lavender-gray for secondary text */
+}
+
+/* ============================
+   FONT ASSIGNMENTS
+   Serif font for headings = more "premium" feel.
+   Sans-serif for everything else = stays clean and readable.
+   ============================ */
+
+header h1,
+#class-selection h3,
+#exam h3 {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+}
+
+/* ============================
+   RESET / BASE STYLES
+   Removes browser default spacing and sets a clean font
+   for the entire page.
+   ============================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* makes width/padding calculations predictable */
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+/* ============================
+   HEADER
+   ============================ */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease, padding 0.3s ease, box-shadow 0.3s ease;
+}
+
+header.scrolled {
+    background-color: rgba(11, 10, 26, 0.75);
+    backdrop-filter: blur(10px);
+    padding: 15px 20px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+header h2 {
+    color: var(--light-text);
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+/* ============================
+   WELCOME SECTION
+   ============================ */
+#welcome {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 40px auto; /* centers the block horizontally */
+    color: var(--light-text);
+}
+
+/* ============================
+   SECTION HEADINGS (Select Your Class / Subjects for X)
+   ============================ */
+#class-selection h3,
+#exam h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    color: var(--text-color);
+}
+
+/* ============================
+   CARD GRID LAYOUT
+   This makes cards automatically arrange in a responsive grid:
+   - On wide screens: multiple cards per row
+   - On narrow screens: fewer cards per row (handled by media query below)
+   ============================ */
+#class-list,
+#subject-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto; /* centers the whole grid on the page */
+}
+
+/* ============================
+   CARD DESIGN
+   Shared styling for both class cards and subject cards.
+   ============================ */
+.class-card,
+.subject-card {
+    background-color: var(--card-background);
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    font-weight: 600;
+    cursor: pointer; /* shows a "hand" cursor so it's obvious it's clickable */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4); /* soft shadow for "floating" look */
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ============================
+   HOVER EFFECTS
+   When the mouse hovers over a card, it lifts slightly,
+   the shadow grows, and the border highlights in teal.
+   ============================ */
+.class-card:hover,
+.subject-card:hover {
+    transform: translateY(-5px); /* lifts the card up slightly */
+    box-shadow: 0 8px 24px rgba(107, 76, 222, 0.4); /* purple glow */
+    border-color: var(--primary-color);
+}
+
+/* ============================
+   BACK BUTTON
+   ============================ */
+#back-button {
+    display: block;
+    margin: 0 auto 30px auto;
+    padding: 10px 24px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    box-shadow: 0 4px 14px rgba(107, 76, 222, 0.3);
+}
+
+#back-button:hover {
+    background-color: var(--primary-dark);
+    box-shadow: 0 6px 20px rgba(107, 76, 222, 0.5);
+    transform: translateY(-2px);
+}
+
+
+/* ============================
+   EXAM INSTRUCTIONS BOX
+   ============================ */
+#exam-instructions {
+    background-color: var(--card-background); /* matches the dark card theme */
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    padding: 18px 22px;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+#exam-instructions h4 {
+    color: var(--primary-dark);
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+#exam-instructions ul {
+    padding-left: 20px;
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+#exam-instructions li {
+    margin-bottom: 4px;
+}
+
+/* ============================
+   SUBJECT SEARCH BAR
+   ============================ */
+#subject-search {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto 30px auto;
+    padding: 10px 16px;
+    background-color: var(--card-background); /* matches card color, not page color */
+    color: var(--text-color); /* makes typed text visible */
+    border: 2px solid rgba(255, 255, 255, 0.1); /* faint light border instead of invisible gray */
+    border-radius: 8px;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#subject-search::placeholder {
+    color: var(--light-text); /* makes the placeholder text readable on dark bg */
+}
+
+#subject-search:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(107, 76, 222, 0.2);
+}
+
+/* ============================
+   SECTION SPACING
+   Gives consistent breathing room between major sections
+   ============================ */
+#class-selection,
+#exam {
+    margin-bottom: 40px;
+}
+
+#back-button:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ============================
+   FOOTER
+   ============================ */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding: 25px 20px;
+    color: var(--light-text);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+    margin-bottom: 4px;
+}
+
+footer p:first-child {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+/* ============================
+   RESPONSIVENESS — TABLET
+   Applies to screens 768px wide or narrower (most tablets,
+   and larger phones in landscape mode).
+   ============================ */
+@media (max-width: 768px) {
+
+    body {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header h2 {
+        font-size: 1.05rem;
+    }
+
+    #class-list,
+    #subject-list {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 15px;
+    }
+
+    .class-card,
+    .subject-card {
+        padding: 24px 16px;
+    }
+}
+/* ============================
+   SECTION TRANSITIONS
+   Instead of instantly switching sections on/off, we fade
+   and slide them, which feels much smoother and more "alive".
+   ============================ */
+#class-selection,
+#exam {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Applied via JS right before a section is hidden — fades it out and
+   slides it slightly upward before it's removed from view */
+.fade-out {
+    opacity: 0;
+    transform: translateY(-15px);
+}
+
+/* Applied via JS right when a section becomes visible — starts slightly
+   lower and transparent, then animates into its normal resting position */
+.fade-in {
+    opacity: 0;
+    transform: translateY(15px);
+}
+
+/* ============================
+   RESPONSIVENESS — PHONE
+   Applies to screens 480px wide or narrower (most phones).
+   These rules apply IN ADDITION to the tablet rules above,
+   since a phone screen also counts as "768px or less."
+   ============================ */
+@media (max-width: 480px) {
+
+    body {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header h2 {
+        font-size: 0.95rem;
+    }
+
+    #welcome {
+        padding: 0 10px;
+        font-size: 0.95rem;
+    }
+
+    #class-selection h3,
+    #exam h3 {
+        font-size: 1.25rem;
+    }
+
+    #class-list,
+    #subject-list {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .class-card,
+    .subject-card {
+        padding: 20px 15px;
+        font-size: 0.95rem;
+    }
+
+    #back-button {
+        width: 100%;
+        padding: 12px 20px;
+    }
+
+    .blob {
+        filter: blur(60px);
+    }
+
+    .blob-1, .blob-2, .blob-3 {
+        width: 220px;
+        height: 220px;
+    }
+}
+
+/* ============================
+   ANIMATED BACKGROUND BLOBS
+   Soft, blurred, slowly-drifting shapes that create a "flowing"
+   feeling behind the content without being distracting.
+   ============================ */
+
+/* The container holds all blobs and pins them to the screen */
+.background-blobs {
+    position: fixed;   /* stays in place even when the page scrolls */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;  /* keeps blobs from causing scrollbars when they drift */
+    z-index: -1;        /* pushes this whole layer behind page content */
+    pointer-events: none; /* lets clicks pass through to cards underneath */
+}
+
+/* Shared shape styling for every blob */
+.blob {
+    position: absolute;
+    border-radius: 50%;   /* makes it a perfect circle */
+    filter: blur(90px);   /* heavy blur turns the circle into a soft glow */
+    opacity: 0.35;
+}
+
+/* Each blob gets its own size, color, starting position, and animation */
+.blob-1 {
+    width: 420px;
+    height: 420px;
+    background: var(--primary-color); /* main purple */
+    top: -120px;
+    left: -100px;
+    animation: floatBlob1 20s ease-in-out infinite;
+}
+
+.blob-2 {
+    width: 350px;
+    height: 350px;
+    background: #9B7FE8; /* lighter lavender-purple */
+    top: 40%;
+    right: -120px;
+    animation: floatBlob2 24s ease-in-out infinite;
+}
+
+.blob-3 {
+    width: 380px;
+    height: 380px;
+    background: #4A2FB0; /* deeper violet */
+    bottom: -150px;
+    left: 30%;
+    animation: floatBlob3 28s ease-in-out infinite;
+}
+/* ============================
+   PARTICLE CANVAS
+   Sits behind all content, same layering approach as the blobs.
+   ============================ */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;       /* behind content, same layer level as blobs */
+    pointer-events: none; /* clicks pass through to cards underneath */
+}
+
+/* Each keyframe set moves a blob in a slow, looping path.
+   "infinite" means it repeats forever; "ease-in-out" makes the
+   movement smooth at the start/end instead of robotic. */
+@keyframes floatBlob1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50%       { transform: translate(120px, 80px) scale(1.15); }
+}
+
+@keyframes floatBlob2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50%       { transform: translate(-100px, 60px) scale(1.1); }
+}
+
+@keyframes floatBlob3 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50%       { transform: translate(80px, -90px) scale(1.2); }
+}
+
+/* Prevent the drifting blobs from ever causing a horizontal scrollbar */
+html, body {
+    overflow-x: hidden;
+}
