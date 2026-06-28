@@ -47,10 +47,14 @@
         <h4>Before You Begin</h4>
         <ul>
             <li>Select the subject you want to be examined on.</li>
-            <li>Each subject opens in a new tab as a Google Form.</li>
             <li>Make sure you have a stable internet connection.</li>
             <li>Submit your form before the time runs out.</li>
         </ul>
+    </div>
+    <!-- NEW: student must enter their name before subjects become clickable -->
+    <div id="name-entry">
+        <label for="student-name">Enter your full name to begin:</label>
+        <input type="text" id="student-name" placeholder="e.g. John Adeyemi">
     </div>
 
     <button id="back-button">Back to Classes</button>
@@ -60,6 +64,33 @@
 
     <div id="subject-list"></div>
 </section>
+<!-- QUIZ SCREEN -->
+<section id="quiz-screen" style="display: none;">
+
+    <div id="quiz-header">
+        <h3 id="quiz-subject-title">Subject</h3>
+        <div id="quiz-timer">05:00</div>
+    </div>
+
+    <div id="question-container">
+        <p id="question-text">Question text goes here</p>
+        <div id="options-container"></div>
+    </div>
+
+    <div id="quiz-nav-buttons">
+        <button id="prev-question-button" style="display: none;">Previous</button>
+        <button id="next-question-button">Next</button>
+    </div>
+
+</section>
+
+<!-- CUSTOM MODAL (replaces browser alert) -->
+<div id="modal-overlay" style="display: none;">
+    <div id="modal-box">
+        <p id="modal-message"></p>
+        <button id="modal-ok-button">OK</button>
+    </div>
+</div>
 
     <!-- FOOTER: Bottom of the page, usually for copyright or contact info -->
     <footer>
