@@ -743,7 +743,7 @@ function saveQuizProgress() {
         questions: currentQuizQuestions,
         currentQuestionIndex: currentQuestionIndex,
         studentAnswers: studentAnswers,
-        timeRemaining: timeRemaining
+        timeRemaining: timeRemaining,
         startTime: quizStartTime ? quizStartTime.toISOString() : null
     };
     localStorage.setItem("examProgress", JSON.stringify(progressData));
