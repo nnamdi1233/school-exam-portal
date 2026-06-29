@@ -182,7 +182,6 @@ const quizScreen = document.getElementById("quiz-screen");
 const quizSubjectTitle = document.getElementById("quiz-subject-title");
 const quizTimerDisplay = document.getElementById("quiz-timer");
 const questionText = document.getElementById("question-text");
-const questionNavGrid = document.getElementById("question-nav-grid");
 const optionsContainer = document.getElementById("options-container");
 const nextQuestionButton = document.getElementById("next-question-button");
 const prevQuestionButton = document.getElementById("prev-question-button");
@@ -208,7 +207,6 @@ let currentSubjectName = "";
 let currentClassName = "";
 let isNavigating = false;
 let quizInProgress = false;
-let quizStartTime = null;
 
 
 /* ============================================================
@@ -236,7 +234,7 @@ function shuffleArray(array) {
     this turns the modal into a Yes/Cancel confirmation instead of
     a plain one-button notice.
 */
-function showModal(message, onOkCallback, onCancelCallback, onOkLabel, onCancelLabel) {
+function showModal(message, onOkCallback, onCancelCallback) {
     modalMessage.textContent = message;
 
     const box = document.getElementById("modal-box");
@@ -259,9 +257,7 @@ function showModal(message, onOkCallback, onCancelCallback, onOkLabel, onCancelL
 
     if (typeof onCancelCallback === "function") {
         freshCancelButton.style.display = "inline-block";
-        // Use custom labels if provided, otherwise default
-        freshOkButton.textContent = onOkLabel || "Yes, Submit";
-        freshCancelButton.textContent = onCancelLabel || "Go Back";
+        freshOkButton.textContent = "Yes, Exit";
     } else {
         freshCancelButton.style.display = "none";
         freshOkButton.textContent = "OK";
@@ -449,7 +445,6 @@ subjectSearchInput.addEventListener("input", function () {
    ============================================================ */
 function startQuiz(subjectInfo, className) {
     quizInProgress = true;
-    quizStartTime = new Date();
     currentClassName = className;
     currentSubjectName = subjectInfo.subject;
     currentQuestionIndex = 0;
@@ -490,7 +485,6 @@ function startQuiz(subjectInfo, className) {
     quizSubjectTitle.textContent = subjectInfo.subject;
 
     switchSection(examSection, quizScreen);
-    buildQuestionNavPanel();
     renderQuestion();
     startTimer();
 }
@@ -520,53 +514,6 @@ document.addEventListener("visibilitychange", function () {
     }
 });
 
-/* ============================================================
-   FUNCTION: buildQuestionNavPanel
-   Builds the numbered button grid once when a quiz starts.
-   Only needs to run once — updateQuestionNavPanel() handles
-   the visual state updates as the student moves around.
-   ============================================================ */
-function buildQuestionNavPanel() {
-    questionNavGrid.innerHTML = "";
-
-    for (let i = 0; i < currentQuizQuestions.length; i++) {
-        const btn = document.createElement("button");
-        btn.className = "question-nav-btn";
-        btn.textContent = i + 1;
-
-        // Clicking jumps directly to that question
-        btn.addEventListener("click", function () {
-            if (isNavigating) return;
-            isNavigating = true;
-            currentQuestionIndex = i;
-            renderQuestion();
-        });
-
-        questionNavGrid.appendChild(btn);
-    }
-}
-
-
-/* ============================================================
-   FUNCTION: updateQuestionNavPanel
-   Called every time a question is rendered or an answer changes.
-   Updates the answered/current visual states on each button.
-   ============================================================ */
-function updateQuestionNavPanel() {
-    const allNavBtns = questionNavGrid.querySelectorAll(".question-nav-btn");
-
-    for (let i = 0; i < allNavBtns.length; i++) {
-        allNavBtns[i].classList.remove("answered", "current");
-
-        if (i === currentQuestionIndex) {
-            allNavBtns[i].classList.add("current");
-        }
-
-        if (studentAnswers[i] !== null) {
-            allNavBtns[i].classList.add("answered");
-        }
-    }
-}
 
 /* ============================================================
    FUNCTION: renderQuestion
@@ -611,7 +558,6 @@ function renderQuestion() {
             }
 
             optionButton.classList.add("selected");
-            updateQuestionNavPanel();
             saveQuizProgress();
         });
 
@@ -625,7 +571,6 @@ function renderQuestion() {
     nextQuestionButton.textContent = isLast ? "Submit" : "Next";
 
     saveQuizProgress();
-    updateQuestionNavPanel();
     isNavigating = false;
 }
 
@@ -639,12 +584,10 @@ nextQuestionButton.addEventListener("click", function () {
     isNavigating = true;
 
     if (currentQuestionIndex < currentQuizQuestions.length - 1) {
-        // Not the last question — just move forward normally
         currentQuestionIndex++;
         renderQuestion();
     } else {
-        // Last question — check for unanswered before submitting
-        checkUnansweredAndSubmit();
+        finishQuiz();
     }
 });
 
@@ -670,16 +613,14 @@ exitQuizButton.addEventListener("click", function () {
     showModal(
         "Are you sure you want to exit this exam? Your progress will be lost.",
         function () {
-            quizInProgress = false;
+            quizInProgress = false
             clearInterval(timerInterval);
             try { localStorage.removeItem("examProgress"); } catch (e) {}
             resetPortal();
         },
         function () {
-            // do nothing
-        },
-        "Yes, Exit",  // OK button label
-        "Cancel"      // Cancel button label
+            // Cancelled — do nothing, modal just closes, quiz continues
+        }
     );
 });
 
@@ -744,7 +685,6 @@ function saveQuizProgress() {
         currentQuestionIndex: currentQuestionIndex,
         studentAnswers: studentAnswers,
         timeRemaining: timeRemaining
-        startTime: quizStartTime ? quizStartTime.toISOString() : null
     };
     localStorage.setItem("examProgress", JSON.stringify(progressData));
 }
@@ -773,7 +713,6 @@ function checkForSavedQuiz() {
     timeRemaining = progress.timeRemaining;
     currentSubjectName = progress.subjectName;
     currentClassName = progress.className;
-    quizStartTime = progress.startTime ? new Date(progress.startTime) : new Date(); // NEW
 
     studentNameInput.value = progress.studentName;
     quizSubjectTitle.textContent = progress.subjectName;
@@ -787,62 +726,9 @@ function checkForSavedQuiz() {
     quizScreen.style.display = "flex";
 
     renderQuestion();
-    buildQuestionNavPanel();
-    updateQuestionNavPanel();
     startTimer();
 }
 
-/* ============================================================
-   FUNCTION: checkUnansweredAndSubmit
-   Counts unanswered questions before final submission.
-   If any are skipped, warns the student and gives them
-   a chance to go back. If all answered, submits directly.
-   ============================================================ */
-function checkUnansweredAndSubmit() {
-    const unanswered = [];
-
-    for (let i = 0; i < studentAnswers.length; i++) {
-        if (studentAnswers[i] === null) {
-            unanswered.push(i + 1);
-        }
-    }
-
-    if (unanswered.length === 0) {
-        // All questions answered — ask for final confirmation
-        showModal(
-            "You have answered all questions. Are you ready to submit your exam?",
-            function () {
-                finishQuiz();
-            },
-            function () {
-                // Cancelled — stay on current question
-                isNavigating = false;
-            },
-            "Yes, Submit",
-            "Cancel"
-        );
-    } else {
-        // Some questions unanswered — warn and give options
-        const questionList = unanswered.join(", ");
-        const plural = unanswered.length === 1 ? "question" : "questions";
-
-        showModal(
-            "You have " + unanswered.length + " unanswered " + plural +
-            " (Question " + questionList + "). Do you still want to submit?",
-            function () {
-                finishQuiz();
-            },
-            function () {
-                // Jump to first unanswered question
-                isNavigating = true;
-                currentQuestionIndex = unanswered[0] - 1;
-                renderQuestion();
-            },
-            "Yes, Submit",
-            "Go Back"
-        );
-    }
-}
 
 /* ============================================================
    FUNCTION: finishQuiz
@@ -884,32 +770,12 @@ function finishQuiz() {
 function submitResultToSheet(studentName, className, subjectName, score) {
     const formBaseURL = "https://docs.google.com/forms/d/e/1FAIpQLSeaIiCn-S-zr56SkrEkLxkAVGESvzu9XPnp_kgGw90vFkastg/formResponse";
 
-    // Calculate how long the student spent
-    const endTime = new Date();
-    const durationMs = endTime - quizStartTime;
-    const durationMinutes = Math.floor(durationMs / 60000);
-    const durationSeconds = Math.floor((durationMs % 60000) / 1000);
-    const durationText = durationMinutes + "m " + durationSeconds + "s";
-
-    // Format start time as readable string e.g. "2026-06-27 10:35:42"
-    const startText = quizStartTime.toLocaleString("en-GB", {
-        year: "numeric", month: "2-digit", day: "2-digit",
-        hour: "2-digit", minute: "2-digit", second: "2-digit",
-        hour12: false
-    });
-
-    // Log for admin reference
-    console.log("Start time :", startText);
-    console.log("Duration   :", durationText);
-
     const submissionURL = formBaseURL +
         "?entry.989513760="  + encodeURIComponent(studentName) +
         "&entry.572955960="  + encodeURIComponent(className) +
         "&entry.649845269="  + encodeURIComponent(subjectName) +
         "&entry.1080095985=" + encodeURIComponent(score) +
-        "&entry.671914243="  + encodeURIComponent(tabSwitchCount) +
-        "&entry.216522547="  + encodeURIComponent(startText) +
-        "&entry.1781815021="  + encodeURIComponent(durationText) +
+        "&entry.671914243=" + encodeURIComponent(tabSwitchCount) + 
         "&submit=Submit";
 
     const img = new Image();

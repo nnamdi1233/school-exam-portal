@@ -417,59 +417,6 @@ header h2 {
     background-color: var(--primary-dark);
     transform: translateY(-2px);
 }
-
-#question-nav-panel {
-    width: 100%;
-    max-width: 600px;
-    margin-bottom: 16px;
-}
-
-#question-nav-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    justify-content: center;
-}
-
-.question-nav-btn {
-    width: 36px;
-    height: 36px;
-    border-radius: 6px;
-    border: 2px solid rgba(255, 255, 255, 0.15);
-    background-color: transparent;
-    color: var(--light-text);
-    font-size: 0.8rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
-}
-
-.question-nav-btn:hover {
-    border-color: var(--primary-color);
-    color: var(--text-color);
-    transform: translateY(-2px);
-}
-
-/* Student has answered this question */
-.question-nav-btn.answered {
-    background-color: var(--primary-color);
-    border-color: var(--primary-color);
-    color: white;
-}
-
-/* This is the question currently on screen */
-.question-nav-btn.current {
-    border-color: #ffffff;
-    color: #ffffff;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
-}
-
-/* Current AND answered */
-.question-nav-btn.answered.current {
-    background-color: var(--primary-color);
-    border-color: #ffffff;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
-}
 /* ============================
    EXIT QUIZ BUTTON
    ============================ */
