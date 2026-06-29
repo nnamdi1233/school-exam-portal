@@ -10,6 +10,16 @@
     --light-text:       #A0A0C0;
 }
 
+/* Light mode — applied to <body> when toggled */
+body.light-mode {
+    --primary-color:    #5B3CC4;
+    --primary-dark:     #4A2FB0;
+    --background-color: #F4F3FF;
+    --card-background:  #FFFFFF;
+    --text-color:       #1A1A2E;
+    --light-text:       #5A5A7A;
+}
+
 
 /* ============================================================
    RESET & BASE
@@ -46,7 +56,6 @@ header {
     -webkit-backdrop-filter: blur(12px);
     transition: padding 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
-
 header.scrolled {
     padding: 12px 20px;
     background-color: rgba(11, 10, 26, 0.97);
@@ -65,6 +74,36 @@ header h2 {
     color: var(--light-text);
     font-size: 1.1rem;
     font-weight: normal;
+}
+/* ============================
+   THEME TOGGLE BUTTON
+   ============================ */
+#theme-toggle {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    color: var(--text-color);
+}
+
+#theme-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-color);
+}
+
+body.light-mode #theme-toggle {
+    border-color: rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode #theme-toggle:hover {
+    background-color: rgba(0, 0, 0, 0.05);
 }
 
 

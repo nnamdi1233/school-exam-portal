@@ -194,6 +194,7 @@ const modalMessage = document.getElementById("modal-message");
 const modalOkButton = document.getElementById("modal-ok-button");
 const welcomeSection = document.getElementById("welcome");
 const footerEl = document.querySelector("footer");
+const themeToggle = document.getElementById("theme-toggle");
 
 
 /* ============================================================
@@ -209,6 +210,7 @@ let currentClassName = "";
 let isNavigating = false;
 let quizInProgress = false;
 let quizStartTime = null;
+let warningsFired = { fiveMin: false, oneMin: false };
 
 
 /* ============================================================
@@ -450,6 +452,7 @@ subjectSearchInput.addEventListener("input", function () {
 function startQuiz(subjectInfo, className) {
     quizInProgress = true;
     quizStartTime = new Date();
+    warningsFired = { fiveMin: false, oneMin: false };
     currentClassName = className;
     currentSubjectName = subjectInfo.subject;
     currentQuestionIndex = 0;
@@ -693,8 +696,19 @@ function startTimer() {
     updateTimerDisplay();
 
     timerInterval = setInterval(function () {
+        if (modalOverlay.style.display === "flex") return;
+
         timeRemaining--;
         updateTimerDisplay();
+
+        // Check warnings — fire if time has passed the threshold and not shown yet
+        if (timeRemaining <= 45 && !warningsFired.fiveMin) {
+            warningsFired.fiveMin = true;
+            showModal("⏰ 5 minutes remaining! Please review your answers and submit soon.");
+        } else if (timeRemaining <= 20 && !warningsFired.oneMin) {
+            warningsFired.oneMin = true;
+            showModal("⚠️ Only 1 minute left! Submit your exam now.");
+        }
 
         if (timeRemaining % 5 === 0) {
             saveQuizProgress();
@@ -749,6 +763,34 @@ function saveQuizProgress() {
     localStorage.setItem("examProgress", JSON.stringify(progressData));
 }
 
+/* ============================================================
+   THEME TOGGLE
+   Switches between dark (default) and light mode.
+   Remembers preference in localStorage across visits.
+   ============================================================ */
+function initTheme() {
+    const saved = localStorage.getItem("theme");
+
+    if (saved === "light") {
+        document.body.classList.add("light-mode");
+        themeToggle.textContent = "☀️";
+    } else {
+        document.body.classList.remove("light-mode");
+        themeToggle.textContent = "🌙";
+    }
+}
+
+themeToggle.addEventListener("click", function () {
+    const isLight = document.body.classList.toggle("light-mode");
+
+    if (isLight) {
+        themeToggle.textContent = "☀️";
+        localStorage.setItem("theme", "light");
+    } else {
+        themeToggle.textContent = "🌙";
+        localStorage.setItem("theme", "dark");
+    }
+});
 
 /* ============================================================
    FUNCTION: checkForSavedQuiz
@@ -1034,5 +1076,6 @@ animateParticles();
 /* ============================================================
    STARTUP
    ============================================================ */
+initTheme();
 checkForSavedQuiz();
 displayClassCards();
