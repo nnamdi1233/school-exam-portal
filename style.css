@@ -106,6 +106,37 @@ body.light-mode #theme-toggle:hover {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
+/* ============================
+   CONNECTION STATUS INDICATOR
+   ============================ */
+#connection-status {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: none; /* hidden by default — only shown when offline */
+    align-items: center;
+    gap: 6px;
+    background-color: rgba(255, 68, 68, 0.15);
+    border: 1px solid rgba(255, 68, 68, 0.4);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 0.8rem;
+    color: #ff4444;
+}
+
+#connection-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #ff4444;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0.3; }
+}
 
 /* ============================================================
    WELCOME SECTION
@@ -340,7 +371,7 @@ body.light-mode #theme-toggle:hover {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 900px;
+    max-width: 600px;
     margin: 0 auto 20px auto;
 }
 
@@ -361,6 +392,7 @@ body.light-mode #theme-toggle:hover {
 }
 
 #question-container {
+    width: 100%;
     max-width: 600px;
     max-height: 65vh;
     overflow-y: auto;
@@ -409,6 +441,24 @@ body.light-mode #theme-toggle:hover {
     animation: selectedPulse 0.25s ease forwards;
 }
 
+#progress-bar-container {
+    width: 100%;
+    max-width: 600px;
+    height: 6px;
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    margin: 0 auto 16px auto;
+    overflow: hidden;
+}
+
+#progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: var(--primary-color);
+    border-radius: 999px;
+    transition: width 0.35s ease;
+}
+
 
 /* ============================================================
    QUIZ NAV BUTTONS (Previous / Next)
@@ -417,6 +467,7 @@ body.light-mode #theme-toggle:hover {
     display: flex;
     justify-content: center;
     gap: 16px;
+    width: 100%;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -556,6 +607,32 @@ body.light-mode #theme-toggle:hover {
     color: var(--text-color);
 }
 
+/* ============================================================
+   FILL IN THE GAP INPUT
+   ============================================================ */
+#fill-answer-input {
+    width: 100%;
+    padding: 14px 18px;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-color);
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    text-align: left;
+}
+
+#fill-answer-input::placeholder {
+    color: var(--light-text);
+}
+
+#fill-answer-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(107, 76, 222, 0.2);
+}
+
 
 /* ============================================================
    QUESTION ANIMATIONS
@@ -620,6 +697,7 @@ body.light-mode #theme-toggle:hover {
     color: var(--text-color);
     margin-bottom: 28px;
     line-height: 1.6;
+    white-space: pre-line;
 }
 
 #modal-ok-button {

@@ -24,6 +24,11 @@
         <h1>Galaxy Gems School</h1>
         <h2>Online Examination Portal</h2>
         <button id="theme-toggle" title="Toggle light/dark mode">🌙</button>
+        <!-- Connection status indicator — only visible when offline -->
+        <div id="connection-status">
+            <span id="connection-dot"></span>
+            <span id="connection-text">Offline</span>
+        </div>
     </header>
 
     <!-- WELCOME / INSTRUCTIONS: Short message telling students what to do -->
@@ -71,6 +76,10 @@
     <div id="quiz-header">
         <h3 id="quiz-subject-title">Subject</h3>
         <div id="quiz-timer">05:00</div>
+    </div>
+    
+    <div id="progress-bar-container">
+        <div id="progress-bar-fill"></div>
     </div>
 
     <!-- QUESTION NAVIGATION PANEL -->

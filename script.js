@@ -34,7 +34,189 @@ const examData = {
 
     "SS1": [
         { subject: "Mathematics",                       link: "https://forms.gle/example" },
-        { subject: "English Language",                  link: "https://forms.gle/example" },
+        {
+    subject: "English Language",
+    timeLimit: 1500,
+    totalMarks: 60,
+    marksPerQuestion: 2,
+    questions: [
+        {
+            type: "mcq",
+            question: "The phrasal verb \"give up\" means ______.",
+            options: ["to continue trying", "to stop trying", "to wear", "to visit"],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Which of the following phrasal verbs means \"to postpone\"?",
+            options: ["Put on", "Put up", "Put off", "Give away"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Which of the following is the correct spelling?",
+            options: ["Recieve", "Receive", "Receeve", "Receve"],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Choose the correctly spelt word.",
+            options: ["Accomodation", "Acommodation", "Accommodation", "Accommondation"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Which of the following words is correctly spelt?",
+            options: ["Begining", "Beggining", "Beginning", "Begininning"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "The antonym of \"temporary\" is ______.",
+            options: ["short", "weak", "permanent", "old"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "English is described as a ______ language.",
+            options: ["syllable-timed", "stress-timed", "sound-timed", "rhythm-less"],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "In spoken English, important words are usually ______.",
+            options: ["ignored", "whispered", "stressed", "omitted"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Voice modulation involves changing the ______.",
+            options: ["handwriting", "spelling", "tone and pitch", "grammar"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "The teacher worked hard to ____ change in the school system.",
+            options: ["bring up", "bring about", "bring back", "take in"],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "She decided to ____ dancing as a new hobby.",
+            options: ["take off", "take away", "take up", "bring back"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "I could not ____ the information because it was too complex.",
+            options: ["take in", "bring up", "take off", "bring about"],
+            correctAnswer: "A"
+        },
+        {
+            type: "mcq",
+            question: "HIV/AIDS can be prevented through ______.",
+            options: ["ignorance", "proper education", "fighting", "isolation"],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "People living with HIV should not be ______.",
+            options: ["supported", "educated", "discriminated against", "encouraged"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Which of the following is NOT a feature of a newspaper article?",
+            options: ["Headline", "Byline", "Stanza", "Lead paragraph"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "The main purpose of a newspaper article is to ______.",
+            options: ["entertain only", "inform or report events", "tell stories in verses", "confuse readers"],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Dignity in labour means ______.",
+            options: ["avoiding work", "respecting honest work", "stealing", "begging"],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Farmers contribute to ______.",
+            options: ["society", "corruption", "laziness", "crime"],
+            correctAnswer: "A"
+        },
+        {
+            type: "mcq",
+            question: "Exam malpractice is ______.",
+            options: ["studying hard", "reading books", "cheating in examinations", "attending classes"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "All the following are features of speech writing EXCEPT",
+            options: ["Opening Greeting", "Introduction", "Body", "Sender's Address"],
+            correctAnswer: "D"
+        },
+        {
+            type: "mcq",
+            question: "Bribery is an example of ______.",
+            options: ["honesty", "corruption", "patriotism", "education"],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "An adjunct of place tells ______.",
+            options: ["why", "when", "how", "where"],
+            correctAnswer: "D"
+        },
+        {
+            type: "mcq",
+            question: "In the sentence \"He slept outside\", the word \"outside\" is an adjunct of ______.",
+            options: ["time", "place", "reason", "manner"],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "An adjunct of time tells ______.",
+            options: ["how", "where", "when", "why"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "In the sentence \"They spoke softly\", the word \"softly\" is an adjunct of ______.",
+            options: ["place", "reason", "manner", "time"],
+            correctAnswer: "C"
+        },
+        {
+            type: "fill",
+            question: "A debate is a formal __________ where speakers present arguments for or against a topic.",
+            correctAnswer: "discussion"
+        },
+        {
+            type: "fill",
+            question: "Patriotism means love and __________ to one's country.",
+            correctAnswer: "loyalty"
+        },
+        {
+            type: "fill",
+            question: "The title of a newspaper article is called a __________.",
+            correctAnswer: "headline"
+        },
+        {
+            type: "fill",
+            question: "A speech is delivered to an audience of __________.",
+            correctAnswer: "people"
+        },
+        {
+            type: "fill",
+            question: "A letter usually begins with an address and a __________.",
+            correctAnswer: "salutation"
+        }
+    ]
+},
         { subject: "Literature in English",             link: "https://forms.gle/example" },
         { subject: "Biology",                           link: "https://forms.gle/example" },
         { subject: "History",                           link: "https://forms.gle/example" },
@@ -211,6 +393,7 @@ let isNavigating = false;
 let quizInProgress = false;
 let quizStartTime = null;
 let warningsFired = { fiveMin: false, oneMin: false };
+let currentSubjectInfo = null; // stores the full subject object for scoring
 
 
 /* ============================================================
@@ -313,6 +496,180 @@ function switchSection(sectionToHide, sectionToShow) {
     }, 400);
 }
 
+/*
+    UTILITY: getSubmissionKey
+    -----------------------------
+    Builds a consistent identifier for a student's exam attempt,
+    so the same person+class+subject combination can be detected
+    even if they type their name slightly differently next time.
+*/
+function getSubmissionKey(studentName, className, subjectName) {
+    const cleanName = studentName.trim().toLowerCase();
+    return cleanName + "|" + className + "|" + subjectName;
+}
+/*
+    UTILITY: getCompletedExams
+    -------------------------------
+    Reads the list of already-completed exam fingerprints
+    from localStorage. Returns an empty array if none exist yet.
+*/
+function getCompletedExams() {
+    try {
+        const saved = localStorage.getItem("completedExams");
+        return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+        return [];
+    }
+}
+
+/*
+    UTILITY: markExamAsCompleted
+    ---------------------------------
+    Adds a new fingerprint to the completed list and saves it.
+*/
+function markExamAsCompleted(studentName, className, subjectName) {
+    const key = getSubmissionKey(studentName, className, subjectName);
+    const completed = getCompletedExams();
+
+    if (!completed.includes(key)) {
+        completed.push(key);
+        localStorage.setItem("completedExams", JSON.stringify(completed));
+    }
+}
+
+/*
+    UTILITY: hasAlreadyCompleted
+    ---------------------------------
+    Checks if this exact student+class+subject combination
+    has already finished an exam on this computer.
+*/
+function hasAlreadyCompleted(studentName, className, subjectName) {
+    const key = getSubmissionKey(studentName, className, subjectName);
+    const completed = getCompletedExams();
+    return completed.includes(key);
+}
+
+/*
+    UTILITY FUNCTION: updateProgressBar
+    ------------------------------
+    Updates the progress bar fill width based on how far
+    through the quiz the student currently is.
+    Called every time a question is rendered.
+*/
+function updateProgressBar() {
+    const answeredCount = studentAnswers.filter(function (answer) {
+        return answer !== null;
+    }).length;
+
+    const progress = (answeredCount / currentQuizQuestions.length) * 100;
+    const fill = document.getElementById("progress-bar-fill");
+    fill.style.width = progress + "%";
+}
+
+/* ============================================================
+   OFFLINE / CONNECTION-LOSS PROTECTION
+   ============================================================ */
+
+const connectionStatus = document.getElementById("connection-status");
+
+/*
+    FUNCTION: updateConnectionUI
+    --------------------------------
+    Shows or hides the offline indicator in the header.
+*/
+function updateConnectionUI() {
+    if (navigator.onLine) {
+        connectionStatus.style.display = "none";
+    } else {
+        connectionStatus.style.display = "flex";
+    }
+}
+
+// Run once immediately on page load, then update on every change
+updateConnectionUI();
+window.addEventListener("online", function () {
+    updateConnectionUI();
+    retryPendingResults(); // automatically retry any saved results
+});
+window.addEventListener("offline", updateConnectionUI);
+
+
+/*
+    FUNCTION: savePendingResult
+    --------------------------------
+    Called when submission fails because there's no internet.
+    Saves the full result to localStorage so it can be retried later.
+*/
+function savePendingResult(studentName, className, subjectName, score, tabSwitches, startText, durationText) {
+    let pending = [];
+    try {
+        const saved = localStorage.getItem("pendingResults");
+        pending = saved ? JSON.parse(saved) : [];
+    } catch (e) {
+        pending = [];
+    }
+
+    pending.push({
+        studentName,
+        className,
+        subjectName,
+        score,
+        tabSwitches,
+        startText,
+        durationText,
+        savedAt: new Date().toISOString()
+    });
+
+    localStorage.setItem("pendingResults", JSON.stringify(pending));
+    console.log("Result saved locally (no internet). Will retry when connection returns.");
+}
+
+
+/*
+    FUNCTION: retryPendingResults
+    ------------------------------------
+    Called automatically when the browser goes back online.
+    Reads any saved results and resubmits them silently.
+    Clears the list if all succeed.
+*/
+function retryPendingResults() {
+    let pending = [];
+    try {
+        const saved = localStorage.getItem("pendingResults");
+        pending = saved ? JSON.parse(saved) : [];
+    } catch (e) {
+        return;
+    }
+
+    if (pending.length === 0) return;
+
+    console.log("Connection restored. Retrying " + pending.length + " pending result(s)...");
+
+    const formBaseURL = "https://docs.google.com/forms/d/e/1FAIpQLSeaIiCn-S-zr56SkrEkLxkAVGESvzu9XPnp_kgGw90vFkastg/formResponse";
+
+    for (let i = 0; i < pending.length; i++) {
+        const r = pending[i];
+
+        const submissionURL = formBaseURL +
+            "?entry.989513760="  + encodeURIComponent(r.studentName) +
+            "&entry.572955960="  + encodeURIComponent(r.className) +
+            "&entry.649845269="  + encodeURIComponent(r.subjectName) +
+            "&entry.1080095985=" + encodeURIComponent(r.score) +
+            "&entry.671914243="  + encodeURIComponent(r.tabSwitches) +
+            "&entry.216522547="  + encodeURIComponent(r.startText) +
+            "&entry.1781815021=" + encodeURIComponent(r.durationText) +
+            "&submit=Submit";
+
+        const img = new Image();
+        img.src = submissionURL;
+
+        console.log("Retried result for:", r.studentName, r.subjectName);
+    }
+
+    // Clear the pending list after retrying
+    localStorage.removeItem("pendingResults");
+}
+
 
 /* ============================================================
    SCROLL-AWARE HEADER
@@ -372,17 +729,44 @@ function showSubjects(className) {
         subjectCard.textContent = subjectInfo.subject;
 
         subjectCard.addEventListener("click", function () {
-            if (studentNameInput.value.trim() === "") {
-                showModal("Please enter your full name before starting an exam.");
-                return;
-            }
+    if (studentNameInput.value.trim() === "") {
+        showModal("Please enter your full name before starting an exam.");
+        return;
+    }
 
-            if (subjectInfo.questions) {
-                startQuiz(subjectInfo, className);
-            } else {
-                window.open(subjectInfo.link, "_blank");
-            }
-        });
+    // NEW: block if this student already completed this exact subject
+    if (subjectInfo.questions && hasAlreadyCompleted(studentNameInput.value, className, subjectInfo.subject)) {
+        showModal(
+            studentNameInput.value.trim() + " has already completed the " +
+            subjectInfo.subject + " exam for " + className +
+            ". If this is a mistake, please contact your exam supervisor."
+        );
+        return;
+    }
+
+    if (subjectInfo.questions) {
+    const confirmedName = studentNameInput.value.trim();
+
+        showModal(
+        "Please confirm your details before starting:\n\n" +
+        "Name: " + confirmedName + "\n" +
+        "Class: " + className + "\n" +
+        "Subject: " + subjectInfo.subject +
+        "\n\nIs this correct?",
+        function () {
+            // Confirmed — actually start the quiz now
+            startQuiz(subjectInfo, className);
+        },
+        function () {
+            // Cancelled — do nothing, student stays on the subject screen
+        },
+        "Yes, Start Exam",
+        "Go Back, Check Name"
+        );
+    } else {
+        window.open(subjectInfo.link, "_blank");
+    }
+});
 
         subjectListContainer.appendChild(subjectCard);
     }
@@ -455,6 +839,7 @@ function startQuiz(subjectInfo, className) {
     warningsFired = { fiveMin: false, oneMin: false };
     currentClassName = className;
     currentSubjectName = subjectInfo.subject;
+    currentSubjectInfo = subjectInfo;
     currentQuestionIndex = 0;
     isNavigating = false;
     tabSwitchCount = 0;
@@ -463,30 +848,42 @@ function startQuiz(subjectInfo, className) {
 
     // Shuffle question order, and shuffle each question's options
     // while tracking which answer is correct after shuffling
-    currentQuizQuestions = shuffleArray(subjectInfo.questions).map(function (q) {
-        const originalOptions = q.options.map(function (optionText, idx) {
-            return {
-                text: optionText,
-                wasCorrect: letters[idx] === q.correctAnswer
-            };
-        });
+currentQuizQuestions = shuffleArray(subjectInfo.questions).map(function (q) {
 
-        const shuffledOptions = shuffleArray(originalOptions);
-
-        let newCorrectLetter = "A";
-        for (let i = 0; i < shuffledOptions.length; i++) {
-            if (shuffledOptions[i].wasCorrect) {
-                newCorrectLetter = letters[i];
-                break;
-            }
-        }
-
+    // Fill-in-the-gap questions have no options to shuffle — return as-is
+    if (q.type === "fill") {
         return {
+            type: "fill",
             question: q.question,
-            options: shuffledOptions.map(function (o) { return o.text; }),
-            correctAnswer: newCorrectLetter
+            correctAnswer: q.correctAnswer
+        };
+    }
+
+    // MCQ — shuffle the options while tracking the correct answer
+    const originalOptions = q.options.map(function (optionText, idx) {
+        return {
+            text: optionText,
+            wasCorrect: letters[idx] === q.correctAnswer
         };
     });
+
+    const shuffledOptions = shuffleArray(originalOptions);
+
+    let newCorrectLetter = "A";
+    for (let i = 0; i < shuffledOptions.length; i++) {
+        if (shuffledOptions[i].wasCorrect) {
+            newCorrectLetter = letters[i];
+            break;
+        }
+    }
+
+    return {
+        type: "mcq",
+        question: q.question,
+        options: shuffledOptions.map(function (o) { return o.text; }),
+        correctAnswer: newCorrectLetter
+    };
+});
 
     studentAnswers = new Array(currentQuizQuestions.length).fill(null);
     timeRemaining = subjectInfo.timeLimit;
@@ -571,9 +968,11 @@ function updateQuestionNavPanel() {
     }
 }
 
+
 /* ============================================================
    FUNCTION: renderQuestion
-   Displays the current question with animated option buttons.
+   Handles both MCQ (option buttons) and fill-in-the-gap
+   (text input) question types.
    ============================================================ */
 function renderQuestion() {
     const question = currentQuizQuestions[currentQuestionIndex];
@@ -589,36 +988,64 @@ function renderQuestion() {
     // Trigger slide-in animation on the question box
     const container = document.getElementById("question-container");
     container.classList.remove("question-enter");
-    void container.offsetWidth; // force browser to re-register the animation
+    void container.offsetWidth;
     container.classList.add("question-enter");
 
-    for (let i = 0; i < question.options.length; i++) {
-        const optionButton = document.createElement("button");
-        optionButton.className = "option-button option-enter";
-        optionButton.style.animationDelay = (i * 0.06) + "s";
-        optionButton.textContent = letters[i] + ". " + question.options[i];
+    if (question.type === "fill") {
+        // ---- FILL IN THE GAP ----
+        const input = document.createElement("input");
+        input.type = "text";
+        input.id = "fill-answer-input";
+        input.placeholder = "Type your answer here...";
 
-        // If student already answered this question, restore their selection
-        if (studentAnswers[currentQuestionIndex] === letters[i]) {
-            optionButton.classList.add("selected");
-            optionButton.style.animationDelay = "0s";
+        // Restore previous answer if student already typed something
+        if (studentAnswers[currentQuestionIndex] !== null) {
+            input.value = studentAnswers[currentQuestionIndex];
         }
 
-        optionButton.addEventListener("click", function () {
-            studentAnswers[currentQuestionIndex] = letters[i];
-
-            // Clear all options then highlight the chosen one
-            const allOptions = optionsContainer.querySelectorAll(".option-button");
-            for (let j = 0; j < allOptions.length; j++) {
-                allOptions[j].classList.remove("selected", "option-enter");
-            }
-
-            optionButton.classList.add("selected");
+        // Save answer every time the student types
+        input.addEventListener("input", function () {
+            const typed = input.value.trim();
+            studentAnswers[currentQuestionIndex] = typed === "" ? null : typed;
             updateQuestionNavPanel();
+            updateProgressBar();
             saveQuizProgress();
         });
 
-        optionsContainer.appendChild(optionButton);
+        optionsContainer.appendChild(input);
+
+        // Auto-focus the input so student can type immediately
+        setTimeout(function () { input.focus(); }, 50);
+
+    } else {
+        // ---- MULTIPLE CHOICE ----
+        for (let i = 0; i < question.options.length; i++) {
+            const optionButton = document.createElement("button");
+            optionButton.className = "option-button option-enter";
+            optionButton.style.animationDelay = (i * 0.06) + "s";
+            optionButton.textContent = letters[i] + ". " + question.options[i];
+
+            if (studentAnswers[currentQuestionIndex] === letters[i]) {
+                optionButton.classList.add("selected");
+                optionButton.style.animationDelay = "0s";
+            }
+
+            optionButton.addEventListener("click", function () {
+                studentAnswers[currentQuestionIndex] = letters[i];
+
+                const allOptions = optionsContainer.querySelectorAll(".option-button");
+                for (let j = 0; j < allOptions.length; j++) {
+                    allOptions[j].classList.remove("selected", "option-enter");
+                }
+
+                optionButton.classList.add("selected");
+                updateQuestionNavPanel();
+                updateProgressBar();
+                saveQuizProgress();
+            });
+
+            optionsContainer.appendChild(optionButton);
+        }
     }
 
     const isFirst = currentQuestionIndex === 0;
@@ -629,6 +1056,7 @@ function renderQuestion() {
 
     saveQuizProgress();
     updateQuestionNavPanel();
+    updateProgressBar();
     isNavigating = false;
 }
 
@@ -831,6 +1259,7 @@ function checkForSavedQuiz() {
     renderQuestion();
     buildQuestionNavPanel();
     updateQuestionNavPanel();
+    updateProgressBar();
     startTimer();
 }
 
@@ -895,15 +1324,35 @@ function finishQuiz() {
     quizInProgress = false;
     clearInterval(timerInterval);
     try { localStorage.removeItem("examProgress"); } catch (e) {}
+    markExamAsCompleted(studentNameInput.value, currentClassName, currentSubjectName);
 
-    let score = 0;
-    for (let i = 0; i < currentQuizQuestions.length; i++) {
-        if (studentAnswers[i] === currentQuizQuestions[i].correctAnswer) {
-            score++;
+// Calculate weighted score
+let rawScore = 0;
+for (let i = 0; i < currentQuizQuestions.length; i++) {
+    const question = currentQuizQuestions[i];
+    const studentAnswer = studentAnswers[i];
+
+    if (studentAnswer === null) continue; // unanswered — skip
+
+    if (question.type === "fill") {
+        // Case-insensitive, trimmed comparison for fill-in-the-gap
+        if (studentAnswer.trim().toLowerCase() === question.correctAnswer.trim().toLowerCase()) {
+            rawScore++;
+        }
+    } else {
+        // Standard MCQ comparison
+        if (studentAnswer === question.correctAnswer) {
+            rawScore++;
         }
     }
+}
 
-    const scoreText = score + "/" + currentQuizQuestions.length;
+const marksPerQuestion = currentSubjectInfo && currentSubjectInfo.marksPerQuestion
+    ? currentSubjectInfo.marksPerQuestion : 1;
+const totalMarks = currentSubjectInfo && currentSubjectInfo.totalMarks
+    ? currentSubjectInfo.totalMarks : currentQuizQuestions.length;
+const totalScore = rawScore * marksPerQuestion;
+const scoreText = totalScore + "/" + totalMarks;
 
     // Admin-only: visible in browser console (F12 → Console tab)
     console.log("=== EXAM RESULT ===");
@@ -924,25 +1373,39 @@ function finishQuiz() {
    Student only sees the modal — never the score.
    ============================================================ */
 function submitResultToSheet(studentName, className, subjectName, score) {
-    const formBaseURL = "https://docs.google.com/forms/d/e/1FAIpQLSeaIiCn-S-zr56SkrEkLxkAVGESvzu9XPnp_kgGw90vFkastg/formResponse";
-
-    // Calculate how long the student spent
     const endTime = new Date();
     const durationMs = endTime - quizStartTime;
     const durationMinutes = Math.floor(durationMs / 60000);
     const durationSeconds = Math.floor((durationMs % 60000) / 1000);
     const durationText = durationMinutes + "m " + durationSeconds + "s";
 
-    // Format start time as readable string e.g. "2026-06-27 10:35:42"
     const startText = quizStartTime.toLocaleString("en-GB", {
         year: "numeric", month: "2-digit", day: "2-digit",
         hour: "2-digit", minute: "2-digit", second: "2-digit",
         hour12: false
     });
 
-    // Log for admin reference
     console.log("Start time :", startText);
     console.log("Duration   :", durationText);
+
+    if (!navigator.onLine) {
+        // No internet — save locally and tell the student honestly
+        savePendingResult(
+            studentName, className, subjectName, score,
+            tabSwitchCount, startText, durationText
+        );
+
+        showModal(
+            "Your exam answers have been saved, but we couldn't connect to the server right now. " +
+            "Your result will be submitted automatically once the connection is restored. " +
+            "Please let your exam supervisor know.",
+            resetPortal
+        );
+        return;
+    }
+
+    // Online — submit normally
+    const formBaseURL = "https://docs.google.com/forms/d/e/1FAIpQLSeaIiCn-S-zr56SkrEkLxkAVGESvzu9XPnp_kgGw90vFkastg/formResponse";
 
     const submissionURL = formBaseURL +
         "?entry.989513760="  + encodeURIComponent(studentName) +
@@ -951,7 +1414,7 @@ function submitResultToSheet(studentName, className, subjectName, score) {
         "&entry.1080095985=" + encodeURIComponent(score) +
         "&entry.671914243="  + encodeURIComponent(tabSwitchCount) +
         "&entry.216522547="  + encodeURIComponent(startText) +
-        "&entry.1781815021="  + encodeURIComponent(durationText) +
+        "&entry.1781815021=" + encodeURIComponent(durationText) +
         "&submit=Submit";
 
     const img = new Image();
