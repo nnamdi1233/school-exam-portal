@@ -16,11 +16,74 @@ const examData = {
         { subject: "History",                                        link: "https://forms.gle/example" },
         { subject: "Citizenship Education",                          link: "https://forms.gle/example" },
         { subject: "Christian Religious Studies (CRS)",              link: "https://forms.gle/example" },
-        { subject: "Cultural and Creative Arts (CCA)",               link: "https://forms.gle/example" }
+        { subject: "Cultural and Creative Arts (CCA)",               link: "https://forms.gle/example" },
+        {
+    subject: "Entertainment & Sports Quiz",
+    timeLimit: 1000,
+    totalMarks: 100,
+    marksPerQuestion: 2,
+    questions: [
+        { type: "mcq", question: "Which club is known as 'The Red Devils'?", options: ["Liverpool", "Arsenal", "Manchester United", "Bayern Munich"], correctAnswer: "C" },
+        { type: "mcq", question: "Which country has won the FIFA World Cup five times?", options: ["Germany", "Brazil", "Italy", "Argentina"], correctAnswer: "B" },
+        { type: "mcq", question: "A football match normally lasts ______ minutes.", options: ["80", "85", "90", "95"], correctAnswer: "C" },
+        { type: "mcq", question: "Which football position is allowed to handle the ball inside the penalty area?", options: ["Defender", "Midfielder", "Goalkeeper", "Striker"], correctAnswer: "C" },
+        { type: "mcq", question: "The UEFA Champions League trophy is often nicknamed ______.", options: ["The Silver Star", "Big Cup", "The Big Ears", "Golden Trophy"], correctAnswer: "C" },
+        { type: "mcq", question: "Which African country won AFCON in 2013?", options: ["Egypt", "Nigeria", "Cameroon", "Ghana"], correctAnswer: "B" },
+        { type: "mcq", question: "A player shown a red card must ______.", options: ["Sit on the bench", "Leave the pitch", "Change jersey", "Take a penalty"], correctAnswer: "B" },
+        { type: "mcq", question: "Which club plays its home matches at Camp Nou?", options: ["Real Madrid", "Barcelona", "PSG", "Juventus"], correctAnswer: "B" },
+        { type: "mcq", question: "Which country hosted the 2010 FIFA World Cup?", options: ["Brazil", "Germany", "South Africa", "Russia"], correctAnswer: "C" },
+        { type: "mcq", question: "Which footballer is nicknamed 'CR7'?", options: ["Kylian Mbappé", "Cristiano Ronaldo", "Kevin De Bruyne", "Neymar"], correctAnswer: "B" },
+        { type: "mcq", question: "How many players does each football team have on the pitch at kickoff?", options: ["9", "10", "11", "12"], correctAnswer: "C" },
+        { type: "mcq", question: "Which competition is played between European national teams?", options: ["AFCON", "Copa América", "UEFA Euro", "Club World Cup"], correctAnswer: "C" },
+        { type: "mcq", question: "Which English club is nicknamed 'The Gunners'?", options: ["Chelsea", "Arsenal", "Everton", "Leicester City"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Nigerian footballer won the CAF Player of the Year award in 2023?", options: ["Victor Osimhen", "Ahmed Musa", "Wilfred Ndidi", "Alex Iwobi"], correctAnswer: "A" },
+        { type: "mcq", question: "Which color card is shown as a warning in football?", options: ["Blue", "Yellow", "Green", "Black"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Afrobeats originated mainly from which country?", options: ["Kenya", "South Africa", "Nigeria", "Ghana"], correctAnswer: "C" },
+        { type: "mcq", question: "Which Nigerian artist released the hit song 'Calm Down'?", options: ["Fireboy DML", "Rema", "Asake", "Burna Boy"], correctAnswer: "B" },
+        { type: "mcq", question: "Which instrument usually has black and white keys?", options: ["Drums", "Trumpet", "Piano", "Saxophone"], correctAnswer: "C" },
+        { type: "mcq", question: "Which streaming platform is mainly used for listening to music?", options: ["Spotify", "WhatsApp", "Zoom", "Google Maps"], correctAnswer: "A" },
+        { type: "mcq", question: "Who is popularly known as the 'African Giant'?", options: ["Davido", "Burna Boy", "Wizkid", "Omah Lay"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Nigerian artist is known by the nickname 'Starboy'?", options: ["Wizkid", "Ruger", "Joeboy", "Zinoleesky"], correctAnswer: "A" },
+        { type: "mcq", question: "Which music award is presented annually in the United States?", options: ["Oscars", "Grammys", "Emmys", "Ballon d'Or"], correctAnswer: "B" },
+        { type: "mcq", question: "Which symbol is commonly used to represent music?", options: ["Heart", "Musical note", "Star", "Triangle"], correctAnswer: "B" },
+        { type: "mcq", question: "Which artist released the album 'Made in Lagos'?", options: ["Davido", "Asake", "Wizkid", "Kizz Daniel"], correctAnswer: "C" },
+        { type: "mcq", question: "Which Nigerian singer is famous for the song 'Buga'?", options: ["Rema", "Kizz Daniel", "Spyro", "Seyi Vibez"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which superhero is also known as the Dark Knight?", options: ["Iron Man", "Batman", "Superman", "Flash"], correctAnswer: "B" },
+        { type: "mcq", question: "Which fictional wizard attends Hogwarts?", options: ["Harry Potter", "Percy Jackson", "Frodo", "Luke Skywalker"], correctAnswer: "A" },
+        { type: "mcq", question: "Which movie franchise features Dominic Toretto?", options: ["Mission Impossible", "Fast & Furious", "Transformers", "John Wick"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Marvel hero carries a shield?", options: ["Thor", "Captain America", "Hulk", "Spider-Man"], correctAnswer: "B" },
+        { type: "mcq", question: "The yellow characters called Minions first appeared in which movie series?", options: ["Toy Story", "Despicable Me", "Cars", "Frozen"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which app is mainly used for short-form videos?", options: ["Excel", "TikTok", "Word", "Chrome"], correctAnswer: "B" },
+        { type: "mcq", question: "ChatGPT is an example of a(n) ______.", options: ["Operating system", "Artificial Intelligence", "Web browser", "Antivirus"], correctAnswer: "B" },
+        { type: "mcq", question: "Which company develops Android?", options: ["Apple", "Microsoft", "Google", "Samsung"], correctAnswer: "C" },
+        { type: "mcq", question: "Which device is mainly used to take selfies?", options: ["Printer", "Smartphone", "Router", "Projector"], correctAnswer: "B" },
+        { type: "mcq", question: "Which social media platform is owned by Meta?", options: ["TikTok", "Instagram", "Snapchat", "Telegram"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which game lets players build with blocks and survive in a pixel world?", options: ["Minecraft", "Roblox", "PUBG", "FC 25"], correctAnswer: "A" },
+        { type: "mcq", question: "In EA Sports FC, the main sport featured is ______.", options: ["Basketball", "Cricket", "Football", "Tennis"], correctAnswer: "C" },
+        { type: "mcq", question: "Which battle royale game begins with players jumping from an airplane?", options: ["Candy Crush", "PUBG", "Subway Surfers", "Temple Run"], correctAnswer: "B" },
+        { type: "mcq", question: "Which company created the PlayStation?", options: ["Microsoft", "Sony", "Nintendo", "Dell"], correctAnswer: "B" },
+        { type: "mcq", question: "Roblox allows users to ______.", options: ["Create and play games", "Edit videos only", "Write essays", "Watch TV channels"], correctAnswer: "A" },
+
+        { type: "fill", question: "The nickname of Nigeria's national football team is the Super __________.", correctAnswer: "Eagles" },
+        { type: "fill", question: "The home stadium of FC Barcelona is __________ Nou.", correctAnswer: "Camp" },
+        { type: "fill", question: "The music award known as the Grammys is presented every __________.", correctAnswer: "year" },
+        { type: "fill", question: "The fictional city protected by Batman is __________ City.", correctAnswer: "Gotham" },
+        { type: "fill", question: "The red play button is the logo of __________.", correctAnswer: "YouTube" },
+        { type: "fill", question: "The green messaging app owned by Meta is __________.", correctAnswer: "WhatsApp" },
+        { type: "fill", question: "Minecraft was originally created by __________.", correctAnswer: "Mojang" },
+        { type: "fill", question: "The captain of a football team usually wears an __________.", correctAnswer: "armband" },
+        { type: "fill", question: "The Nigerian currency is the __________.", correctAnswer: "Naira" },
+        { type: "fill", question: "The world's largest video-sharing platform is __________.", correctAnswer: "YouTube" }
+    ]
+}
     ],
 
     "JSS2": [
-        { subject: "Mathematics",                                    link: "https://forms.gle/example" },
+        { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
         { subject: "English Language",                               link: "https://forms.gle/example" },
         { subject: "Information and Communication Technology (ICT)", link: "https://forms.gle/example" },
         { subject: "Physical and Health Education (PHE)",            link: "https://forms.gle/example" },
@@ -29,195 +92,155 @@ const examData = {
         { subject: "History",                                        link: "https://forms.gle/example" },
         { subject: "Citizenship Education",                          link: "https://forms.gle/example" },
         { subject: "Christian Religious Studies (CRS)",              link: "https://forms.gle/example" },
-        { subject: "Cultural and Creative Arts (CCA)",               link: "https://forms.gle/example" }
+        { subject: "Cultural and Creative Arts (CCA)",               link: "https://forms.gle/example" },
+        {
+    subject: "Entertainment & Sports Quiz",
+    timeLimit: 1000,
+    totalMarks: 100,
+    marksPerQuestion: 2,
+    questions: [
+        { type: "mcq", question: "Which club is known as 'The Red Devils'?", options: ["Liverpool", "Arsenal", "Manchester United", "Bayern Munich"], correctAnswer: "C" },
+        { type: "mcq", question: "Which country has won the FIFA World Cup five times?", options: ["Germany", "Brazil", "Italy", "Argentina"], correctAnswer: "B" },
+        { type: "mcq", question: "A football match normally lasts ______ minutes.", options: ["80", "85", "90", "95"], correctAnswer: "C" },
+        { type: "mcq", question: "Which football position is allowed to handle the ball inside the penalty area?", options: ["Defender", "Midfielder", "Goalkeeper", "Striker"], correctAnswer: "C" },
+        { type: "mcq", question: "The UEFA Champions League trophy is often nicknamed ______.", options: ["The Silver Star", "Big Cup", "The Big Ears", "Golden Trophy"], correctAnswer: "C" },
+        { type: "mcq", question: "Which African country won AFCON in 2013?", options: ["Egypt", "Nigeria", "Cameroon", "Ghana"], correctAnswer: "B" },
+        { type: "mcq", question: "A player shown a red card must ______.", options: ["Sit on the bench", "Leave the pitch", "Change jersey", "Take a penalty"], correctAnswer: "B" },
+        { type: "mcq", question: "Which club plays its home matches at Camp Nou?", options: ["Real Madrid", "Barcelona", "PSG", "Juventus"], correctAnswer: "B" },
+        { type: "mcq", question: "Which country hosted the 2010 FIFA World Cup?", options: ["Brazil", "Germany", "South Africa", "Russia"], correctAnswer: "C" },
+        { type: "mcq", question: "Which footballer is nicknamed 'CR7'?", options: ["Kylian Mbappé", "Cristiano Ronaldo", "Kevin De Bruyne", "Neymar"], correctAnswer: "B" },
+        { type: "mcq", question: "How many players does each football team have on the pitch at kickoff?", options: ["9", "10", "11", "12"], correctAnswer: "C" },
+        { type: "mcq", question: "Which competition is played between European national teams?", options: ["AFCON", "Copa América", "UEFA Euro", "Club World Cup"], correctAnswer: "C" },
+        { type: "mcq", question: "Which English club is nicknamed 'The Gunners'?", options: ["Chelsea", "Arsenal", "Everton", "Leicester City"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Nigerian footballer won the CAF Player of the Year award in 2023?", options: ["Victor Osimhen", "Ahmed Musa", "Wilfred Ndidi", "Alex Iwobi"], correctAnswer: "A" },
+        { type: "mcq", question: "Which color card is shown as a warning in football?", options: ["Blue", "Yellow", "Green", "Black"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Afrobeats originated mainly from which country?", options: ["Kenya", "South Africa", "Nigeria", "Ghana"], correctAnswer: "C" },
+        { type: "mcq", question: "Which Nigerian artist released the hit song 'Calm Down'?", options: ["Fireboy DML", "Rema", "Asake", "Burna Boy"], correctAnswer: "B" },
+        { type: "mcq", question: "Which instrument usually has black and white keys?", options: ["Drums", "Trumpet", "Piano", "Saxophone"], correctAnswer: "C" },
+        { type: "mcq", question: "Which streaming platform is mainly used for listening to music?", options: ["Spotify", "WhatsApp", "Zoom", "Google Maps"], correctAnswer: "A" },
+        { type: "mcq", question: "Who is popularly known as the 'African Giant'?", options: ["Davido", "Burna Boy", "Wizkid", "Omah Lay"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Nigerian artist is known by the nickname 'Starboy'?", options: ["Wizkid", "Ruger", "Joeboy", "Zinoleesky"], correctAnswer: "A" },
+        { type: "mcq", question: "Which music award is presented annually in the United States?", options: ["Oscars", "Grammys", "Emmys", "Ballon d'Or"], correctAnswer: "B" },
+        { type: "mcq", question: "Which symbol is commonly used to represent music?", options: ["Heart", "Musical note", "Star", "Triangle"], correctAnswer: "B" },
+        { type: "mcq", question: "Which artist released the album 'Made in Lagos'?", options: ["Davido", "Asake", "Wizkid", "Kizz Daniel"], correctAnswer: "C" },
+        { type: "mcq", question: "Which Nigerian singer is famous for the song 'Buga'?", options: ["Rema", "Kizz Daniel", "Spyro", "Seyi Vibez"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which superhero is also known as the Dark Knight?", options: ["Iron Man", "Batman", "Superman", "Flash"], correctAnswer: "B" },
+        { type: "mcq", question: "Which fictional wizard attends Hogwarts?", options: ["Harry Potter", "Percy Jackson", "Frodo", "Luke Skywalker"], correctAnswer: "A" },
+        { type: "mcq", question: "Which movie franchise features Dominic Toretto?", options: ["Mission Impossible", "Fast & Furious", "Transformers", "John Wick"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Marvel hero carries a shield?", options: ["Thor", "Captain America", "Hulk", "Spider-Man"], correctAnswer: "B" },
+        { type: "mcq", question: "The yellow characters called Minions first appeared in which movie series?", options: ["Toy Story", "Despicable Me", "Cars", "Frozen"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which app is mainly used for short-form videos?", options: ["Excel", "TikTok", "Word", "Chrome"], correctAnswer: "B" },
+        { type: "mcq", question: "ChatGPT is an example of a(n) ______.", options: ["Operating system", "Artificial Intelligence", "Web browser", "Antivirus"], correctAnswer: "B" },
+        { type: "mcq", question: "Which company develops Android?", options: ["Apple", "Microsoft", "Google", "Samsung"], correctAnswer: "C" },
+        { type: "mcq", question: "Which device is mainly used to take selfies?", options: ["Printer", "Smartphone", "Router", "Projector"], correctAnswer: "B" },
+        { type: "mcq", question: "Which social media platform is owned by Meta?", options: ["TikTok", "Instagram", "Snapchat", "Telegram"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which game lets players build with blocks and survive in a pixel world?", options: ["Minecraft", "Roblox", "PUBG", "FC 25"], correctAnswer: "A" },
+        { type: "mcq", question: "In EA Sports FC, the main sport featured is ______.", options: ["Basketball", "Cricket", "Football", "Tennis"], correctAnswer: "C" },
+        { type: "mcq", question: "Which battle royale game begins with players jumping from an airplane?", options: ["Candy Crush", "PUBG", "Subway Surfers", "Temple Run"], correctAnswer: "B" },
+        { type: "mcq", question: "Which company created the PlayStation?", options: ["Microsoft", "Sony", "Nintendo", "Dell"], correctAnswer: "B" },
+        { type: "mcq", question: "Roblox allows users to ______.", options: ["Create and play games", "Edit videos only", "Write essays", "Watch TV channels"], correctAnswer: "A" },
+
+        { type: "fill", question: "The nickname of Nigeria's national football team is the Super __________.", correctAnswer: "Eagles" },
+        { type: "fill", question: "The home stadium of FC Barcelona is __________ Nou.", correctAnswer: "Camp" },
+        { type: "fill", question: "The music award known as the Grammys is presented every __________.", correctAnswer: "year" },
+        { type: "fill", question: "The fictional city protected by Batman is __________ City.", correctAnswer: "Gotham" },
+        { type: "fill", question: "The red play button is the logo of __________.", correctAnswer: "YouTube" },
+        { type: "fill", question: "The green messaging app owned by Meta is __________.", correctAnswer: "WhatsApp" },
+        { type: "fill", question: "Minecraft was originally created by __________.", correctAnswer: "Mojang" },
+        { type: "fill", question: "The captain of a football team usually wears an __________.", correctAnswer: "armband" },
+        { type: "fill", question: "The Nigerian currency is the __________.", correctAnswer: "Naira" },
+        { type: "fill", question: "The world's largest video-sharing platform is __________.", correctAnswer: "YouTube" }
+    ]
+}
     ],
 
     "SS1": [
         { subject: "Mathematics",                       link: "https://forms.gle/example" },
+        { subject: "Mathematics",                       link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
+        { subject: "Literature in English",             link: "https://forms.gle/example" },
+        { subject: "Biology",                           link: "https://forms.gle/example" },
+        { subject: "Biology",                           link: "https://forms.gle/example" },
+        { subject: "Digital Literacy",                  link: "https://forms.gle/example" },
+        { subject: "Citizenship Education",             link: "https://forms.gle/example" },
+        { subject: "Christian Religious Studies (CRS)", link: "https://forms.gle/example" },
+        { subject: "Physics",                           link: "https://forms.gle/example" },
+        { subject: "Chemistry",                         link: "https://forms.gle/example" },
+        { subject: "Economics",                         link: "https://forms.gle/example" },
+        { subject: "Government",                        link: "https://forms.gle/example" },
         {
-    subject: "English Language",
-    timeLimit: 1500,
-    totalMarks: 60,
+    subject: "Entertainment & Sports Quiz",
+    timeLimit: 1000,
+    totalMarks: 100,
     marksPerQuestion: 2,
     questions: [
-        {
-            type: "mcq",
-            question: "The phrasal verb \"give up\" means ______.",
-            options: ["to continue trying", "to stop trying", "to wear", "to visit"],
-            correctAnswer: "B"
-        },
-        {
-            type: "mcq",
-            question: "Which of the following phrasal verbs means \"to postpone\"?",
-            options: ["Put on", "Put up", "Put off", "Give away"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "Which of the following is the correct spelling?",
-            options: ["Recieve", "Receive", "Receeve", "Receve"],
-            correctAnswer: "B"
-        },
-        {
-            type: "mcq",
-            question: "Choose the correctly spelt word.",
-            options: ["Accomodation", "Acommodation", "Accommodation", "Accommondation"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "Which of the following words is correctly spelt?",
-            options: ["Begining", "Beggining", "Beginning", "Begininning"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "The antonym of \"temporary\" is ______.",
-            options: ["short", "weak", "permanent", "old"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "English is described as a ______ language.",
-            options: ["syllable-timed", "stress-timed", "sound-timed", "rhythm-less"],
-            correctAnswer: "B"
-        },
-        {
-            type: "mcq",
-            question: "In spoken English, important words are usually ______.",
-            options: ["ignored", "whispered", "stressed", "omitted"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "Voice modulation involves changing the ______.",
-            options: ["handwriting", "spelling", "tone and pitch", "grammar"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "The teacher worked hard to ____ change in the school system.",
-            options: ["bring up", "bring about", "bring back", "take in"],
-            correctAnswer: "B"
-        },
-        {
-            type: "mcq",
-            question: "She decided to ____ dancing as a new hobby.",
-            options: ["take off", "take away", "take up", "bring back"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "I could not ____ the information because it was too complex.",
-            options: ["take in", "bring up", "take off", "bring about"],
-            correctAnswer: "A"
-        },
-        {
-            type: "mcq",
-            question: "HIV/AIDS can be prevented through ______.",
-            options: ["ignorance", "proper education", "fighting", "isolation"],
-            correctAnswer: "B"
-        },
-        {
-            type: "mcq",
-            question: "People living with HIV should not be ______.",
-            options: ["supported", "educated", "discriminated against", "encouraged"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "Which of the following is NOT a feature of a newspaper article?",
-            options: ["Headline", "Byline", "Stanza", "Lead paragraph"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "The main purpose of a newspaper article is to ______.",
-            options: ["entertain only", "inform or report events", "tell stories in verses", "confuse readers"],
-            correctAnswer: "B"
-        },
-        {
-            type: "mcq",
-            question: "Dignity in labour means ______.",
-            options: ["avoiding work", "respecting honest work", "stealing", "begging"],
-            correctAnswer: "B"
-        },
-        {
-            type: "mcq",
-            question: "Farmers contribute to ______.",
-            options: ["society", "corruption", "laziness", "crime"],
-            correctAnswer: "A"
-        },
-        {
-            type: "mcq",
-            question: "Exam malpractice is ______.",
-            options: ["studying hard", "reading books", "cheating in examinations", "attending classes"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "All the following are features of speech writing EXCEPT",
-            options: ["Opening Greeting", "Introduction", "Body", "Sender's Address"],
-            correctAnswer: "D"
-        },
-        {
-            type: "mcq",
-            question: "Bribery is an example of ______.",
-            options: ["honesty", "corruption", "patriotism", "education"],
-            correctAnswer: "B"
-        },
-        {
-            type: "mcq",
-            question: "An adjunct of place tells ______.",
-            options: ["why", "when", "how", "where"],
-            correctAnswer: "D"
-        },
-        {
-            type: "mcq",
-            question: "In the sentence \"He slept outside\", the word \"outside\" is an adjunct of ______.",
-            options: ["time", "place", "reason", "manner"],
-            correctAnswer: "B"
-        },
-        {
-            type: "mcq",
-            question: "An adjunct of time tells ______.",
-            options: ["how", "where", "when", "why"],
-            correctAnswer: "C"
-        },
-        {
-            type: "mcq",
-            question: "In the sentence \"They spoke softly\", the word \"softly\" is an adjunct of ______.",
-            options: ["place", "reason", "manner", "time"],
-            correctAnswer: "C"
-        },
-        {
-            type: "fill",
-            question: "A debate is a formal __________ where speakers present arguments for or against a topic.",
-            correctAnswer: "discussion"
-        },
-        {
-            type: "fill",
-            question: "Patriotism means love and __________ to one's country.",
-            correctAnswer: "loyalty"
-        },
-        {
-            type: "fill",
-            question: "The title of a newspaper article is called a __________.",
-            correctAnswer: "headline"
-        },
-        {
-            type: "fill",
-            question: "A speech is delivered to an audience of __________.",
-            correctAnswer: "people"
-        },
-        {
-            type: "fill",
-            question: "A letter usually begins with an address and a __________.",
-            correctAnswer: "salutation"
-        }
+        { type: "mcq", question: "Which club is known as 'The Red Devils'?", options: ["Liverpool", "Arsenal", "Manchester United", "Bayern Munich"], correctAnswer: "C" },
+        { type: "mcq", question: "Which country has won the FIFA World Cup five times?", options: ["Germany", "Brazil", "Italy", "Argentina"], correctAnswer: "B" },
+        { type: "mcq", question: "A football match normally lasts ______ minutes.", options: ["80", "85", "90", "95"], correctAnswer: "C" },
+        { type: "mcq", question: "Which football position is allowed to handle the ball inside the penalty area?", options: ["Defender", "Midfielder", "Goalkeeper", "Striker"], correctAnswer: "C" },
+        { type: "mcq", question: "The UEFA Champions League trophy is often nicknamed ______.", options: ["The Silver Star", "Big Cup", "The Big Ears", "Golden Trophy"], correctAnswer: "C" },
+        { type: "mcq", question: "Which African country won AFCON in 2013?", options: ["Egypt", "Nigeria", "Cameroon", "Ghana"], correctAnswer: "B" },
+        { type: "mcq", question: "A player shown a red card must ______.", options: ["Sit on the bench", "Leave the pitch", "Change jersey", "Take a penalty"], correctAnswer: "B" },
+        { type: "mcq", question: "Which club plays its home matches at Camp Nou?", options: ["Real Madrid", "Barcelona", "PSG", "Juventus"], correctAnswer: "B" },
+        { type: "mcq", question: "Which country hosted the 2010 FIFA World Cup?", options: ["Brazil", "Germany", "South Africa", "Russia"], correctAnswer: "C" },
+        { type: "mcq", question: "Which footballer is nicknamed 'CR7'?", options: ["Kylian Mbappé", "Cristiano Ronaldo", "Kevin De Bruyne", "Neymar"], correctAnswer: "B" },
+        { type: "mcq", question: "How many players does each football team have on the pitch at kickoff?", options: ["9", "10", "11", "12"], correctAnswer: "C" },
+        { type: "mcq", question: "Which competition is played between European national teams?", options: ["AFCON", "Copa América", "UEFA Euro", "Club World Cup"], correctAnswer: "C" },
+        { type: "mcq", question: "Which English club is nicknamed 'The Gunners'?", options: ["Chelsea", "Arsenal", "Everton", "Leicester City"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Nigerian footballer won the CAF Player of the Year award in 2023?", options: ["Victor Osimhen", "Ahmed Musa", "Wilfred Ndidi", "Alex Iwobi"], correctAnswer: "A" },
+        { type: "mcq", question: "Which color card is shown as a warning in football?", options: ["Blue", "Yellow", "Green", "Black"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Afrobeats originated mainly from which country?", options: ["Kenya", "South Africa", "Nigeria", "Ghana"], correctAnswer: "C" },
+        { type: "mcq", question: "Which Nigerian artist released the hit song 'Calm Down'?", options: ["Fireboy DML", "Rema", "Asake", "Burna Boy"], correctAnswer: "B" },
+        { type: "mcq", question: "Which instrument usually has black and white keys?", options: ["Drums", "Trumpet", "Piano", "Saxophone"], correctAnswer: "C" },
+        { type: "mcq", question: "Which streaming platform is mainly used for listening to music?", options: ["Spotify", "WhatsApp", "Zoom", "Google Maps"], correctAnswer: "A" },
+        { type: "mcq", question: "Who is popularly known as the 'African Giant'?", options: ["Davido", "Burna Boy", "Wizkid", "Omah Lay"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Nigerian artist is known by the nickname 'Starboy'?", options: ["Wizkid", "Ruger", "Joeboy", "Zinoleesky"], correctAnswer: "A" },
+        { type: "mcq", question: "Which music award is presented annually in the United States?", options: ["Oscars", "Grammys", "Emmys", "Ballon d'Or"], correctAnswer: "B" },
+        { type: "mcq", question: "Which symbol is commonly used to represent music?", options: ["Heart", "Musical note", "Star", "Triangle"], correctAnswer: "B" },
+        { type: "mcq", question: "Which artist released the album 'Made in Lagos'?", options: ["Davido", "Asake", "Wizkid", "Kizz Daniel"], correctAnswer: "C" },
+        { type: "mcq", question: "Which Nigerian singer is famous for the song 'Buga'?", options: ["Rema", "Kizz Daniel", "Spyro", "Seyi Vibez"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which superhero is also known as the Dark Knight?", options: ["Iron Man", "Batman", "Superman", "Flash"], correctAnswer: "B" },
+        { type: "mcq", question: "Which fictional wizard attends Hogwarts?", options: ["Harry Potter", "Percy Jackson", "Frodo", "Luke Skywalker"], correctAnswer: "A" },
+        { type: "mcq", question: "Which movie franchise features Dominic Toretto?", options: ["Mission Impossible", "Fast & Furious", "Transformers", "John Wick"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Marvel hero carries a shield?", options: ["Thor", "Captain America", "Hulk", "Spider-Man"], correctAnswer: "B" },
+        { type: "mcq", question: "The yellow characters called Minions first appeared in which movie series?", options: ["Toy Story", "Despicable Me", "Cars", "Frozen"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which app is mainly used for short-form videos?", options: ["Excel", "TikTok", "Word", "Chrome"], correctAnswer: "B" },
+        { type: "mcq", question: "ChatGPT is an example of a(n) ______.", options: ["Operating system", "Artificial Intelligence", "Web browser", "Antivirus"], correctAnswer: "B" },
+        { type: "mcq", question: "Which company develops Android?", options: ["Apple", "Microsoft", "Google", "Samsung"], correctAnswer: "C" },
+        { type: "mcq", question: "Which device is mainly used to take selfies?", options: ["Printer", "Smartphone", "Router", "Projector"], correctAnswer: "B" },
+        { type: "mcq", question: "Which social media platform is owned by Meta?", options: ["TikTok", "Instagram", "Snapchat", "Telegram"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which game lets players build with blocks and survive in a pixel world?", options: ["Minecraft", "Roblox", "PUBG", "FC 25"], correctAnswer: "A" },
+        { type: "mcq", question: "In EA Sports FC, the main sport featured is ______.", options: ["Basketball", "Cricket", "Football", "Tennis"], correctAnswer: "C" },
+        { type: "mcq", question: "Which battle royale game begins with players jumping from an airplane?", options: ["Candy Crush", "PUBG", "Subway Surfers", "Temple Run"], correctAnswer: "B" },
+        { type: "mcq", question: "Which company created the PlayStation?", options: ["Microsoft", "Sony", "Nintendo", "Dell"], correctAnswer: "B" },
+        { type: "mcq", question: "Roblox allows users to ______.", options: ["Create and play games", "Edit videos only", "Write essays", "Watch TV channels"], correctAnswer: "A" },
+
+        { type: "fill", question: "The nickname of Nigeria's national football team is the Super __________.", correctAnswer: "Eagles" },
+        { type: "fill", question: "The home stadium of FC Barcelona is __________ Nou.", correctAnswer: "Camp" },
+        { type: "fill", question: "The music award known as the Grammys is presented every __________.", correctAnswer: "year" },
+        { type: "fill", question: "The fictional city protected by Batman is __________ City.", correctAnswer: "Gotham" },
+        { type: "fill", question: "The red play button is the logo of __________.", correctAnswer: "YouTube" },
+        { type: "fill", question: "The green messaging app owned by Meta is __________.", correctAnswer: "WhatsApp" },
+        { type: "fill", question: "Minecraft was originally created by __________.", correctAnswer: "Mojang" },
+        { type: "fill", question: "The captain of a football team usually wears an __________.", correctAnswer: "armband" },
+        { type: "fill", question: "The Nigerian currency is the __________.", correctAnswer: "Naira" },
+        { type: "fill", question: "The world's largest video-sharing platform is __________.", correctAnswer: "YouTube" }
     ]
-},
+}
+    ],
+
+    "SS2": [
+        { subject: "Mathematics",                       link: "https://forms.gle/example" },
+        { subject: "English Language",                  link: "https://forms.gle/example" },
         { subject: "Literature in English",             link: "https://forms.gle/example" },
+        { subject: "Digital Literacy",                  link: "https://forms.gle/example" },
         { subject: "Biology",                           link: "https://forms.gle/example" },
         { subject: "History",                           link: "https://forms.gle/example" },
         { subject: "Citizenship Education",             link: "https://forms.gle/example" },
@@ -225,181 +248,269 @@ const examData = {
         { subject: "Physics",                           link: "https://forms.gle/example" },
         { subject: "Chemistry",                         link: "https://forms.gle/example" },
         { subject: "Economics",                         link: "https://forms.gle/example" },
-        { subject: "Government",                        link: "https://forms.gle/example" }
-    ],
-
-    "SS2": [
-        { subject: "Mathematics",                       link: "https://forms.gle/example" },
-        { subject: "English Language",                  link: "https://forms.gle/example" },
-        { subject: "Literature in English",             link: "https://forms.gle/example" },
-        { subject: "Biology",                           link: "https://forms.gle/example" },
-        { subject: "History",                           link: "https://forms.gle/example" },
-        { subject: "Citizenship Education",             link: "https://forms.gle/example" },
-        { subject: "Christian Religious Studies (CRS)", link: "https://forms.gle/example" },
-        { subject: "Physics",                           link: "https://forms.gle/example" },
+        { subject: "Government",                        link: "https://forms.gle/example" },
         {
-            subject: "Chemistry",
-            timeLimit: 60, // change to e.g. 900 for 15 mins in production
-            questions: [
-                {
-                    question: "Fats and oils belong to a group of compounds known as",
-                    options: ["Glycerols", "Caustic alkalis", "Lipids", "Detergents"],
-                    correctAnswer: "C"
-                },
-                {
-                    question: "Fats and oils are complex mixture of esters of",
-                    options: ["Trihydric alkanol", "Tetrahydric alkanol, butane-1,2,3-triol", "Polyhydric alkanol, propane-2,3,4-triol", "Monohhdric alkanal, Pentane-1,2,3-triol"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "Fatty acid are classified into how many groups",
-                    options: ["1", "2", "3", "4"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "Which of these fatty acid has one or more double bonds in their hydrocarbon chain",
-                    options: ["Hydrocarbon fatty acid", "Saturated fatty acid", "Unsaturated fatty acid", "Alkanoate fatty acid"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "The hydrolysis of fats and oils with caustic alkali yields",
-                    options: ["Ethane-1,2,3-triol", "Buthane-1,2,3-triol", "Propane-1,2,3-triol", "Pentane-1,2,3-triol"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "Linseed oil is a raw material used in the manufacture of",
-                    options: ["Margarine and soap", "Ingredients of food", "Glycerol and candles", "Paints and varnishes"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "The rays in the radioactivity process is known as",
-                    options: ["Radioactive decay", "Radioactivity", "Radioactive element", "Radioactive reaction"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "The spontaneous decay of the radioactive element to emit radiation is called",
-                    options: ["Half Life", "Emission", "Radiation", "Radioactivity"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "Radioactivity was first observed and investigated in 1896 by",
-                    options: ["Pierre Curie", "Henri Bacquerel", "Mendeleev", "Marie Curie"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "In what year did Pierre and Marie Curie detect some radioactivity in the element thorium",
-                    options: ["1894", "1896", "1898", "1890"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "The time taken for the intensity of radiation to fall to half its original value is known as",
-                    options: ["Emission", "Half Life", "Decay constant", "Radiation"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "A process in which the nucleus of a heavy element is split into two nuclei, with a release of energy and several neutrons, is known as",
-                    options: ["Fission", "Fusion", "Transmutation", "Bombardment"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "Astatine belongs to the family of elements called",
-                    options: ["Chalcogen", "Alkaline metal", "Halogen", "Transition metals"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "Who Built Rome?",
-                    options: ["Chlorine", "Florine", "Bromine", "Lodine"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "Which of the gases does chlorine water liberate when exposed to sunlight",
-                    options: ["Nitrogen", "Hydrogen", "Carbon(IV) oxide", "Oxygen"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "All of these gases are not bleaching agents except",
-                    options: ["Neon", "Chlorine", "Lodine", "Astatine"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "The elements in group I are collectively called",
-                    options: ["Alkali earth metals", "Alkali metals", "Transition metals", "Metalloid"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "Which of these elements reacts explosively with water",
-                    options: ["Lithium", "Sodium", "Potassium", "Calcium"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "Which of these metals are strongly electropositive metals",
-                    options: ["Alkali metal", "Non-metal", "Halogens", "Lantinides"],
-                    correctAnswer: "A"
-                },
-                {
-                    question: "Alkali metals react vigorously with dilute acids, liberating",
-                    options: ["Acid gas", "Nitrogen gas", "Oxygen gas", "Hydrogen gas"],
-                    correctAnswer: "A"
-                }
-            ]
-        },
-        { subject: "Economics",  link: "https://forms.gle/example" },
-        { subject: "Government", link: "https://forms.gle/example" }
+    subject: "Entertainment & Sports Quiz",
+    timeLimit: 1000,
+    totalMarks: 100,
+    marksPerQuestion: 2,
+    questions: [
+        { type: "mcq", question: "Which club is known as 'The Red Devils'?", options: ["Liverpool", "Arsenal", "Manchester United", "Bayern Munich"], correctAnswer: "C" },
+        { type: "mcq", question: "Which country has won the FIFA World Cup five times?", options: ["Germany", "Brazil", "Italy", "Argentina"], correctAnswer: "B" },
+        { type: "mcq", question: "A football match normally lasts ______ minutes.", options: ["80", "85", "90", "95"], correctAnswer: "C" },
+        { type: "mcq", question: "Which football position is allowed to handle the ball inside the penalty area?", options: ["Defender", "Midfielder", "Goalkeeper", "Striker"], correctAnswer: "C" },
+        { type: "mcq", question: "The UEFA Champions League trophy is often nicknamed ______.", options: ["The Silver Star", "Big Cup", "The Big Ears", "Golden Trophy"], correctAnswer: "C" },
+        { type: "mcq", question: "Which African country won AFCON in 2013?", options: ["Egypt", "Nigeria", "Cameroon", "Ghana"], correctAnswer: "B" },
+        { type: "mcq", question: "A player shown a red card must ______.", options: ["Sit on the bench", "Leave the pitch", "Change jersey", "Take a penalty"], correctAnswer: "B" },
+        { type: "mcq", question: "Which club plays its home matches at Camp Nou?", options: ["Real Madrid", "Barcelona", "PSG", "Juventus"], correctAnswer: "B" },
+        { type: "mcq", question: "Which country hosted the 2010 FIFA World Cup?", options: ["Brazil", "Germany", "South Africa", "Russia"], correctAnswer: "C" },
+        { type: "mcq", question: "Which footballer is nicknamed 'CR7'?", options: ["Kylian Mbappé", "Cristiano Ronaldo", "Kevin De Bruyne", "Neymar"], correctAnswer: "B" },
+        { type: "mcq", question: "How many players does each football team have on the pitch at kickoff?", options: ["9", "10", "11", "12"], correctAnswer: "C" },
+        { type: "mcq", question: "Which competition is played between European national teams?", options: ["AFCON", "Copa América", "UEFA Euro", "Club World Cup"], correctAnswer: "C" },
+        { type: "mcq", question: "Which English club is nicknamed 'The Gunners'?", options: ["Chelsea", "Arsenal", "Everton", "Leicester City"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Nigerian footballer won the CAF Player of the Year award in 2023?", options: ["Victor Osimhen", "Ahmed Musa", "Wilfred Ndidi", "Alex Iwobi"], correctAnswer: "A" },
+        { type: "mcq", question: "Which color card is shown as a warning in football?", options: ["Blue", "Yellow", "Green", "Black"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Afrobeats originated mainly from which country?", options: ["Kenya", "South Africa", "Nigeria", "Ghana"], correctAnswer: "C" },
+        { type: "mcq", question: "Which Nigerian artist released the hit song 'Calm Down'?", options: ["Fireboy DML", "Rema", "Asake", "Burna Boy"], correctAnswer: "B" },
+        { type: "mcq", question: "Which instrument usually has black and white keys?", options: ["Drums", "Trumpet", "Piano", "Saxophone"], correctAnswer: "C" },
+        { type: "mcq", question: "Which streaming platform is mainly used for listening to music?", options: ["Spotify", "WhatsApp", "Zoom", "Google Maps"], correctAnswer: "A" },
+        { type: "mcq", question: "Who is popularly known as the 'African Giant'?", options: ["Davido", "Burna Boy", "Wizkid", "Omah Lay"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Nigerian artist is known by the nickname 'Starboy'?", options: ["Wizkid", "Ruger", "Joeboy", "Zinoleesky"], correctAnswer: "A" },
+        { type: "mcq", question: "Which music award is presented annually in the United States?", options: ["Oscars", "Grammys", "Emmys", "Ballon d'Or"], correctAnswer: "B" },
+        { type: "mcq", question: "Which symbol is commonly used to represent music?", options: ["Heart", "Musical note", "Star", "Triangle"], correctAnswer: "B" },
+        { type: "mcq", question: "Which artist released the album 'Made in Lagos'?", options: ["Davido", "Asake", "Wizkid", "Kizz Daniel"], correctAnswer: "C" },
+        { type: "mcq", question: "Which Nigerian singer is famous for the song 'Buga'?", options: ["Rema", "Kizz Daniel", "Spyro", "Seyi Vibez"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which superhero is also known as the Dark Knight?", options: ["Iron Man", "Batman", "Superman", "Flash"], correctAnswer: "B" },
+        { type: "mcq", question: "Which fictional wizard attends Hogwarts?", options: ["Harry Potter", "Percy Jackson", "Frodo", "Luke Skywalker"], correctAnswer: "A" },
+        { type: "mcq", question: "Which movie franchise features Dominic Toretto?", options: ["Mission Impossible", "Fast & Furious", "Transformers", "John Wick"], correctAnswer: "B" },
+        { type: "mcq", question: "Which Marvel hero carries a shield?", options: ["Thor", "Captain America", "Hulk", "Spider-Man"], correctAnswer: "B" },
+        { type: "mcq", question: "The yellow characters called Minions first appeared in which movie series?", options: ["Toy Story", "Despicable Me", "Cars", "Frozen"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which app is mainly used for short-form videos?", options: ["Excel", "TikTok", "Word", "Chrome"], correctAnswer: "B" },
+        { type: "mcq", question: "ChatGPT is an example of a(n) ______.", options: ["Operating system", "Artificial Intelligence", "Web browser", "Antivirus"], correctAnswer: "B" },
+        { type: "mcq", question: "Which company develops Android?", options: ["Apple", "Microsoft", "Google", "Samsung"], correctAnswer: "C" },
+        { type: "mcq", question: "Which device is mainly used to take selfies?", options: ["Printer", "Smartphone", "Router", "Projector"], correctAnswer: "B" },
+        { type: "mcq", question: "Which social media platform is owned by Meta?", options: ["TikTok", "Instagram", "Snapchat", "Telegram"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Which game lets players build with blocks and survive in a pixel world?", options: ["Minecraft", "Roblox", "PUBG", "FC 25"], correctAnswer: "A" },
+        { type: "mcq", question: "In EA Sports FC, the main sport featured is ______.", options: ["Basketball", "Cricket", "Football", "Tennis"], correctAnswer: "C" },
+        { type: "mcq", question: "Which battle royale game begins with players jumping from an airplane?", options: ["Candy Crush", "PUBG", "Subway Surfers", "Temple Run"], correctAnswer: "B" },
+        { type: "mcq", question: "Which company created the PlayStation?", options: ["Microsoft", "Sony", "Nintendo", "Dell"], correctAnswer: "B" },
+        { type: "mcq", question: "Roblox allows users to ______.", options: ["Create and play games", "Edit videos only", "Write essays", "Watch TV channels"], correctAnswer: "A" },
+
+        { type: "fill", question: "The nickname of Nigeria's national football team is the Super __________.", correctAnswer: "Eagles" },
+        { type: "fill", question: "The home stadium of FC Barcelona is __________ Nou.", correctAnswer: "Camp" },
+        { type: "fill", question: "The music award known as the Grammys is presented every __________.", correctAnswer: "year" },
+        { type: "fill", question: "The fictional city protected by Batman is __________ City.", correctAnswer: "Gotham" },
+        { type: "fill", question: "The red play button is the logo of __________.", correctAnswer: "YouTube" },
+        { type: "fill", question: "The green messaging app owned by Meta is __________.", correctAnswer: "WhatsApp" },
+        { type: "fill", question: "Minecraft was originally created by __________.", correctAnswer: "Mojang" },
+        { type: "fill", question: "The captain of a football team usually wears an __________.", correctAnswer: "armband" },
+        { type: "fill", question: "The Nigerian currency is the __________.", correctAnswer: "Naira" },
+        { type: "fill", question: "The world's largest video-sharing platform is __________.", correctAnswer: "YouTube" }
     ]
+}
+    ]
+};
+
+/*
+    SUBJECT STREAM RULES
+    ----------------------
+    Defines which subjects are accessible to each stream.
+    "all" means every student in that class can access it.
+    "science" and "art" are stream-specific.
+    JSS students always get "general" stream which means all subjects.
+*/
+const subjectStreamMap = {
+    "SS1": {
+        "Mathematics":                          "all",
+        "English Language":                     "all",
+        "Biology":                              "all",
+        "History":                              "all",
+        "Citizenship Education":                "all",
+        "Christian Religious Studies (CRS)":    "art",
+        "Physics":                              "science",
+        "Chemistry":                            "science",
+        "Economics":                            "all",
+        "Government":                           "art",
+        "Literature in English":                "art"
+    },
+    "SS2": {
+        "Mathematics":                          "all",
+        "English Language":                     "all",
+        "Biology":                              "all",
+        "History":                              "all",
+        "Citizenship Education":                "all",
+        "Christian Religious Studies (CRS)":    "art",
+        "Physics":                              "science",
+        "Chemistry":                            "science",
+        "Economics":                            "all",
+        "Government":                           "art",
+        "Literature in English":                "art"
+    }
+};
+
+
+/* ============================================================
+   STUDENT REGISTRY
+   Admission numbers mapped to student names, per class.
+   GGS00000 is the master demo/admin key.
+   ============================================================ */
+const studentRegistry = {
+
+    "MASTER": {
+        "GGS00000": { name: "Admin / Demo", stream: "all" }
+    },
+
+    "JSS1": {
+        "GGS12336": { name: "Chinaka Maryjane",          stream: "general" },
+        "GGS12316": { name: "Chukwuagozie Goodness",     stream: "general" },
+        "GGS12310": { name: "Chukwurah Chibuike",        stream: "general" },
+        "GGS12373": { name: "Esonwune Ngozi",            stream: "general" },
+        "GGS12354": { name: "Ewurum Stephanie",          stream: "general" },
+        "GGS12347": { name: "Francis Emmanuel",          stream: "general" },
+        "GGS12344": { name: "Ifeanyichukwu Chioma",      stream: "general" },
+        "GGS12348": { name: "Igboneme Chidera",          stream: "general" },
+        "GGS12337": { name: "Nwanya Precious",           stream: "general" },
+        "GGS12315": { name: "Obi Oluebube",              stream: "general" },
+        "GGS12376": { name: "Ofere Samuel",              stream: "general" },
+        "GGS12342": { name: "Ogonna Daniel",             stream: "general" },
+        "GGS12314": { name: "Ojukwu Esther",             stream: "general" },
+        "GGS12312": { name: "Okeke Vivian",              stream: "general" },
+        "GGS12685": { name: "Okereke Destiny",           stream: "general" },
+        "GGS12374": { name: "Okoli Chimamkpam",          stream: "general" },
+        "GGS12313": { name: "Stanley Blessing",          stream: "general" },
+        "GGS12311": { name: "Sunday Precious",           stream: "general" },
+        "GGS12375": { name: "Udeze Chidalu",             stream: "general" },
+        "GGS12352": { name: "Ugo Chidera",               stream: "general" },
+        "GGS12349": { name: "Ugo Ebube",                 stream: "general" },
+        "GGS12338": { name: "Uwaezuoke Annabel",         stream: "general" }
+    },
+
+    "JSS2": {
+        "GGS12298": { name: "Adetona Jamiu",             stream: "general" },
+        "GGS12286": { name: "Amadi Somtochukwu",         stream: "general" },
+        "GGS12304": { name: "Aniukwu Kosisochukwu",      stream: "general" },
+        "GGS12293": { name: "Anya Esther",               stream: "general" },
+        "GGS12308": { name: "Chime Favour",              stream: "general" },
+        "GGS12292": { name: "Ekere Raymond",             stream: "general" },
+        "GGS12294": { name: "Emeka Miracle",             stream: "general" },
+        "GGS12283": { name: "Emeka-Obi Promise",         stream: "general" },
+        "GGS12299": { name: "Ezeukwu Chidera",           stream: "general" },
+        "GGS12291": { name: "Ezeukwu Mmesoma",           stream: "general" },
+        "GGS12303": { name: "Hilary Pascal",             stream: "general" },
+        "GGS12295": { name: "Imoh Deborah",              stream: "general" },
+        "GGS12290": { name: "Joseph Chidubem",           stream: "general" },
+        "GGS12287": { name: "Mbah Adaeze",               stream: "general" },
+        "GGS12297": { name: "Michael Chidinma",          stream: "general" },
+        "GGS12300": { name: "Nnamah Favour",             stream: "general" },
+        "GGS12296": { name: "Nwaeze Chinaza",            stream: "general" },
+        "GGS12289": { name: "Ogbu Amanda",               stream: "general" },
+        "GGS12302": { name: "Oguchi Chidiuso",           stream: "general" },
+        "GGS12284": { name: "Okeke Praise",              stream: "general" },
+        "GGS12301": { name: "Okelue Munachi",            stream: "general" },
+        "GGS12305": { name: "Okoli Miracle",             stream: "general" },
+        "GGS12309": { name: "Okonkwo Miracle",           stream: "general" },
+        "GGS12285": { name: "Onyekachi Promise",         stream: "general" }
+    },
+
+    "SS1": {
+        // Science students
+        "GGS12398": { name: "Stanley Dominion",          stream: "science" },
+        "GGS12392": { name: "Okebaram Jennifer",         stream: "science" },
+        "GGS12394": { name: "Obiakor Francisca",         stream: "science" },
+        "GGS12150": { name: "Ilobi Chidera",             stream: "science" },
+        "GGS12402": { name: "Ezeifeka Johnkennedy",      stream: "science" },
+        "GGS12388": { name: "Eze Maryann",               stream: "science" },
+        "GGS12386": { name: "Eze Goodluck",              stream: "science" },
+        "GGS12382": { name: "Chimezie Charity",          stream: "science" },
+        // Art students
+        "GGS12149": { name: "Onwuaso Chinenye",          stream: "art" },
+        "GGS12391": { name: "Okonkwo Precious",          stream: "art" },
+        "GGS12395": { name: "Okoli Precious",            stream: "art" },
+        "GGS12397": { name: "Okeke Favour",              stream: "art" },
+        "GGS12390": { name: "Nwovu Shedrack",            stream: "art" },
+        "GGS12401": { name: "Nweke Victoria",            stream: "art" },
+        "GGS12404": { name: "Michael Miracle",           stream: "art" },
+        "GGS12389": { name: "Fedrick Ogbuchie",          stream: "art" },
+        "GGS12407": { name: "Ejike Emmanuella",          stream: "art" },
+        "GGS12383": { name: "Ebenyi Beatrice",           stream: "art" }
+    },
+
+    "SS2": {
+        // Science students
+        "GGS12714": { name: "Amaechi Ebuka",             stream: "science" },
+        "GGS12702": { name: "Aniukwu Chinemerem",        stream: "science" },
+        "GGS12703": { name: "Chikaodili Chioma",         stream: "science" },
+        "GGS12707": { name: "Ezeabayi Paschal",          stream: "science" },
+        "GGS12712": { name: "Okeke Chiemerie",           stream: "science" },
+        "GGS12713": { name: "Uche Chizoba",              stream: "science" },
+        // Art students
+        "GGS12704": { name: "Chukwuebuka David",         stream: "art" },
+        "GGS12705": { name: "Enuma Chinaemelum",         stream: "art" },
+        "GGS12706": { name: "Ewurum Norah",              stream: "art" },
+        "GGS12708": { name: "Imo Miracle",               stream: "art" },
+        "GGS12709": { name: "John Blessed",              stream: "art" },
+        "GGS12710": { name: "Nwaeze Blessing",           stream: "art" }
+    }
 };
 
 
 /* ============================================================
    ELEMENT REFERENCES
    ============================================================ */
-const classListContainer = document.getElementById("class-list");
-const subjectListContainer = document.getElementById("subject-list");
-const classSection = document.getElementById("class-selection");
-const examSection = document.getElementById("exam");
-const examClassTitle = document.getElementById("exam-class-title");
-const backButton = document.getElementById("back-button");
-const subjectSearchInput = document.getElementById("subject-search");
-const studentNameInput = document.getElementById("student-name");
-const quizScreen = document.getElementById("quiz-screen");
-const quizSubjectTitle = document.getElementById("quiz-subject-title");
-const quizTimerDisplay = document.getElementById("quiz-timer");
-const questionText = document.getElementById("question-text");
-const questionNavGrid = document.getElementById("question-nav-grid");
-const optionsContainer = document.getElementById("options-container");
-const nextQuestionButton = document.getElementById("next-question-button");
-const prevQuestionButton = document.getElementById("prev-question-button");
-const exitQuizButton = document.getElementById("exit-quiz-button");
-const modalCancelButton = document.getElementById("modal-cancel-button");
-const siteHeader = document.getElementById("site-header");
-const modalOverlay = document.getElementById("modal-overlay");
-const modalMessage = document.getElementById("modal-message");
-const modalOkButton = document.getElementById("modal-ok-button");
-const welcomeSection = document.getElementById("welcome");
-const footerEl = document.querySelector("footer");
-const themeToggle = document.getElementById("theme-toggle");
+const classListContainer    = document.getElementById("class-list");
+const subjectListContainer  = document.getElementById("subject-list");
+const classSection          = document.getElementById("class-selection");
+const examSection           = document.getElementById("exam");
+const examClassTitle        = document.getElementById("exam-class-title");
+const backButton            = document.getElementById("back-button");
+const subjectSearchInput    = document.getElementById("subject-search");
+const admissionInput        = document.getElementById("admission-input");
+const admissionFeedback     = document.getElementById("admission-feedback");
+const quizScreen            = document.getElementById("quiz-screen");
+const quizSubjectTitle      = document.getElementById("quiz-subject-title");
+const quizTimerDisplay      = document.getElementById("quiz-timer");
+const questionText          = document.getElementById("question-text");
+const questionNavGrid       = document.getElementById("question-nav-grid");
+const optionsContainer      = document.getElementById("options-container");
+const nextQuestionButton    = document.getElementById("next-question-button");
+const prevQuestionButton    = document.getElementById("prev-question-button");
+const exitQuizButton        = document.getElementById("exit-quiz-button");
+const siteHeader            = document.getElementById("site-header");
+const modalOverlay          = document.getElementById("modal-overlay");
+const modalMessage          = document.getElementById("modal-message");
+const welcomeSection        = document.getElementById("welcome");
+const footerEl              = document.querySelector("footer");
+const themeToggle           = document.getElementById("theme-toggle");
+const connectionStatus      = document.getElementById("connection-status");
 
 
 /* ============================================================
    QUIZ STATE
    ============================================================ */
-let currentQuizQuestions = [];
-let currentQuestionIndex = 0;
-let studentAnswers = [];
-let timeRemaining = 0;
-let timerInterval = null;
-let currentSubjectName = "";
-let currentClassName = "";
-let isNavigating = false;
-let quizInProgress = false;
-let quizStartTime = null;
-let warningsFired = { fiveMin: false, oneMin: false };
-let currentSubjectInfo = null; // stores the full subject object for scoring
+let currentQuizQuestions  = [];
+let currentQuestionIndex  = 0;
+let studentAnswers        = [];
+let timeRemaining         = 0;
+let timerInterval         = null;
+let currentSubjectName    = "";
+let currentClassName      = "";
+let isNavigating          = false;
+let quizInProgress        = false;
+let quizStartTime         = null;
+let warningsFired         = { fiveMin: false, oneMin: false };
+let currentSubjectInfo    = null;
+let currentSelectedClass  = "";
+let currentStudentName    = "";
+let currentAdmissionNumber = "";
+let tabSwitchCount        = 0;
 
 
 /* ============================================================
    UTILITY: shuffleArray
-   Fisher-Yates shuffle — returns a new randomly ordered copy.
-   Never modifies the original array.
    ============================================================ */
 function shuffleArray(array) {
     const shuffled = array.slice();
@@ -413,14 +524,9 @@ function shuffleArray(array) {
 }
 
 
-/*
-    UTILITY: showModal
-    -----------------------
-    Shows the modal with a message and an OK button.
-    If onCancelCallback is provided, a Cancel button also appears —
-    this turns the modal into a Yes/Cancel confirmation instead of
-    a plain one-button notice.
-*/
+/* ============================================================
+   UTILITY: showModal
+   ============================================================ */
 function showModal(message, onOkCallback, onCancelCallback, onOkLabel, onCancelLabel) {
     modalMessage.textContent = message;
 
@@ -431,9 +537,7 @@ function showModal(message, onOkCallback, onCancelCallback, onOkLabel, onCancelL
 
     modalOverlay.style.display = "flex";
 
-    // Always grab whichever OK/Cancel button currently exists in the DOM right now —
-    // never rely on an old reference that may have already been replaced
-    const currentOkButton = document.getElementById("modal-ok-button");
+    const currentOkButton     = document.getElementById("modal-ok-button");
     const currentCancelButton = document.getElementById("modal-cancel-button");
 
     const freshOkButton = currentOkButton.cloneNode(true);
@@ -444,8 +548,7 @@ function showModal(message, onOkCallback, onCancelCallback, onOkLabel, onCancelL
 
     if (typeof onCancelCallback === "function") {
         freshCancelButton.style.display = "inline-block";
-        // Use custom labels if provided, otherwise default
-        freshOkButton.textContent = onOkLabel || "Yes, Submit";
+        freshOkButton.textContent     = onOkLabel    || "Yes";
         freshCancelButton.textContent = onCancelLabel || "Go Back";
     } else {
         freshCancelButton.style.display = "none";
@@ -466,19 +569,15 @@ function showModal(message, onOkCallback, onCancelCallback, onOkLabel, onCancelL
 
 /* ============================================================
    UTILITY: switchSection
-   Fades and slides between two page sections.
-   Also controls welcome text and footer visibility.
    ============================================================ */
 function switchSection(sectionToHide, sectionToShow) {
-
-    // Show welcome + footer only on the homepage
     if (sectionToHide === classSection) {
         welcomeSection.style.display = "none";
-        footerEl.style.display = "none";
+        footerEl.style.display       = "none";
     }
     if (sectionToShow === classSection) {
         welcomeSection.style.display = "block";
-        footerEl.style.display = "block";
+        footerEl.style.display       = "block";
     }
 
     sectionToHide.classList.add("fade-out");
@@ -496,23 +595,34 @@ function switchSection(sectionToHide, sectionToShow) {
     }, 400);
 }
 
-/*
-    UTILITY: getSubmissionKey
-    -----------------------------
-    Builds a consistent identifier for a student's exam attempt,
-    so the same person+class+subject combination can be detected
-    even if they type their name slightly differently next time.
-*/
-function getSubmissionKey(studentName, className, subjectName) {
-    const cleanName = studentName.trim().toLowerCase();
-    return cleanName + "|" + className + "|" + subjectName;
+
+/* ============================================================
+   UTILITY: validateAdmissionNumber
+   Returns student name if valid, null if not.
+   ============================================================ */
+function validateAdmissionNumber(admissionNumber, className) {
+    const upper = admissionNumber.trim().toUpperCase();
+
+    if (studentRegistry["MASTER"][upper]) {
+        return studentRegistry["MASTER"][upper]; // returns { name, stream }
+    }
+
+    if (studentRegistry[className] && studentRegistry[className][upper]) {
+        return studentRegistry[className][upper]; // returns { name, stream }
+    }
+
+    return null;
 }
-/*
-    UTILITY: getCompletedExams
-    -------------------------------
-    Reads the list of already-completed exam fingerprints
-    from localStorage. Returns an empty array if none exist yet.
-*/
+
+
+/* ============================================================
+   UTILITY: Completed exams tracking
+   Uses admission number as the unique identifier.
+   ============================================================ */
+function getSubmissionKey(admissionNumber, className, subjectName) {
+    return admissionNumber.trim().toUpperCase() + "|" + className + "|" + subjectName;
+}
+
 function getCompletedExams() {
     try {
         const saved = localStorage.getItem("completedExams");
@@ -522,124 +632,75 @@ function getCompletedExams() {
     }
 }
 
-/*
-    UTILITY: markExamAsCompleted
-    ---------------------------------
-    Adds a new fingerprint to the completed list and saves it.
-*/
-function markExamAsCompleted(studentName, className, subjectName) {
-    const key = getSubmissionKey(studentName, className, subjectName);
+function markExamAsCompleted(admissionNumber, className, subjectName) {
+    const key       = getSubmissionKey(admissionNumber, className, subjectName);
     const completed = getCompletedExams();
-
     if (!completed.includes(key)) {
         completed.push(key);
         localStorage.setItem("completedExams", JSON.stringify(completed));
     }
 }
 
-/*
-    UTILITY: hasAlreadyCompleted
-    ---------------------------------
-    Checks if this exact student+class+subject combination
-    has already finished an exam on this computer.
-*/
-function hasAlreadyCompleted(studentName, className, subjectName) {
-    const key = getSubmissionKey(studentName, className, subjectName);
-    const completed = getCompletedExams();
-    return completed.includes(key);
+function hasAlreadyCompleted(admissionNumber, className, subjectName) {
+    const key = getSubmissionKey(admissionNumber, className, subjectName);
+    return getCompletedExams().includes(key);
 }
 
-/*
-    UTILITY FUNCTION: updateProgressBar
-    ------------------------------
-    Updates the progress bar fill width based on how far
-    through the quiz the student currently is.
-    Called every time a question is rendered.
-*/
-function updateProgressBar() {
-    const answeredCount = studentAnswers.filter(function (answer) {
-        return answer !== null;
-    }).length;
-
-    const progress = (answeredCount / currentQuizQuestions.length) * 100;
-    const fill = document.getElementById("progress-bar-fill");
-    fill.style.width = progress + "%";
-}
 
 /* ============================================================
-   OFFLINE / CONNECTION-LOSS PROTECTION
+   UTILITY: updateProgressBar
+   Fills based on answered questions, not current position.
    ============================================================ */
-
-const connectionStatus = document.getElementById("connection-status");
-
-/*
-    FUNCTION: updateConnectionUI
-    --------------------------------
-    Shows or hides the offline indicator in the header.
-*/
-function updateConnectionUI() {
-    if (navigator.onLine) {
-        connectionStatus.style.display = "none";
-    } else {
-        connectionStatus.style.display = "flex";
-    }
+function updateProgressBar() {
+    const answeredCount = studentAnswers.filter(function (a) { return a !== null; }).length;
+    const progress      = (answeredCount / currentQuizQuestions.length) * 100;
+    document.getElementById("progress-bar-fill").style.width = progress + "%";
 }
 
-// Run once immediately on page load, then update on every change
+
+/* ============================================================
+   UTILITY: lock / unlock subject cards
+   ============================================================ */
+function lockAllSubjectCards(cards) {
+    for (let i = 0; i < cards.length; i++) { cards[i].classList.add("locked"); }
+}
+
+function unlockAllSubjectCards(cards) {
+    for (let i = 0; i < cards.length; i++) { cards[i].classList.remove("locked"); }
+}
+
+
+/* ============================================================
+   OFFLINE PROTECTION
+   ============================================================ */
+function updateConnectionUI() {
+    connectionStatus.style.display = navigator.onLine ? "none" : "flex";
+}
+
 updateConnectionUI();
-window.addEventListener("online", function () {
-    updateConnectionUI();
-    retryPendingResults(); // automatically retry any saved results
-});
+window.addEventListener("online",  function () { updateConnectionUI(); retryPendingResults(); });
 window.addEventListener("offline", updateConnectionUI);
 
 
-/*
-    FUNCTION: savePendingResult
-    --------------------------------
-    Called when submission fails because there's no internet.
-    Saves the full result to localStorage so it can be retried later.
-*/
-function savePendingResult(studentName, className, subjectName, score, tabSwitches, startText, durationText) {
+function savePendingResult(studentName, admissionNumber, className, subjectName, score, tabSwitches, startText, durationText) {
     let pending = [];
     try {
         const saved = localStorage.getItem("pendingResults");
         pending = saved ? JSON.parse(saved) : [];
-    } catch (e) {
-        pending = [];
-    }
+    } catch (e) { pending = []; }
 
-    pending.push({
-        studentName,
-        className,
-        subjectName,
-        score,
-        tabSwitches,
-        startText,
-        durationText,
-        savedAt: new Date().toISOString()
-    });
-
+    pending.push({ studentName, admissionNumber, className, subjectName, score, tabSwitches, startText, durationText, savedAt: new Date().toISOString() });
     localStorage.setItem("pendingResults", JSON.stringify(pending));
     console.log("Result saved locally (no internet). Will retry when connection returns.");
 }
 
 
-/*
-    FUNCTION: retryPendingResults
-    ------------------------------------
-    Called automatically when the browser goes back online.
-    Reads any saved results and resubmits them silently.
-    Clears the list if all succeed.
-*/
 function retryPendingResults() {
     let pending = [];
     try {
         const saved = localStorage.getItem("pendingResults");
         pending = saved ? JSON.parse(saved) : [];
-    } catch (e) {
-        return;
-    }
+    } catch (e) { return; }
 
     if (pending.length === 0) return;
 
@@ -648,32 +709,26 @@ function retryPendingResults() {
     const formBaseURL = "https://docs.google.com/forms/d/e/1FAIpQLSeaIiCn-S-zr56SkrEkLxkAVGESvzu9XPnp_kgGw90vFkastg/formResponse";
 
     for (let i = 0; i < pending.length; i++) {
-        const r = pending[i];
-
-        const submissionURL = formBaseURL +
-            "?entry.989513760="  + encodeURIComponent(r.studentName) +
-            "&entry.572955960="  + encodeURIComponent(r.className) +
-            "&entry.649845269="  + encodeURIComponent(r.subjectName) +
-            "&entry.1080095985=" + encodeURIComponent(r.score) +
-            "&entry.671914243="  + encodeURIComponent(r.tabSwitches) +
-            "&entry.216522547="  + encodeURIComponent(r.startText) +
-            "&entry.1781815021=" + encodeURIComponent(r.durationText) +
-            "&submit=Submit";
-
+        const r   = pending[i];
         const img = new Image();
-        img.src = submissionURL;
-
+        img.src = formBaseURL +
+            "?entry.989513760="  + encodeURIComponent(r.studentName) +
+            "&entry.572955960="  + encodeURIComponent(r.admissionNumber) +
+            "&entry.649845269="  + encodeURIComponent(r.className) +
+            "&entry.1080095985=" + encodeURIComponent(r.subjectName) +
+            "&entry.671914243="  + encodeURIComponent(r.score) +
+            "&entry.216522547="  + encodeURIComponent(r.tabSwitches) +
+            "&entry.1781815021=" + encodeURIComponent(r.startText) +
+            "&submit=Submit";
         console.log("Retried result for:", r.studentName, r.subjectName);
     }
 
-    // Clear the pending list after retrying
     localStorage.removeItem("pendingResults");
 }
 
 
 /* ============================================================
    SCROLL-AWARE HEADER
-   Adds a frosted glass effect once the user scrolls down.
    ============================================================ */
 window.addEventListener("scroll", function () {
     if (window.scrollY > 50) {
@@ -685,23 +740,37 @@ window.addEventListener("scroll", function () {
 
 
 /* ============================================================
+   THEME TOGGLE
+   ============================================================ */
+function initTheme() {
+    const saved = localStorage.getItem("theme");
+    if (saved === "light") {
+        document.body.classList.add("light-mode");
+        themeToggle.textContent = "☀️";
+    } else {
+        document.body.classList.remove("light-mode");
+        themeToggle.textContent = "🌙";
+    }
+}
+
+themeToggle.addEventListener("click", function () {
+    const isLight = document.body.classList.toggle("light-mode");
+    themeToggle.textContent = isLight ? "☀️" : "🌙";
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+});
+
+
+/* ============================================================
    FUNCTION: displayClassCards
-   Builds one clickable card per class from examData.
    ============================================================ */
 function displayClassCards() {
     const classNames = Object.keys(examData);
-
     for (let i = 0; i < classNames.length; i++) {
         const className = classNames[i];
-
-        const card = document.createElement("div");
-        card.className = "class-card";
+        const card      = document.createElement("div");
+        card.className  = "class-card";
         card.textContent = className;
-
-        card.addEventListener("click", function () {
-            showSubjects(className);
-        });
-
+        card.addEventListener("click", function () { showSubjects(className); });
         classListContainer.appendChild(card);
     }
 }
@@ -709,13 +778,14 @@ function displayClassCards() {
 
 /* ============================================================
    FUNCTION: showSubjects
-   Shows subject cards for the selected class.
-   Resets name + search fields for shared computers.
    ============================================================ */
 function showSubjects(className) {
-    subjectListContainer.innerHTML = "";
-    subjectSearchInput.value = "";
-    studentNameInput.value = "";
+    currentSelectedClass = className;
+    subjectListContainer.innerHTML  = "";
+    subjectSearchInput.value        = "";
+    admissionInput.value            = "";
+    admissionFeedback.textContent   = "";
+    admissionFeedback.className     = "";
 
     examClassTitle.textContent = "Subjects for " + className;
 
@@ -723,21 +793,30 @@ function showSubjects(className) {
 
     for (let i = 0; i < subjects.length; i++) {
         const subjectInfo = subjects[i];
-
         const subjectCard = document.createElement("div");
-        subjectCard.className = "subject-card locked";
+        subjectCard.className  = "subject-card locked";
         subjectCard.textContent = subjectInfo.subject;
+        // Store which stream this subject belongs to (for filtering later)
+        const streamRule = subjectStreamMap[className]
+            ? (subjectStreamMap[className][subjectInfo.subject] || "all")
+            : "all";
+        subjectCard.dataset.stream = streamRule;
 
         subjectCard.addEventListener("click", function () {
-    if (studentNameInput.value.trim() === "") {
-        showModal("Please enter your full name before starting an exam.");
+
+    const entered     = admissionInput.value.trim();
+    const studentData = validateAdmissionNumber(entered, className);
+
+    // Must have a valid admission number
+    if (!studentData) {
+        showModal("Please enter a valid admission number before starting an exam.");
         return;
     }
 
-    // NEW: block if this student already completed this exact subject
-    if (subjectInfo.questions && hasAlreadyCompleted(studentNameInput.value, className, subjectInfo.subject)) {
+    // Block duplicate attempts
+    if (subjectInfo.questions && hasAlreadyCompleted(entered, className, subjectInfo.subject)) {
         showModal(
-            studentNameInput.value.trim() + " has already completed the " +
+            studentData.name + " has already completed the " +
             subjectInfo.subject + " exam for " + className +
             ". If this is a mistake, please contact your exam supervisor."
         );
@@ -745,23 +824,20 @@ function showSubjects(className) {
     }
 
     if (subjectInfo.questions) {
-    const confirmedName = studentNameInput.value.trim();
-
+        // Show confirmation before starting
         showModal(
-        "Please confirm your details before starting:\n\n" +
-        "Name: " + confirmedName + "\n" +
-        "Class: " + className + "\n" +
-        "Subject: " + subjectInfo.subject +
-        "\n\nIs this correct?",
-        function () {
-            // Confirmed — actually start the quiz now
-            startQuiz(subjectInfo, className);
-        },
-        function () {
-            // Cancelled — do nothing, student stays on the subject screen
-        },
-        "Yes, Start Exam",
-        "Go Back, Check Name"
+            "Please confirm your details before starting:\n\n" +
+            "Name: "          + studentData.name      + "\n" +
+            "Admission No: "  + entered.toUpperCase() + "\n" +
+            "Class: "         + className             + "\n" +
+            "Subject: "       + subjectInfo.subject   +
+            "\n\nIs this correct?",
+            function () {
+                startQuiz(subjectInfo, className, studentData.name, entered.toUpperCase());
+            },
+            function () {},
+            "Yes, Start Exam",
+            "Go Back, Check Number"
         );
     } else {
         window.open(subjectInfo.link, "_blank");
@@ -772,6 +848,7 @@ function showSubjects(className) {
     }
 
     switchSection(classSection, examSection);
+    savePageState();
 }
 
 
@@ -782,45 +859,68 @@ backButton.addEventListener("click", function () {
     switchSection(examSection, classSection);
 });
 
-/*
-    ANTI-CHEATING: Disable right-click and copy during the quiz
-    -----------------------------------------------------------
-    Only applies inside the quiz screen — the rest of the site
-    behaves completely normally.
-*/
-quizScreen.addEventListener("contextmenu", function (event) {
-    event.preventDefault(); // blocks the right-click menu
-});
-
-quizScreen.addEventListener("copy", function (event) {
-    event.preventDefault(); // blocks copying selected text
-});
 
 /* ============================================================
-   EVENT LISTENER: Name input
-   Unlocks subject cards once a name is typed.
+   EVENT LISTENER: Admission number input
+   Validates in real time, shows student name, locks/unlocks cards.
    ============================================================ */
-studentNameInput.addEventListener("input", function () {
+admissionInput.addEventListener("input", function () {
     const allSubjectCards = subjectListContainer.querySelectorAll(".subject-card");
-    const hasName = studentNameInput.value.trim() !== "";
+    const entered         = admissionInput.value.trim();
 
-    for (let i = 0; i < allSubjectCards.length; i++) {
-        if (hasName) {
-            allSubjectCards[i].classList.remove("locked");
-        } else {
-            allSubjectCards[i].classList.add("locked");
+    if (entered === "") {
+        admissionFeedback.textContent = "";
+        admissionFeedback.className   = "";
+        // Hide all cards and re-show them (reset any stream filtering)
+        for (let i = 0; i < allSubjectCards.length; i++) {
+            allSubjectCards[i].style.display = "block";
         }
+        lockAllSubjectCards(allSubjectCards);
+        return;
+    }
+
+    const studentData = validateAdmissionNumber(entered, currentSelectedClass);
+
+    if (studentData) {
+        admissionFeedback.textContent = "✓ Welcome, " + studentData.name +
+            (studentData.stream !== "general" && studentData.stream !== "all"
+                ? " (" + studentData.stream.charAt(0).toUpperCase() + studentData.stream.slice(1) + " student)"
+                : "");
+        admissionFeedback.className = "valid";
+
+        // Show/hide cards based on student's stream
+        for (let i = 0; i < allSubjectCards.length; i++) {
+            const cardStream = allSubjectCards[i].dataset.stream || "all";
+
+            if (
+                studentData.stream === "all" ||     // admin/master key sees everything
+                studentData.stream === "general" ||  // JSS sees everything
+                cardStream === "all" ||              // subject is for everyone
+                cardStream === studentData.stream    // subject matches student's stream
+            ) {
+                allSubjectCards[i].style.display = "block";
+                allSubjectCards[i].classList.remove("locked");
+            } else {
+                // Hide subjects that don't belong to this student's stream
+                allSubjectCards[i].style.display = "none";
+            }
+        }
+    } else {
+        admissionFeedback.textContent = "✗ Admission number not found for this class.";
+        admissionFeedback.className   = "invalid";
+        for (let i = 0; i < allSubjectCards.length; i++) {
+            allSubjectCards[i].style.display = "block"; // show all but locked
+        }
+        lockAllSubjectCards(allSubjectCards);
     }
 });
-
 
 /* ============================================================
    EVENT LISTENER: Subject search/filter
    ============================================================ */
 subjectSearchInput.addEventListener("input", function () {
-    const searchTerm = subjectSearchInput.value.toLowerCase();
+    const searchTerm      = subjectSearchInput.value.toLowerCase();
     const allSubjectCards = subjectListContainer.querySelectorAll(".subject-card");
-
     for (let i = 0; i < allSubjectCards.length; i++) {
         const cardText = allSubjectCards[i].textContent.toLowerCase();
         allSubjectCards[i].style.display = cardText.includes(searchTerm) ? "block" : "none";
@@ -829,85 +929,17 @@ subjectSearchInput.addEventListener("input", function () {
 
 
 /* ============================================================
-   FUNCTION: startQuiz
-   Shuffles questions and options, sets up state,
-   then shows the first question and starts the timer.
+   ANTI-CHEATING: right-click and copy blocked during quiz
    ============================================================ */
-function startQuiz(subjectInfo, className) {
-    quizInProgress = true;
-    quizStartTime = new Date();
-    warningsFired = { fiveMin: false, oneMin: false };
-    currentClassName = className;
-    currentSubjectName = subjectInfo.subject;
-    currentSubjectInfo = subjectInfo;
-    currentQuestionIndex = 0;
-    isNavigating = false;
-    tabSwitchCount = 0;
+quizScreen.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+quizScreen.addEventListener("copy",        function (e) { e.preventDefault(); });
 
-    const letters = ["A", "B", "C", "D"];
 
-    // Shuffle question order, and shuffle each question's options
-    // while tracking which answer is correct after shuffling
-currentQuizQuestions = shuffleArray(subjectInfo.questions).map(function (q) {
-
-    // Fill-in-the-gap questions have no options to shuffle — return as-is
-    if (q.type === "fill") {
-        return {
-            type: "fill",
-            question: q.question,
-            correctAnswer: q.correctAnswer
-        };
-    }
-
-    // MCQ — shuffle the options while tracking the correct answer
-    const originalOptions = q.options.map(function (optionText, idx) {
-        return {
-            text: optionText,
-            wasCorrect: letters[idx] === q.correctAnswer
-        };
-    });
-
-    const shuffledOptions = shuffleArray(originalOptions);
-
-    let newCorrectLetter = "A";
-    for (let i = 0; i < shuffledOptions.length; i++) {
-        if (shuffledOptions[i].wasCorrect) {
-            newCorrectLetter = letters[i];
-            break;
-        }
-    }
-
-    return {
-        type: "mcq",
-        question: q.question,
-        options: shuffledOptions.map(function (o) { return o.text; }),
-        correctAnswer: newCorrectLetter
-    };
-});
-
-    studentAnswers = new Array(currentQuizQuestions.length).fill(null);
-    timeRemaining = subjectInfo.timeLimit;
-    quizSubjectTitle.textContent = subjectInfo.subject;
-
-    switchSection(examSection, quizScreen);
-    buildQuestionNavPanel();
-    renderQuestion();
-    startTimer();
-}
-/*
-    ANTI-CHEATING: Tab/window switch detection
-    ----------------------------------------------
-    Fires whenever the browser tab is hidden or shown again
-    (switching tabs, minimizing, switching apps). We only care
-    about this WHILE a quiz is actively in progress.
-*/
-let tabSwitchCount = 0;
-
+/* ============================================================
+   ANTI-CHEATING: tab switch detection
+   ============================================================ */
 document.addEventListener("visibilitychange", function () {
-
-    if (!quizInProgress) {
-        return;
-    }
+    if (!quizInProgress) return;
 
     if (document.hidden) {
         tabSwitchCount++;
@@ -920,28 +952,76 @@ document.addEventListener("visibilitychange", function () {
     }
 });
 
+
+/* ============================================================
+   FUNCTION: startQuiz
+   ============================================================ */
+function startQuiz(subjectInfo, className, studentName, admissionNumber) {
+    quizInProgress        = true;
+    quizStartTime         = new Date();
+    warningsFired         = { fiveMin: false, oneMin: false };
+    currentClassName      = className;
+    currentSubjectName    = subjectInfo.subject;
+    currentSubjectInfo    = subjectInfo;
+    currentQuestionIndex  = 0;
+    isNavigating          = false;
+    tabSwitchCount        = 0;
+    currentStudentName    = studentName;
+    currentAdmissionNumber = admissionNumber;
+
+    const letters = ["A", "B", "C", "D"];
+
+    currentQuizQuestions = shuffleArray(subjectInfo.questions).map(function (q) {
+
+        if (q.type === "fill") {
+            return { type: "fill", question: q.question, correctAnswer: q.correctAnswer };
+        }
+
+        const originalOptions = q.options.map(function (optionText, idx) {
+            return { text: optionText, wasCorrect: letters[idx] === q.correctAnswer };
+        });
+
+        const shuffledOptions = shuffleArray(originalOptions);
+
+        let newCorrectLetter = "A";
+        for (let i = 0; i < shuffledOptions.length; i++) {
+            if (shuffledOptions[i].wasCorrect) { newCorrectLetter = letters[i]; break; }
+        }
+
+        return {
+            type:          "mcq",
+            question:      q.question,
+            options:       shuffledOptions.map(function (o) { return o.text; }),
+            correctAnswer: newCorrectLetter
+        };
+    });
+
+    studentAnswers             = new Array(currentQuizQuestions.length).fill(null);
+    timeRemaining              = subjectInfo.timeLimit;
+    quizSubjectTitle.textContent = subjectInfo.subject;
+
+    switchSection(examSection, quizScreen);
+    buildQuestionNavPanel();
+    renderQuestion();
+    startTimer();
+}
+
+
 /* ============================================================
    FUNCTION: buildQuestionNavPanel
-   Builds the numbered button grid once when a quiz starts.
-   Only needs to run once — updateQuestionNavPanel() handles
-   the visual state updates as the student moves around.
    ============================================================ */
 function buildQuestionNavPanel() {
     questionNavGrid.innerHTML = "";
-
     for (let i = 0; i < currentQuizQuestions.length; i++) {
-        const btn = document.createElement("button");
-        btn.className = "question-nav-btn";
+        const btn       = document.createElement("button");
+        btn.className   = "question-nav-btn";
         btn.textContent = i + 1;
-
-        // Clicking jumps directly to that question
         btn.addEventListener("click", function () {
             if (isNavigating) return;
-            isNavigating = true;
+            isNavigating         = true;
             currentQuestionIndex = i;
             renderQuestion();
         });
-
         questionNavGrid.appendChild(btn);
     }
 }
@@ -949,61 +1029,46 @@ function buildQuestionNavPanel() {
 
 /* ============================================================
    FUNCTION: updateQuestionNavPanel
-   Called every time a question is rendered or an answer changes.
-   Updates the answered/current visual states on each button.
    ============================================================ */
 function updateQuestionNavPanel() {
     const allNavBtns = questionNavGrid.querySelectorAll(".question-nav-btn");
-
     for (let i = 0; i < allNavBtns.length; i++) {
         allNavBtns[i].classList.remove("answered", "current");
-
-        if (i === currentQuestionIndex) {
-            allNavBtns[i].classList.add("current");
-        }
-
-        if (studentAnswers[i] !== null) {
-            allNavBtns[i].classList.add("answered");
-        }
+        if (i === currentQuestionIndex)    allNavBtns[i].classList.add("current");
+        if (studentAnswers[i] !== null)    allNavBtns[i].classList.add("answered");
     }
 }
 
 
 /* ============================================================
    FUNCTION: renderQuestion
-   Handles both MCQ (option buttons) and fill-in-the-gap
-   (text input) question types.
    ============================================================ */
 function renderQuestion() {
     const question = currentQuizQuestions[currentQuestionIndex];
-    const letters = ["A", "B", "C", "D"];
+    const letters  = ["A", "B", "C", "D"];
 
     questionText.textContent =
         "Question " + (currentQuestionIndex + 1) +
-        " of " + currentQuizQuestions.length +
-        ": " + question.question;
+        " of "      + currentQuizQuestions.length +
+        ": "        + question.question;
 
     optionsContainer.innerHTML = "";
 
-    // Trigger slide-in animation on the question box
     const container = document.getElementById("question-container");
     container.classList.remove("question-enter");
     void container.offsetWidth;
     container.classList.add("question-enter");
 
     if (question.type === "fill") {
-        // ---- FILL IN THE GAP ----
-        const input = document.createElement("input");
-        input.type = "text";
-        input.id = "fill-answer-input";
+        const input       = document.createElement("input");
+        input.type        = "text";
+        input.id          = "fill-answer-input";
         input.placeholder = "Type your answer here...";
 
-        // Restore previous answer if student already typed something
         if (studentAnswers[currentQuestionIndex] !== null) {
             input.value = studentAnswers[currentQuestionIndex];
         }
 
-        // Save answer every time the student types
         input.addEventListener("input", function () {
             const typed = input.value.trim();
             studentAnswers[currentQuestionIndex] = typed === "" ? null : typed;
@@ -1013,15 +1078,12 @@ function renderQuestion() {
         });
 
         optionsContainer.appendChild(input);
-
-        // Auto-focus the input so student can type immediately
         setTimeout(function () { input.focus(); }, 50);
 
     } else {
-        // ---- MULTIPLE CHOICE ----
         for (let i = 0; i < question.options.length; i++) {
-            const optionButton = document.createElement("button");
-            optionButton.className = "option-button option-enter";
+            const optionButton       = document.createElement("button");
+            optionButton.className   = "option-button option-enter";
             optionButton.style.animationDelay = (i * 0.06) + "s";
             optionButton.textContent = letters[i] + ". " + question.options[i];
 
@@ -1032,12 +1094,10 @@ function renderQuestion() {
 
             optionButton.addEventListener("click", function () {
                 studentAnswers[currentQuestionIndex] = letters[i];
-
                 const allOptions = optionsContainer.querySelectorAll(".option-button");
                 for (let j = 0; j < allOptions.length; j++) {
                     allOptions[j].classList.remove("selected", "option-enter");
                 }
-
                 optionButton.classList.add("selected");
                 updateQuestionNavPanel();
                 updateProgressBar();
@@ -1049,10 +1109,10 @@ function renderQuestion() {
     }
 
     const isFirst = currentQuestionIndex === 0;
-    const isLast = currentQuestionIndex === currentQuizQuestions.length - 1;
+    const isLast  = currentQuestionIndex === currentQuizQuestions.length - 1;
 
     prevQuestionButton.style.display = isFirst ? "none" : "inline-block";
-    nextQuestionButton.textContent = isLast ? "Submit" : "Next";
+    nextQuestionButton.textContent   = isLast  ? "Submit" : "Next";
 
     saveQuizProgress();
     updateQuestionNavPanel();
@@ -1063,18 +1123,15 @@ function renderQuestion() {
 
 /* ============================================================
    EVENT LISTENER: Next / Submit button
-   isNavigating guard prevents double-click question skipping.
    ============================================================ */
 nextQuestionButton.addEventListener("click", function () {
     if (isNavigating) return;
     isNavigating = true;
 
     if (currentQuestionIndex < currentQuizQuestions.length - 1) {
-        // Not the last question — just move forward normally
         currentQuestionIndex++;
         renderQuestion();
     } else {
-        // Last question — check for unanswered before submitting
         checkUnansweredAndSubmit();
     }
 });
@@ -1086,17 +1143,14 @@ nextQuestionButton.addEventListener("click", function () {
 prevQuestionButton.addEventListener("click", function () {
     if (isNavigating || currentQuestionIndex === 0) return;
     isNavigating = true;
-
     currentQuestionIndex--;
     renderQuestion();
 });
 
-/*
-    EVENT LISTENER: Exit Exam button
-    -------------------------------------
-    Asks for confirmation before actually leaving the quiz,
-    so an accidental click doesn't wipe a student's progress.
-*/
+
+/* ============================================================
+   EVENT LISTENER: Exit Exam button
+   ============================================================ */
 exitQuizButton.addEventListener("click", function () {
     showModal(
         "Are you sure you want to exit this exam? Your progress will be lost.",
@@ -1106,19 +1160,15 @@ exitQuizButton.addEventListener("click", function () {
             try { localStorage.removeItem("examProgress"); } catch (e) {}
             resetPortal();
         },
-        function () {
-            // do nothing
-        },
-        "Yes, Exit",  // OK button label
-        "Cancel"      // Cancel button label
+        function () {},
+        "Yes, Exit",
+        "Cancel"
     );
 });
 
 
 /* ============================================================
    FUNCTION: startTimer
-   Counts down once per second. Auto-submits when time hits zero.
-   Saves progress every 5 seconds.
    ============================================================ */
 function startTimer() {
     updateTimerDisplay();
@@ -1129,18 +1179,15 @@ function startTimer() {
         timeRemaining--;
         updateTimerDisplay();
 
-        // Check warnings — fire if time has passed the threshold and not shown yet
-        if (timeRemaining <= 45 && !warningsFired.fiveMin) {
+        if (timeRemaining <= 300 && !warningsFired.fiveMin) {
             warningsFired.fiveMin = true;
             showModal("⏰ 5 minutes remaining! Please review your answers and submit soon.");
-        } else if (timeRemaining <= 20 && !warningsFired.oneMin) {
+        } else if (timeRemaining <= 60 && !warningsFired.oneMin) {
             warningsFired.oneMin = true;
             showModal("⚠️ Only 1 minute left! Submit your exam now.");
         }
 
-        if (timeRemaining % 5 === 0) {
-            saveQuizProgress();
-        }
+        if (timeRemaining % 5 === 0) { saveQuizProgress(); }
 
         if (timeRemaining <= 0) {
             clearInterval(timerInterval);
@@ -1152,7 +1199,6 @@ function startTimer() {
 
 /* ============================================================
    FUNCTION: updateTimerDisplay
-   Converts seconds to MM:SS. Turns red under 60 seconds.
    ============================================================ */
 function updateTimerDisplay() {
     const minutes = Math.floor(timeRemaining / 60);
@@ -1163,10 +1209,10 @@ function updateTimerDisplay() {
         String(seconds).padStart(2, "0");
 
     if (timeRemaining <= 60) {
-        quizTimerDisplay.style.color = "#ff4444";
+        quizTimerDisplay.style.color       = "#ff4444";
         quizTimerDisplay.style.borderColor = "#ff4444";
     } else {
-        quizTimerDisplay.style.color = "";
+        quizTimerDisplay.style.color       = "";
         quizTimerDisplay.style.borderColor = "";
     }
 }
@@ -1174,138 +1220,85 @@ function updateTimerDisplay() {
 
 /* ============================================================
    FUNCTION: saveQuizProgress
-   Saves all quiz state to localStorage so it survives
-   a refresh, crash, or power cut.
    ============================================================ */
 function saveQuizProgress() {
     const progressData = {
-        subjectName: currentSubjectName,
-        className: currentClassName,
-        studentName: studentNameInput.value,
-        questions: currentQuizQuestions,
+        subjectName:      currentSubjectName,
+        className:        currentClassName,
+        studentName:      currentStudentName,
+        admissionNumber:  currentAdmissionNumber,
+        questions:        currentQuizQuestions,
         currentQuestionIndex: currentQuestionIndex,
-        studentAnswers: studentAnswers,
-        timeRemaining: timeRemaining,
-        startTime: quizStartTime ? quizStartTime.toISOString() : null
+        studentAnswers:   studentAnswers,
+        timeRemaining:    timeRemaining,
+        startTime:        quizStartTime ? quizStartTime.toISOString() : null
     };
     localStorage.setItem("examProgress", JSON.stringify(progressData));
 }
 
-/* ============================================================
-   THEME TOGGLE
-   Switches between dark (default) and light mode.
-   Remembers preference in localStorage across visits.
-   ============================================================ */
-function initTheme() {
-    const saved = localStorage.getItem("theme");
-
-    if (saved === "light") {
-        document.body.classList.add("light-mode");
-        themeToggle.textContent = "☀️";
-    } else {
-        document.body.classList.remove("light-mode");
-        themeToggle.textContent = "🌙";
-    }
-}
-
-themeToggle.addEventListener("click", function () {
-    const isLight = document.body.classList.toggle("light-mode");
-
-    if (isLight) {
-        themeToggle.textContent = "☀️";
-        localStorage.setItem("theme", "light");
-    } else {
-        themeToggle.textContent = "🌙";
-        localStorage.setItem("theme", "dark");
-    }
-});
 
 /* ============================================================
    FUNCTION: checkForSavedQuiz
-   Runs on page load. If an unfinished quiz exists in
-   localStorage, resumes it instead of showing the homepage.
    ============================================================ */
 function checkForSavedQuiz() {
     let savedData;
-    try {
-        savedData = localStorage.getItem("examProgress");
-    } catch (e) {
-        return;
-    }
-
+    try { savedData = localStorage.getItem("examProgress"); } catch (e) { return; }
     if (!savedData) return;
 
     const progress = JSON.parse(savedData);
 
-    currentQuizQuestions = progress.questions;
-    currentQuestionIndex = progress.currentQuestionIndex;
-    studentAnswers = progress.studentAnswers;
-    timeRemaining = progress.timeRemaining;
-    currentSubjectName = progress.subjectName;
-    currentClassName = progress.className;
-    quizStartTime = progress.startTime ? new Date(progress.startTime) : new Date(); // NEW
+    currentQuizQuestions   = progress.questions;
+    currentQuestionIndex   = progress.currentQuestionIndex;
+    studentAnswers         = progress.studentAnswers;
+    timeRemaining          = progress.timeRemaining;
+    currentSubjectName     = progress.subjectName;
+    currentClassName       = progress.className;
+    currentStudentName     = progress.studentName    || "";
+    currentAdmissionNumber = progress.admissionNumber || "";
+    quizStartTime          = progress.startTime ? new Date(progress.startTime) : new Date();
 
-    studentNameInput.value = progress.studentName;
     quizSubjectTitle.textContent = progress.subjectName;
 
-    // Hide welcome + footer since we're jumping straight to the quiz
     welcomeSection.style.display = "none";
-    footerEl.style.display = "none";
+    footerEl.style.display       = "none";
+    classSection.style.display   = "none";
+    examSection.style.display    = "none";
+    quizScreen.style.display     = "flex";
 
-    classSection.style.display = "none";
-    examSection.style.display = "none";
-    quizScreen.style.display = "flex";
-
-    renderQuestion();
     buildQuestionNavPanel();
+    renderQuestion();
     updateQuestionNavPanel();
     updateProgressBar();
     startTimer();
 }
 
+
 /* ============================================================
    FUNCTION: checkUnansweredAndSubmit
-   Counts unanswered questions before final submission.
-   If any are skipped, warns the student and gives them
-   a chance to go back. If all answered, submits directly.
    ============================================================ */
 function checkUnansweredAndSubmit() {
     const unanswered = [];
-
     for (let i = 0; i < studentAnswers.length; i++) {
-        if (studentAnswers[i] === null) {
-            unanswered.push(i + 1);
-        }
+        if (studentAnswers[i] === null) unanswered.push(i + 1);
     }
 
     if (unanswered.length === 0) {
-        // All questions answered — ask for final confirmation
         showModal(
             "You have answered all questions. Are you ready to submit your exam?",
-            function () {
-                finishQuiz();
-            },
-            function () {
-                // Cancelled — stay on current question
-                isNavigating = false;
-            },
+            function () { finishQuiz(); },
+            function () { isNavigating = false; },
             "Yes, Submit",
             "Cancel"
         );
     } else {
-        // Some questions unanswered — warn and give options
         const questionList = unanswered.join(", ");
-        const plural = unanswered.length === 1 ? "question" : "questions";
-
+        const plural       = unanswered.length === 1 ? "question" : "questions";
         showModal(
             "You have " + unanswered.length + " unanswered " + plural +
             " (Question " + questionList + "). Do you still want to submit?",
+            function () { finishQuiz(); },
             function () {
-                finishQuiz();
-            },
-            function () {
-                // Jump to first unanswered question
-                isNavigating = true;
+                isNavigating         = true;
                 currentQuestionIndex = unanswered[0] - 1;
                 renderQuestion();
             },
@@ -1315,86 +1308,109 @@ function checkUnansweredAndSubmit() {
     }
 }
 
+/*
+    SAVE / RESTORE PAGE STATE
+    ---------------------------
+    Saves which section the student is on + which class was selected,
+    so a refresh brings them back to the same place instead of the homepage.
+    Only saves the subject-picker state (not the quiz, which already
+    has its own crash-recovery via "examProgress").
+*/
+function savePageState() {
+    const state = {
+        section:      "exam",
+        className:    currentSelectedClass,
+        admission:    admissionInput.value.trim()
+    };
+    sessionStorage.setItem("pageState", JSON.stringify(state));
+}
+
+function clearPageState() {
+    sessionStorage.removeItem("pageState");
+}
+
+function checkForSavedPageState() {
+    // Don't restore page state if a quiz is already being resumed
+    if (localStorage.getItem("examProgress")) return;
+
+    let state;
+    try {
+        const saved = sessionStorage.getItem("pageState");
+        state = saved ? JSON.parse(saved) : null;
+    } catch (e) { return; }
+
+    if (!state || state.section !== "exam") return;
+
+    // Restore the subject picker for the same class
+    showSubjects(state.className);
+
+    // Restore the admission number if they'd typed one
+    if (state.admission) {
+        admissionInput.value = state.admission;
+        admissionInput.dispatchEvent(new Event("input")); // triggers validation + unlock
+    }
+}
+
+
 /* ============================================================
    FUNCTION: finishQuiz
-   Calculates score silently, submits to Google Sheet,
-   shows the modal, then resets for the next student.
    ============================================================ */
 function finishQuiz() {
     quizInProgress = false;
     clearInterval(timerInterval);
     try { localStorage.removeItem("examProgress"); } catch (e) {}
-    markExamAsCompleted(studentNameInput.value, currentClassName, currentSubjectName);
+    markExamAsCompleted(currentAdmissionNumber, currentClassName, currentSubjectName);
 
-// Calculate weighted score
-let rawScore = 0;
-for (let i = 0; i < currentQuizQuestions.length; i++) {
-    const question = currentQuizQuestions[i];
-    const studentAnswer = studentAnswers[i];
+    let rawScore = 0;
+    for (let i = 0; i < currentQuizQuestions.length; i++) {
+        const question     = currentQuizQuestions[i];
+        const studentAnswer = studentAnswers[i];
+        if (studentAnswer === null) continue;
 
-    if (studentAnswer === null) continue; // unanswered — skip
-
-    if (question.type === "fill") {
-        // Case-insensitive, trimmed comparison for fill-in-the-gap
-        if (studentAnswer.trim().toLowerCase() === question.correctAnswer.trim().toLowerCase()) {
-            rawScore++;
-        }
-    } else {
-        // Standard MCQ comparison
-        if (studentAnswer === question.correctAnswer) {
-            rawScore++;
+        if (question.type === "fill") {
+            if (studentAnswer.trim().toLowerCase() === question.correctAnswer.trim().toLowerCase()) rawScore++;
+        } else {
+            if (studentAnswer === question.correctAnswer) rawScore++;
         }
     }
-}
 
-const marksPerQuestion = currentSubjectInfo && currentSubjectInfo.marksPerQuestion
-    ? currentSubjectInfo.marksPerQuestion : 1;
-const totalMarks = currentSubjectInfo && currentSubjectInfo.totalMarks
-    ? currentSubjectInfo.totalMarks : currentQuizQuestions.length;
-const totalScore = rawScore * marksPerQuestion;
-const scoreText = totalScore + "/" + totalMarks;
+    const marksPerQuestion = currentSubjectInfo && currentSubjectInfo.marksPerQuestion ? currentSubjectInfo.marksPerQuestion : 1;
+    const totalMarks       = currentSubjectInfo && currentSubjectInfo.totalMarks       ? currentSubjectInfo.totalMarks       : currentQuizQuestions.length;
+    const totalScore       = rawScore * marksPerQuestion;
+    const scoreText        = totalScore + "/" + totalMarks;
 
-    // Admin-only: visible in browser console (F12 → Console tab)
     console.log("=== EXAM RESULT ===");
-    console.log("Student :", studentNameInput.value);
-    console.log("Class   :", currentClassName);
-    console.log("Subject :", currentSubjectName);
-    console.log("Score   :", scoreText);
+    console.log("Student :",    currentStudentName);
+    console.log("Admission:",   currentAdmissionNumber);
+    console.log("Class :",      currentClassName);
+    console.log("Subject :",    currentSubjectName);
+    console.log("Score :",      scoreText);
     console.log("===================");
 
-    submitResultToSheet(studentNameInput.value, currentClassName, currentSubjectName, scoreText);
+    submitResultToSheet(currentStudentName, currentAdmissionNumber, currentClassName, currentSubjectName, scoreText);
 }
 
 
 /* ============================================================
    FUNCTION: submitResultToSheet
-   Silently submits the result to Google Forms/Sheets using
-   an image GET request (bypasses CORS restrictions).
-   Student only sees the modal — never the score.
    ============================================================ */
-function submitResultToSheet(studentName, className, subjectName, score) {
-    const endTime = new Date();
-    const durationMs = endTime - quizStartTime;
+function submitResultToSheet(studentName, admissionNumber, className, subjectName, score) {
+    const endTime         = new Date();
+    const durationMs      = endTime - quizStartTime;
     const durationMinutes = Math.floor(durationMs / 60000);
     const durationSeconds = Math.floor((durationMs % 60000) / 1000);
-    const durationText = durationMinutes + "m " + durationSeconds + "s";
+    const durationText    = durationMinutes + "m " + durationSeconds + "s";
 
     const startText = quizStartTime.toLocaleString("en-GB", {
         year: "numeric", month: "2-digit", day: "2-digit",
-        hour: "2-digit", minute: "2-digit", second: "2-digit",
-        hour12: false
+        hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false
     });
 
     console.log("Start time :", startText);
     console.log("Duration   :", durationText);
 
     if (!navigator.onLine) {
-        // No internet — save locally and tell the student honestly
-        savePendingResult(
-            studentName, className, subjectName, score,
-            tabSwitchCount, startText, durationText
-        );
-
+        savePendingResult(studentName, admissionNumber, className, subjectName, score, tabSwitchCount, startText, durationText);
         showModal(
             "Your exam answers have been saved, but we couldn't connect to the server right now. " +
             "Your result will be submitted automatically once the connection is restored. " +
@@ -1404,21 +1420,20 @@ function submitResultToSheet(studentName, className, subjectName, score) {
         return;
     }
 
-    // Online — submit normally
-    const formBaseURL = "https://docs.google.com/forms/d/e/1FAIpQLSeaIiCn-S-zr56SkrEkLxkAVGESvzu9XPnp_kgGw90vFkastg/formResponse";
-
-    const submissionURL = formBaseURL +
-        "?entry.989513760="  + encodeURIComponent(studentName) +
-        "&entry.572955960="  + encodeURIComponent(className) +
-        "&entry.649845269="  + encodeURIComponent(subjectName) +
-        "&entry.1080095985=" + encodeURIComponent(score) +
-        "&entry.671914243="  + encodeURIComponent(tabSwitchCount) +
-        "&entry.216522547="  + encodeURIComponent(startText) +
-        "&entry.1781815021=" + encodeURIComponent(durationText) +
+    const formBaseURL    = "https://docs.google.com/forms/d/e/1FAIpQLSeaIiCn-S-zr56SkrEkLxkAVGESvzu9XPnp_kgGw90vFkastg/formResponse";
+    const submissionURL  = formBaseURL +
+        "?entry.989513760="  + encodeURIComponent(studentName)    +
+        "&entry.572955960="  + encodeURIComponent(admissionNumber) +
+        "&entry.649845269="  + encodeURIComponent(className)       +
+        "&entry.1080095985=" + encodeURIComponent(subjectName)     +
+        "&entry.671914243="  + encodeURIComponent(score)           +
+        "&entry.216522547="  + encodeURIComponent(tabSwitchCount)  +
+        "&entry.1781815021=" + encodeURIComponent(startText)       +
+        "&entry.=" + encodeURIComponent(durationText) +
         "&submit=Submit";
 
     const img = new Image();
-    img.src = submissionURL;
+    img.src   = submissionURL;
 
     showModal(
         "Your exam has been submitted successfully. Results will be released by school management.",
@@ -1429,16 +1444,19 @@ function submitResultToSheet(studentName, className, subjectName, score) {
 
 /* ============================================================
    FUNCTION: resetPortal
-   Clears all state and returns to the homepage,
-   ready for the next student.
    ============================================================ */
 function resetPortal() {
-    studentNameInput.value = "";
-    subjectSearchInput.value = "";
-    currentQuizQuestions = [];
-    currentQuestionIndex = 0;
-    studentAnswers = [];
-    isNavigating = false;
+    clearPageState();
+    admissionInput.value          = "";
+    admissionFeedback.textContent = "";
+    admissionFeedback.className   = "";
+    subjectSearchInput.value      = "";
+    currentQuizQuestions          = [];
+    currentQuestionIndex          = 0;
+    studentAnswers                = [];
+    isNavigating                  = false;
+    currentStudentName            = "";
+    currentAdmissionNumber        = "";
 
     quizScreen.style.display = "none";
     switchSection(quizScreen, classSection);
@@ -1447,19 +1465,18 @@ function resetPortal() {
 
 /* ============================================================
    PARTICLE BACKGROUND
-   Interactive network of dots that react to mouse movement.
    ============================================================ */
 const particleCanvas = document.getElementById("particle-canvas");
-const ctx = particleCanvas.getContext("2d");
+const ctx            = particleCanvas.getContext("2d");
 
 function resizeCanvas() {
-    particleCanvas.width = window.innerWidth;
+    particleCanvas.width  = window.innerWidth;
     particleCanvas.height = window.innerHeight;
 }
 resizeCanvas();
 window.addEventListener("resize", resizeCanvas);
 
-const particles = [];
+const particles     = [];
 const particleCount = 70;
 
 for (let i = 0; i < particleCount; i++) {
@@ -1474,29 +1491,23 @@ for (let i = 0; i < particleCount; i++) {
 let mouseX = -9999;
 let mouseY = -9999;
 
-window.addEventListener("mousemove", function (event) {
-    mouseX = event.clientX;
-    mouseY = event.clientY;
-});
+window.addEventListener("mousemove", function (e) { mouseX = e.clientX; mouseY = e.clientY; });
 
 function animateParticles() {
     ctx.clearRect(0, 0, particleCanvas.width, particleCanvas.height);
 
     for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
-
         p.x += p.speedX;
         p.y += p.speedY;
 
-        // Wrap particles around screen edges
-        if (p.x < 0)                    p.x = particleCanvas.width;
-        if (p.x > particleCanvas.width)  p.x = 0;
-        if (p.y < 0)                    p.y = particleCanvas.height;
-        if (p.y > particleCanvas.height) p.y = 0;
+        if (p.x < 0)                     p.x = particleCanvas.width;
+        if (p.x > particleCanvas.width)   p.x = 0;
+        if (p.y < 0)                     p.y = particleCanvas.height;
+        if (p.y > particleCanvas.height)  p.y = 0;
 
-        // Push particles away from the mouse cursor
-        const dx = p.x - mouseX;
-        const dy = p.y - mouseY;
+        const dx       = p.x - mouseX;
+        const dy       = p.y - mouseY;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
         if (distance < 120) {
@@ -1505,26 +1516,23 @@ function animateParticles() {
             p.y += (dy / distance) * pushStrength * 2;
         }
 
-        // Draw the dot
         ctx.beginPath();
         ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
         ctx.fillStyle = "rgba(155, 127, 232, 0.8)";
         ctx.fill();
     }
 
-    // Draw connecting lines between nearby particles
     for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
+            const dx       = particles[i].x - particles[j].x;
+            const dy       = particles[i].y - particles[j].y;
             const distance = Math.sqrt(dx * dx + dy * dy);
-
             if (distance < 100) {
                 ctx.beginPath();
                 ctx.moveTo(particles[i].x, particles[i].y);
                 ctx.lineTo(particles[j].x, particles[j].y);
                 ctx.strokeStyle = "rgba(107, 76, 222, " + (1 - distance / 100) * 0.3 + ")";
-                ctx.lineWidth = 1;
+                ctx.lineWidth   = 1;
                 ctx.stroke();
             }
         }
@@ -1541,4 +1549,5 @@ animateParticles();
    ============================================================ */
 initTheme();
 checkForSavedQuiz();
+checkForSavedPageState();
 displayClassCards();

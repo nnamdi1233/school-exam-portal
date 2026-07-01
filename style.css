@@ -286,7 +286,8 @@ body.light-mode #theme-toggle:hover {
     font-size: 0.95rem;
 }
 
-#student-name {
+
+#admission-input {
     width: 100%;
     padding: 10px 16px;
     background-color: var(--card-background);
@@ -298,14 +299,30 @@ body.light-mode #theme-toggle:hover {
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-#student-name::placeholder {
+#admission-input ::placeholder {
     color: var(--light-text);
 }
 
-#student-name:focus {
+#admission-input :focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(107, 76, 222, 0.2);
+}
+/* ============================================================
+   ADMISSION NUMBER FEEDBACK
+   ============================================================ */
+#admission-feedback {
+    margin-top: 8px;
+    font-size: 0.9rem;
+    min-height: 20px; /* stops layout jumping when text appears */
+}
+
+#admission-feedback.valid {
+    color: #4ade80; /* green — valid admission number */
+}
+
+#admission-feedback.invalid {
+    color: #ff4444; /* red — not found in registry */
 }
 
 
