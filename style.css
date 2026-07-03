@@ -239,6 +239,19 @@ body.light-mode #theme-toggle:hover {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
     border-color: rgba(255, 255, 255, 0.08);
 }
+.subject-card.exam-locked {
+    opacity: 0.5;
+    position: relative;
+}
+
+.subject-card.exam-locked::after {
+    content: "🔒 Not yet open";
+    display: block;
+    margin-top: 8px;
+    font-size: 0.78rem;
+    color: var(--light-text);
+    font-weight: normal;
+}
 
 
 /* ============================================================
