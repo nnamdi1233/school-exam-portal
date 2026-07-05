@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin - Results Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Lora:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #6B4CDE;
+            --primary-dark: #5A3FC0;
+            --background-color: #0B0A1A;
+            --card-background: #15132B;
+            --text-color: #FFFFFF;
+            --light-text: #A0A0C0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        h1 {
+            font-family: 'Lora', serif;
+            color: var(--primary-color);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        #pin-gate {
+            max-width: 300px;
+            margin: 100px auto;
+            text-align: center;
+        }
+        #pin-gate input {
+            width: 100%;
+            padding: 14px;
+            font-size: 1.5rem;
+            text-align: center;
+            letter-spacing: 8px;
+            background: var(--card-background);
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            color: var(--text-color);
+            margin-bottom: 15px;
+        }
+        #pin-gate button, .action-btn {
+            padding: 12px 30px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        #pin-gate button:hover, .action-btn:hover { background: var(--primary-dark); }
+        #pin-error { color: #ff4444; margin-top: 10px; min-height: 20px; }
+
+        #dashboard { display: none; max-width: 900px; margin: 0 auto; }
+
+        .controls { display: flex; gap: 15px; margin-bottom: 25px; flex-wrap: wrap; }
+        select {
+            padding: 10px 16px;
+            background: var(--card-background);
+            color: var(--text-color);
+            border: 2px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+        
+
+        #student-list { display: grid; gap: 10px; margin-bottom: 25px; }
+        #broadsheet-container table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+#broadsheet-container th, #broadsheet-container td {
+    border: 1px solid rgba(255,255,255,0.1);
+    padding: 8px 12px;
+    text-align: center;
+}
+#broadsheet-container th {
+    background: var(--card-background);
+    color: var(--light-text);
+    position: sticky;
+    top: 0;
+}
+#broadsheet-container td:nth-child(2) {
+    text-align: left;
+    font-weight: 600;
+}
+#broadsheet-container tr:nth-child(even) {
+    background: rgba(255,255,255,0.02);
+}
+        .student-row {
+            background: var(--card-background);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 16px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: border-color 0.2s ease;
+        }
+        .student-row:hover { border-color: var(--primary-color); }
+        .student-row .adm { color: var(--light-text); font-size: 0.85rem; }
+
+        #student-detail {
+            background: var(--card-background);
+            border: 1px solid var(--primary-color);
+            border-radius: 12px;
+            padding: 25px;
+            display: none;
+        }
+        #student-detail h2 { font-family: 'Lora', serif; margin-bottom: 5px; }
+        #student-detail .adm-number { color: var(--light-text); margin-bottom: 20px; }
+
+        table { width: 100%; border-collapse: collapse; }
+        th, td { text-align: left; padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.08); }
+        th { color: var(--light-text); font-weight: 600; font-size: 0.85rem; }
+
+        #back-to-list { margin-top: 20px; }
+        .empty-msg { color: var(--light-text); text-align: center; padding: 30px; }
+    </style>
+</head>
+<body>
+
+    <div id="pin-gate">
+        <h1>Admin Access</h1>
+        <input type="password" id="pin-input" maxlength="4" placeholder="••••" inputmode="numeric">
+        <br>
+        <button onclick="checkPin()">Enter</button>
+        <p id="pin-error"></p>
+    </div>
+
+    <div id="dashboard">
+        <h1>Results Dashboard</h1>
+
+        <div class="controls">
+            <select id="class-select" onchange="loadStudents()">
+                <option value="">Select a class...</option>
+                <option value="JSS1">JSS1</option>
+                <option value="JSS2">JSS2</option>
+                <option value="SS1">SS1</option>
+                <option value="SS2">SS2</option>
+            </select>
+             <button class="action-btn" id="table-view-btn" onclick="loadBroadsheet()">View as Table</button>
+        </div>
+
+        <div id="student-list"></div>
+        <div id="broadsheet-container" style="display:none; overflow-x:auto;"></div>
+
+        <div id="student-detail">
+            <h2 id="detail-name"></h2>
+            <p class="adm-number" id="detail-adm"></p>
+            <table>
+                <thead>
+                    <tr><th>Subject</th><th>Score</th><th>Out Of</th><th>Duration</th><th>Tab Switches</th></tr>
+                </thead>
+                <tbody id="detail-rows"></tbody>
+            </table>
+            <button class="action-btn" id="back-to-list" onclick="showStudentList()">← Back to list</button>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyAJ4u0ResZrpw6qdScmo63lAH3DplKmfik",
+            authDomain: "galaxy-gems-exam-portal1.firebaseapp.com",
+            databaseURL: "https://galaxy-gems-exam-portal1-default-rtdb.firebaseio.com",
+            projectId: "galaxy-gems-exam-portal1",
+            storageBucket: "galaxy-gems-exam-portal1.appspot.com",
+            messagingSenderId: "391876465013",
+            appId: "1:391876465013:web:ea7d6bcb37a8d39513433c"
+        };
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.database();
+
+        const ADMIN_PIN = "2003"; 
+
+        function checkPin() {
+            const entered = document.getElementById("pin-input").value;
+            if (entered === ADMIN_PIN) {
+                document.getElementById("pin-gate").style.display = "none";
+                document.getElementById("dashboard").style.display = "block";
+            } else {
+                document.getElementById("pin-error").textContent = "Incorrect PIN.";
+            }
+        }
+
+        // Allow pressing Enter to submit the PIN
+        document.getElementById("pin-input").addEventListener("keyup", function (e) {
+            if (e.key === "Enter") checkPin();
+        });
+
+        // Student registry mirrored here just for names (kept minimal — only need names for display)
+        // We pull names directly from the stored result data instead, so no need to duplicate the full registry.
+
+        function loadBroadsheet() {
+    const className = document.getElementById("class-select").value;
+    const broadsheetContainer = document.getElementById("broadsheet-container");
+    const listContainer = document.getElementById("student-list");
+    document.getElementById("student-detail").style.display = "none";
+
+    if (!className) {
+        alert("Please select a class first.");
+        return;
+    }
+
+    listContainer.style.display = "none";
+    broadsheetContainer.style.display = "block";
+    broadsheetContainer.innerHTML = "<p class='empty-msg'>Loading...</p>";
+
+    db.ref("results/" + className).once("value").then(function (snapshot) {
+        const data = snapshot.val();
+
+        if (!data) {
+            broadsheetContainer.innerHTML = "<p class='empty-msg'>No results recorded yet for this class.</p>";
+            return;
+        }
+
+        const allSubjects = new Set();
+        const admissionNumbers = Object.keys(data);
+
+        admissionNumbers.forEach(function (admNo) {
+            Object.keys(data[admNo]).forEach(function (subjectKey) {
+                allSubjects.add(subjectKey);
+            });
+        });
+
+        const subjectList = Array.from(allSubjects).sort();
+
+        let html = "<table><thead><tr>";
+        html += "<th>S/No</th><th>Admission No</th><th>Student Name</th>";
+        subjectList.forEach(function (subj) {
+            html += "<th>" + subj.replace(/_/g, " ") + "</th>";
+        });
+        html += "</tr></thead><tbody>";
+
+        admissionNumbers.forEach(function (admNo, index) {
+            const studentSubjects = data[admNo];
+            const subjectKeys = Object.keys(studentSubjects);
+            const studentName = studentSubjects[subjectKeys[0]].studentName || "Unknown";
+
+            html += "<tr>";
+            html += "<td>" + (index + 1) + "</td>";
+            html += "<td>" + admNo + "</td>";
+            html += "<td>" + studentName + "</td>";
+
+            subjectList.forEach(function (subj) {
+                const record = studentSubjects[subj];
+                html += "<td>" + (record ? record.score : "-") + "</td>";
+            });
+
+            html += "</tr>";
+        });
+
+        html += "</tbody></table>";
+        broadsheetContainer.innerHTML = html;
+    });
+}
+
+        function loadStudents() {
+        const className = document.getElementById("class-select").value;
+        const listContainer = document.getElementById("student-list");
+        document.getElementById("student-detail").style.display = "none";
+        document.getElementById("broadsheet-container").style.display = "none";
+        listContainer.style.display = "grid";
+        listContainer.innerHTML = "";
+
+            if (!className) return;
+
+            db.ref("results/" + className).once("value").then(function (snapshot) {
+                const data = snapshot.val();
+
+                if (!data) {
+                    listContainer.innerHTML = '<p class="empty-msg">No results recorded yet for this class.</p>';
+                    return;
+                }
+
+                const admissionNumbers = Object.keys(data);
+
+                admissionNumbers.forEach(function (admNo) {
+                    const subjects = data[admNo];
+                    const subjectKeys = Object.keys(subjects);
+                    const firstSubject = subjects[subjectKeys[0]];
+                    const studentName = firstSubject.studentName || "Unknown";
+
+                    const row = document.createElement("div");
+                    row.className = "student-row";
+                    row.innerHTML =
+                        "<span>" + studentName + "</span>" +
+                        "<span class='adm'>" + admNo + " &middot; " + subjectKeys.length + " subject(s)</span>";
+
+                    row.addEventListener("click", function () {
+                        showStudentDetail(className, admNo, studentName, subjects);
+                    });
+
+                    listContainer.appendChild(row);
+                });
+            });
+        }
+
+        function showStudentDetail(className, admNo, studentName, subjects) {
+            document.getElementById("student-list").style.display = "none";
+            document.getElementById("student-detail").style.display = "block";
+            document.getElementById("detail-name").textContent = studentName;
+            document.getElementById("detail-adm").textContent = className + " — " + admNo;
+
+            const rows = document.getElementById("detail-rows");
+            rows.innerHTML = "";
+
+            Object.keys(subjects).forEach(function (subjectKey) {
+                const s = subjects[subjectKey];
+                const tr = document.createElement("tr");
+                tr.innerHTML =
+                    "<td>" + subjectKey.replace(/_/g, " ") + "</td>" +
+                    "<td>" + s.score + "</td>" +
+                    "<td>" + s.totalMarks + "</td>" +
+                    "<td>" + (s.duration || "-") + "</td>" +
+                    "<td>" + (s.tabSwitches != null ? s.tabSwitches : "-") + "</td>";
+                rows.appendChild(tr);
+            });
+        }
+
+        function showStudentList() {
+        document.getElementById("student-detail").style.display = "none";
+        document.getElementById("student-list").style.display = "grid";
+        document.getElementById("broadsheet-container").style.display = "none";
+        }
+    </script>
+</body>
+</html>

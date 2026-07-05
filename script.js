@@ -14,6 +14,19 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 const db = firebase.database();
 
+/*
+    FUNCTION: saveResultToFirebase
+    ----------------------------------
+    Stores the result in an organized structure:
+    results/{class}/{admissionNumber}/{subject}
+*/
+function saveResultToFirebase(className, admissionNumber, subjectName, resultData) {
+    const cleanAdmission = admissionNumber.trim().toUpperCase();
+    const cleanSubject   = subjectName.replace(/[.#$\[\]\/\s]/g, "_");
+
+    db.ref("results/" + className + "/" + cleanAdmission + "/" + cleanSubject).set(resultData);
+}
+
 /* ============================================================
    EXAM WINDOW CONTROL
    ------------------------------------------------------------
@@ -3298,14 +3311,14 @@ function finishQuiz() {
     console.log("Score :",      scoreText);
     console.log("===================");
 
-    submitResultToSheet(currentStudentName, currentAdmissionNumber, currentClassName, currentSubjectName, scoreText);
+    submitResultToSheet(currentStudentName, currentAdmissionNumber, currentClassName, currentSubjectName, scoreText, totalScore, totalMarks);
 }
 
 
 /* ============================================================
    FUNCTION: submitResultToSheet
    ============================================================ */
-function submitResultToSheet(studentName, admissionNumber, className, subjectName, score) {
+function submitResultToSheet(studentName, admissionNumber, className, subjectName, score, rawScore, totalMarks) {
     const endTime         = new Date();
     const durationMs      = endTime - quizStartTime;
     const durationMinutes = Math.floor(durationMs / 60000);
@@ -3319,6 +3332,17 @@ function submitResultToSheet(studentName, admissionNumber, className, subjectNam
 
     console.log("Start time :", startText);
     console.log("Duration   :", durationText);
+
+    // Save to Firebase in an organized structure, alongside the Google Form submission
+    saveResultToFirebase(className, admissionNumber, subjectName, {
+    studentName: studentName,
+    score: rawScore,
+    totalMarks: totalMarks,
+    tabSwitches: tabSwitchCount,
+    startTime: startText,
+    duration: durationText,
+    submittedAt: new Date().toISOString()
+    });
 
     if (!navigator.onLine) {
         savePendingResult(studentName, admissionNumber, className, subjectName, score, tabSwitchCount, startText, durationText);
