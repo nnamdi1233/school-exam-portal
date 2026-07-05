@@ -1762,22 +1762,22 @@ const examData = {
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
-        { type: "mcq", question: "A mobile application is a software program designed to run on ______.", options: ["desktop computers only", "mobile devices", "television sets", "printers"], correctAnswer: "B" },
+        { type: "mcq", question: "A mobile application is a software program designed to run on ______.", options: ["desktop computers", "mobile devices", "television sets", "Platforms"], correctAnswer: "B" },
         { type: "mcq", question: "Which of the following is an example of a mobile application?", options: ["WhatsApp", "Microsoft Paint", "Notepad", "Windows Explorer"], correctAnswer: "A" },
-        { type: "mcq", question: "Mobile application development is the process of ______.", options: ["repairing smartphones", "creating and testing mobile apps", "building computer hardware", "installing operating systems"], correctAnswer: "B" },
+        { type: "mcq", question: "Mobile application development is the process of ______.", options: ["repairing smartphones", "creating and testing mobile apps", "building computer software", "installing operating systems"], correctAnswer: "B" },
         { type: "mcq", question: "Which type of mobile app is built specifically for one platform?", options: ["Hybrid app", "Native app", "Web app", "Cloud app"], correctAnswer: "B" },
-        { type: "mcq", question: "A web app runs mainly through a ______.", options: ["printer", "web browser", "scanner", "router"], correctAnswer: "B" },
-        { type: "mcq", question: "Hybrid apps combine features of ______.", options: ["hardware and software", "native and web apps", "Android and Windows", "games and browsers"], correctAnswer: "B" },
+        { type: "mcq", question: "A web app runs mainly through a ______.", options: ["Platform", "web browser", "Web Platform", "Mobile Application"], correctAnswer: "B" },
+        { type: "mcq", question: "Hybrid apps combine features of ______.", options: ["hardware and software", "native and web apps", "Android and Windows", "Platforms and browsers"], correctAnswer: "B" },
         { type: "mcq", question: "Which of the following is a mobile operating system?", options: ["Android", "Linux Mint", "Ubuntu Server", "MS-DOS"], correctAnswer: "A" },
         { type: "mcq", question: "Which development tool is commonly used for Android app development?", options: ["Android Studio", "Adobe Reader", "PowerPoint", "Notepad"], correctAnswer: "A" },
-        { type: "mcq", question: "Flutter is mainly used for ______.", options: ["database management", "mobile app development", "video editing", "computer networking"], correctAnswer: "B" },
+        { type: "mcq", question: "Android Studio is mainly used for ______.", options: ["database management", "mobile app development", "video editing", "computer networking"], correctAnswer: "B" },
         { type: "mcq", question: "One advantage of mobile applications is that they ______.", options: ["are always free", "provide fast access to services", "cannot be hacked", "never require updates"], correctAnswer: "B" },
-        { type: "mcq", question: "Artificial Intelligence (AI) is the ability of a machine to ______.", options: ["produce electricity", "perform tasks requiring human intelligence", "repair hardware", "increase internet speed"], correctAnswer: "B" },
-        { type: "mcq", question: "Which of the following is an AI-powered chatbot?", options: ["Microsoft Word", "ChatGPT", "Paint", "Excel"], correctAnswer: "B" },
-        { type: "mcq", question: "Generative AI can create ______.", options: ["only numbers", "new content such as text and images", "computer cables", "hardware components"], correctAnswer: "B" },
+        { type: "mcq", question: "Artificial Intelligence (AI) is the ability of a machine to ______.", options: ["produce electricity", "perform tasks requiring human intelligence", "Handle Multiple Tasks", "increase internet speed"], correctAnswer: "B" },
+        { type: "mcq", question: "Which of the following is an AI-powered chatbot?", options: ["ARE-GPT", "ChatGPT", "Paint", "Excel"], correctAnswer: "B" },
+        { type: "mcq", question: "Generative AI can create ______.", options: ["Data & numbers", "new content such as text and images", "computer cables", "Complex Data"], correctAnswer: "B" },
         { type: "mcq", question: "Which of these is an example of Generative AI?", options: ["ChatGPT", "Google Chrome", "Calculator", "Windows Explorer"], correctAnswer: "A" },
         { type: "mcq", question: "AI used for only one specific task is called ______.", options: ["General AI", "Narrow AI", "Adaptive AI", "Machine AI"], correctAnswer: "B" },
-        { type: "mcq", question: "Which of these is an application of AI in healthcare?", options: ["Diagnosing diseases", "Building roads", "Printing books", "Repairing engines"], correctAnswer: "A" },
+        { type: "mcq", question: "Which of these is an application of AI in healthcare?", options: ["Diagnosing diseases", "Building roads", "Performing Surgeries", "Repairing engines"], correctAnswer: "A" },
         { type: "mcq", question: "AI learns from ______.", options: ["dreams", "training data", "electricity only", "luck"], correctAnswer: "B" },
         { type: "mcq", question: "Training data is ______.", options: ["a computer virus", "information used to teach AI", "an internet browser", "a mobile phone"], correctAnswer: "B" },
         { type: "mcq", question: "After studying training data, AI mainly learns by finding ______.", options: ["colours", "patterns", "music", "games"], correctAnswer: "B" },
@@ -2138,12 +2138,12 @@ const subjectStreamMap = {
 /* ============================================================
    STUDENT REGISTRY
    Admission numbers mapped to student names, per class.
-   GGS00001 is the master demo/admin key.
+   GGS00011 is the master demo/admin key.
    ============================================================ */
 const studentRegistry = {
 
     "MASTER": {
-        "GGS00001": { name: "Admin / Demo", stream: "all" }
+        "GGS00011": { name: "Admin / Demo", stream: "all" }
     },
 
     "JSS1": {
@@ -2552,15 +2552,16 @@ function retryPendingResults() {
     for (let i = 0; i < pending.length; i++) {
         const r   = pending[i];
         const img = new Image();
-        img.src = formBaseURL +
-            "?entry.989513760="  + encodeURIComponent(r.studentName) +
-            "&entry.572955960="  + encodeURIComponent(r.admissionNumber) +
-            "&entry.649845269="  + encodeURIComponent(r.className) +
-            "&entry.1080095985=" + encodeURIComponent(r.subjectName) +
-            "&entry.671914243="  + encodeURIComponent(r.score) +
-            "&entry.216522547="  + encodeURIComponent(r.tabSwitches) +
-            "&entry.1781815021=" + encodeURIComponent(r.startText) +
-            "&submit=Submit";
+    img.src = formBaseURL +
+        "?entry.989513760="  + encodeURIComponent(r.studentName) +
+        "&entry.572955960="  + encodeURIComponent(r.admissionNumber) +
+        "&entry.649845269="  + encodeURIComponent(r.className) +
+        "&entry.1080095985=" + encodeURIComponent(r.subjectName) +
+        "&entry.671914243="  + encodeURIComponent(r.score) +
+        "&entry.216522547="  + encodeURIComponent(r.tabSwitches) +
+        "&entry.1781815021=" + encodeURIComponent(r.startText) +
+        "&entry.367340230="  + encodeURIComponent(r.durationText) +
+        "&submit=Submit";
         console.log("Retried result for:", r.studentName, r.subjectName);
     }
 
@@ -3267,7 +3268,7 @@ function finishQuiz() {
     quizInProgress = false;
     clearInterval(timerInterval);
     try { localStorage.removeItem("examProgress"); } catch (e) {}
-    if (currentAdmissionNumber.toUpperCase() !== "GGS00001") {
+    if (currentAdmissionNumber.toUpperCase() !== "GGS00011") {
     markExamSessionCompleted(currentAdmissionNumber, currentClassName, currentSubjectName);
         }
 
@@ -3332,15 +3333,15 @@ function submitResultToSheet(studentName, admissionNumber, className, subjectNam
 
     const formBaseURL    = "https://docs.google.com/forms/d/e/1FAIpQLSeaIiCn-S-zr56SkrEkLxkAVGESvzu9XPnp_kgGw90vFkastg/formResponse";
     const submissionURL  = formBaseURL +
-        "?entry.989513760="  + encodeURIComponent(studentName)    +
-        "&entry.572955960="  + encodeURIComponent(admissionNumber) +
-        "&entry.649845269="  + encodeURIComponent(className)       +
-        "&entry.1080095985=" + encodeURIComponent(subjectName)     +
-        "&entry.671914243="  + encodeURIComponent(score)           +
-        "&entry.216522547="  + encodeURIComponent(tabSwitchCount)  +
-        "&entry.1781815021=" + encodeURIComponent(startText)       +
-        "&entry.=" + encodeURIComponent(durationText) +
-        "&submit=Submit";
+    "?entry.989513760="  + encodeURIComponent(studentName)    +
+    "&entry.572955960="  + encodeURIComponent(admissionNumber) +
+    "&entry.649845269="  + encodeURIComponent(className)       +
+    "&entry.1080095985=" + encodeURIComponent(subjectName)     +
+    "&entry.671914243="  + encodeURIComponent(score)           +
+    "&entry.216522547="  + encodeURIComponent(tabSwitchCount)  +
+    "&entry.1781815021=" + encodeURIComponent(startText)       +
+    "&entry.367340230="  + encodeURIComponent(durationText)    +
+    "&submit=Submit";
 
     const img = new Image();
     img.src   = submissionURL;
