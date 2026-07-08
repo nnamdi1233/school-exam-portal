@@ -33,7 +33,7 @@ function saveResultToFirebase(className, admissionNumber, subjectName, resultDat
    Subjects stay locked for regular students until this date/time.
    The admin/demo admission number (GGS00000) always bypasses this.
    ============================================================ */
-const EXAM_START_DATE = new Date("2026-07-15T09:00:00"); // 9:00 AM, July 15 2026
+const EXAM_START_DATE = new Date("2026-07-6T09:00:00"); // 9:00 AM, July 13 2026
 
 // Manual override — set to true to force-lock everything regardless
 // of date (e.g. if you need to delay exams last-minute)
@@ -584,7 +584,7 @@ const examData = {
 },
         {
   subject: "English Studies",
-  timeLimit: 5400,
+  timeLimit: 1500,
   totalMarks: 60,
   marksPerQuestion: 2,
   questions: [
@@ -1427,7 +1427,76 @@ const examData = {
         { type: "fill", question: "Jesus Christ rose from the dead on the __________ day after His crucifixion.", correctAnswer: "Third" }
     ]
 },
-        { subject: "Physics",                           link: "https://forms.gle/example" },
+        {
+    subject: "Physics",
+    timeLimit: 2400,
+    totalMarks: 60,
+    marksPerQuestion: 1,
+    questions: [
+        { type: "mcq", question: "What is a vector quantity?", options: ["A quantity with magnitude only", "A quantity with magnitude and direction", "A quantity without unit", "A quantity measured in kilograms"], correctAnswer: "B" },
+        { type: "mcq", question: "Which of the following quantities is a vector?", options: ["Speed", "Distance", "Energy", "Momentum"], correctAnswer: "D" },
+        { type: "mcq", question: "Which of the following is NOT a vector quantity?", options: ["Momentum", "Force", "Velocity", "Temperature"], correctAnswer: "D" },
+        { type: "mcq", question: "Which of the following pairs of physical quantities is made up of vectors?", options: ["Speed and displacement", "Mass and force", "Displacement and acceleration", "Momentum and length"], correctAnswer: "C" },
+        { type: "mcq", question: "Which of the following pairs of physical quantities comprises vectors?", options: ["Capacitance and inductance", "Force ratio and velocity ratio", "Friction and momentum", "Electric field potential and electric field intensity"], correctAnswer: "C" },
+        { type: "mcq", question: "Which of the following is a scalar quantity?", options: ["Tension", "Weight", "Impulse", "Distance"], correctAnswer: "D" },
+        { type: "mcq", question: "Which of the following is a scalar quantity?", options: ["Momentum", "Acceleration", "Displacement", "Distance"], correctAnswer: "D" },
+        { type: "mcq", question: "Which classification is correct?", options: ["Electric potential (Vector)", "Momentum (Scalar)", "Gravitational field intensity (Scalar)", "Magnetic flux density (Scalar)"], correctAnswer: "A" },
+        { type: "mcq", question: "Which of the following quantities is a vector?", options: ["Volume", "Momentum", "Energy", "Speed"], correctAnswer: "B" },
+        { type: "mcq", question: "Which of the following set of quantities are all vectors?", options: ["Pressure, energy and force", "Force, displacement and momentum", "Distance, acceleration and work", "Density, volume and weight"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Water does not drip through an open silk umbrella unless the inside is touched because of ______.", options: ["Surface tension", "Hydrostatic upthrust", "Viscosity", "Diffusion"], correctAnswer: "A" },
+        { type: "mcq", question: "The frictional effect between the layers of a moving fluid is called ______.", options: ["Capillarity", "Turbulence", "Diffusion", "Viscosity"], correctAnswer: "D" },
+        { type: "mcq", question: "Viscosity in a liquid does NOT depend on the ______.", options: ["Nature of the liquid", "Relative velocity between layers", "Area of contact", "Normal reaction between layers"], correctAnswer: "D" },
+        { type: "mcq", question: "Palm oil flows out more easily after heating because ______.", options: ["Molecules gain potential energy", "Friction between oil layers is reduced", "Oil molecules force each other out", "Adhesion increases"], correctAnswer: "B" },
+        { type: "mcq", question: "A ball falling through a viscous liquid before terminal velocity ______.", options: ["Its acceleration decreases", "Fluid acceleration becomes zero", "There is no resultant force", "Its velocity decreases"], correctAnswer: "A" },
+        { type: "mcq", question: "Which statement about viscosity is correct?", options: ["I and III only", "I and II only", "II and IV only", "III and IV only"], correctAnswer: "A" },
+        { type: "mcq", question: "Which substance is most viscous at room temperature?", options: ["Water", "Alcohol", "Petrol", "Palm oil"], correctAnswer: "D" },
+
+        { type: "mcq", question: "The concave meniscus of water in glass is because ______.", options: ["Adhesion is greater than cohesion", "Cohesion is greater than adhesion", "Water molecules move faster", "Water is attracted to the centre"], correctAnswer: "A" },
+        { type: "mcq", question: "Capillarity in narrow tubes is caused by ______.", options: ["Viscosity", "Surface tension", "Osmosis", "Brownian motion"], correctAnswer: "B" },
+        { type: "mcq", question: "Knowledge of surface tension is applied in all except ______.", options: ["Manufacturing raincoats", "Production of palm oil", "Floating a needle on water", "Washing plates with soapy water"], correctAnswer: "B" },
+        { type: "mcq", question: "Which of the following is NOT an effect of surface tension?", options: ["Water droplets from a tap", "Mercury forming spherical droplets", "An insect walking on water", "Water flowing more easily than engine oil"], correctAnswer: "D" },
+        { type: "mcq", question: "Which of the following will NOT lower the surface tension of water?", options: ["Detergent", "Methylated spirit", "Soap solution", "Grease"], correctAnswer: "D" },
+        { type: "mcq", question: "The force between molecules of the same substance is called ______.", options: ["Elastic force", "Repulsive force", "Cohesive force", "Adhesive force"], correctAnswer: "C" },
+        { type: "mcq", question: "Which substance lowers the surface tension of water?", options: ["Metal", "Sand", "Detergent", "Paper"], correctAnswer: "C" },
+        { type: "mcq", question: "Which of the following has the highest surface tension?", options: ["Cold water", "Soapy water", "Warm water", "Oily water"], correctAnswer: "A" },
+        { type: "mcq", question: "The rising of liquid in a narrow tube is known as ______.", options: ["Osmosis", "Adhesion", "Capillarity", "Surface tension"], correctAnswer: "C" },
+        { type: "mcq", question: "The force between molecules of a liquid and a solid is called ______.", options: ["Adhesive", "Cohesive", "Magnetic", "Repulsive"], correctAnswer: "A" },
+        { type: "mcq", question: "Which of the following is NOT a surface phenomenon?", options: ["Condensation", "Evaporation", "Photoemission", "Thermionic emission"], correctAnswer: "D" },
+        { type: "mcq", question: "Paint brush bristles stick together after removal from water because of ______.", options: ["Air viscosity", "Low density of water", "Surface tension", "Weight of the bristles"], correctAnswer: "C" },
+        { type: "mcq", question: "Movement of fluid in a narrow tube is called ______.", options: ["Osmosis", "Brownian motion", "Capillarity", "Diffusion"], correctAnswer: "C" },
+        { type: "mcq", question: "A steel needle sinks when kerosene is added because kerosene ______.", options: ["Increases surface tension", "Reduces density", "Reduces surface tension", "Reduces upthrust"], correctAnswer: "C" },
+        { type: "mcq", question: "Hot soapy water cleans oily dishes better because ______.", options: ["Oil repels soap", "Soap and heat reduce surface tension", "Hot water increases surface tension", "Soap increases density"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Oscillatory motion is motion ______.", options: ["In an erratic manner", "To and fro about a fixed point", "In a circular path", "Along a straight line"], correctAnswer: "B" },
+        { type: "mcq", question: "The motion of the prongs of a sounding tuning fork is ______.", options: ["Random", "Translational", "Rotational", "Vibratory"], correctAnswer: "D" },
+        { type: "mcq", question: "A floating test tube depressed and released performs ______ motion.", options: ["Circular", "Rotational", "Random", "Oscillatory"], correctAnswer: "D" },
+        { type: "mcq", question: "The skin of a talking drum performs ______ motion when struck.", options: ["Random", "Rotational", "Vibratory", "Translational"], correctAnswer: "C" },
+        { type: "mcq", question: "Which are in random motion?", options: ["I and II only", "I and III only", "II and III only", "I, II and III"], correctAnswer: "D" },
+        { type: "mcq", question: "Equal and opposite non-collinear parallel forces produce ______ motion.", options: ["Vibrational", "Random", "Translational", "Rotational"], correctAnswer: "D" },
+        { type: "mcq", question: "A drum rolling down an inclined plane undergoes ______ motion.", options: ["Circular and translational", "Rotational and translational", "Rotational and circular", "Rectilinear and circular"], correctAnswer: "B" },
+        { type: "mcq", question: "A body can undergo all the following except ______ motion.", options: ["Random", "Rotational", "Translational", "Relative"], correctAnswer: "D" },
+        { type: "mcq", question: "A body acted upon by a couple undergoes ______ motion.", options: ["Vibrational", "Translational", "Rotational", "Random"], correctAnswer: "C" },
+
+        { type: "mcq", question: "Which of the following are derived quantities?", options: ["I, II, III and IV", "I, II and III only", "I, III and IV only", "II and IV only"], correctAnswer: "B" },
+        { type: "mcq", question: "Which of the following is a derived unit?", options: ["Metre", "Coulomb", "Kilogram", "Second"], correctAnswer: "B" },
+        { type: "mcq", question: "Which quantity is correctly matched with its SI unit?", options: ["Density — kg m⁻³", "Power — J s⁻¹", "Specific latent heat — J kg⁻¹ K⁻¹", "Pressure — N m⁻¹"], correctAnswer: "A" },
+        { type: "mcq", question: "Which of the following is a fundamental quantity?", options: ["Speed", "Density", "Length", "Impulse"], correctAnswer: "C" },
+        { type: "mcq", question: "Which of the following units is derived?", options: ["kg", "m", "K", "N"], correctAnswer: "D" },
+        { type: "mcq", question: "Which set contains only fundamental quantities?", options: ["Length, mass and time", "Speed, length and time", "Speed, mass and distance", "Distance, speed and time"], correctAnswer: "A" },
+        { type: "mcq", question: "For maximum horizontal range, the angle of projection is ______.", options: ["30°", "45°", "90°", "60°"], correctAnswer: "B" },
+        { type: "mcq", question: "A projectile is launched at 200 m/s for maximum range. Its maximum height is ______.", options: ["3004 m", "2008 m", "1000 m", "640 m"], correctAnswer: "C" },
+        { type: "mcq", question: "A body is projected at 150 m/s at 30°. Time to reach maximum height is ______.", options: ["10 s", "13 s", "7.5 s", "8.5 s"], correctAnswer: "C" },
+        { type: "mcq", question: "Which of the following is a fundamental quantity?", options: ["Heat capacity", "Electric current", "Torque", "Reactivity"], correctAnswer: "B" },
+        { type: "mcq", question: "Which quantity has the same SI unit as energy?", options: ["Power", "Work", "Force", "Momentum"], correctAnswer: "B" },
+        { type: "mcq", question: "Which of the following is NOT a mechanical wave?", options: ["Wave in a stretched string", "Waves in closed pipes", "Radio waves", "Water waves"], correctAnswer: "C" },
+        { type: "mcq", question: "Which of the following units is NOT fundamental?", options: ["Metre", "Kilogram", "Joule", "Candela"], correctAnswer: "C" },
+        { type: "mcq", question: "The joule is equivalent to ______.", options: ["kg m² s⁻¹", "kg² m s⁻²", "kg m² s⁻²", "kg m s⁻¹"], correctAnswer: "C" },
+        { type: "mcq", question: "The SI unit of magnetic flux density is ______.", options: ["Tesla", "Watt", "Newton per metre", "Coulomb"], correctAnswer: "A" },
+        { type: "mcq", question: "An example of a mechanical wave is ______.", options: ["Water wave", "Radio wave", "X-ray", "Light ray"], correctAnswer: "A" },
+        { type: "mcq", question: "The wave emitted by a loudspeaker is ______.", options: ["Transverse", "Longitudinal", "Gamma", "Radio"], correctAnswer: "B" }
+    ]
+},
         {
     subject: "Government",
     timeLimit: 1500,
@@ -1925,7 +1994,133 @@ const examData = {
         { type: "fill", question: "The believers in the early church shared their possessions and lived in __________________.", correctAnswer: "Unity" }
     ]
 },
-        { subject: "Physics",                           link: "https://forms.gle/example" },
+        {
+    subject: "Physics",
+    timeLimit: 2400,
+    totalMarks: 60,
+    marksPerQuestion: 1,
+    questions: [
+        { type: "mcq", question: "The motion of a body is simple harmonic if the", options: ["acceleration is always directed towards a fixed point.", "path of motion is a straight line.", "acceleration is directed towards a fixed point and proportional to its distance from the point.", "acceleration is proportional to the square of the distance from a fixed point."], correctAnswer: "C" },
+
+        { type: "mcq", question: "An oscillating pendulum has a velocity of 2 m s⁻¹ at the equilibrium position O and zero velocity at point P. Calculate the height of P above O (g = 10 m s⁻²).", options: ["5.0 m", "2.0 m", "0.4 m", "0.2 m"], correctAnswer: "D" },
+
+        { type: "mcq", question: "Which of the following statements about simple harmonic motion is correct?", options: ["Total mechanical energy is always conserved.", "Linear acceleration is directed to any variable point.", "Linear acceleration varies inversely with displacement.", "Period of oscillation varies linearly as acceleration due to gravity."], correctAnswer: "A" },
+
+        { type: "mcq", question: "A simple pendulum makes 50 oscillations in one minute. What is its period of oscillation?", options: ["0.02 s", "0.20 s", "0.83 s", "1.20 s"], correctAnswer: "D" },
+
+        { type: "mcq", question: "The period of a simple pendulum X is 5 s. What is the period of a simple pendulum Y which makes 50 vibrations in the same time it takes X to make 20 vibrations?", options: ["12.5 s", "2.5 s", "2.0 s", "1.2 s"], correctAnswer: "C" },
+
+        { type: "mcq", question: "In a wave, the maximum displacement of particles from their equilibrium positions is called", options: ["frequency", "amplitude", "period", "wavelength"], correctAnswer: "B" },
+
+        { type: "mcq", question: "The S.I. units of frequency, period and amplitude of a wave are respectively", options: ["hertz, second and centimetre", "second, metre and hertz", "metre, hertz and second", "hertz, second and metre"], correctAnswer: "D" },
+
+        { type: "mcq", question: "A stone is dropped into the middle of a pool of water. Which statement is correct?", options: ["I only", "II only", "III only", "II and III only"], correctAnswer: "C" },
+
+        { type: "mcq", question: "The amplitude of a wave is the", options: ["distance between two successive troughs", "separation of two adjacent particles vibrating in phase", "maximum displacement from equilibrium position", "distance travelled in one cycle"], correctAnswer: "C" },
+
+        { type: "mcq", question: "Thunder is usually heard some seconds after lightning because", options: ["the eye is more sensitive than the ear", "sound and light travel in different media", "thunder occurs after lightning", "light travels faster than sound"], correctAnswer: "D" },
+
+        { type: "mcq", question: "Which statement about wave fronts is correct?", options: ["I only", "II only", "III only", "I and III only"], correctAnswer: "D" },
+
+        { type: "mcq", question: "The maximum displacement of a vibrating tuning fork is its", options: ["amplitude", "frequency", "period", "wavelength"], correctAnswer: "A" },
+
+        { type: "mcq", question: "The inverse of the time required for one complete cycle is called", options: ["wavelength", "period", "frequency", "amplitude"], correctAnswer: "C" },
+
+        { type: "mcq", question: "Lightning is seen before thunder because", options: ["air pressure is higher", "the speed of sound is less than that of light", "temperature decreases with altitude", "air density decreases with altitude"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Frequency is measured in", options: ["metre per second", "second", "hertz", "farad"], correctAnswer: "C" },
+
+        { type: "mcq", question: "Which property of a wave remains constant when it enters another medium?", options: ["Amplitude", "Velocity", "Frequency", "Wavelength"], correctAnswer: "C" },
+
+        { type: "mcq", question: "A string 50 cm long has a wave speed of 300 m s⁻¹. Calculate the number of vibrations per second.", options: ["3", "6", "150", "600"], correctAnswer: "D" },
+
+        { type: "mcq", question: "A note of frequency 2000 Hz travels at 400 m s⁻¹. Calculate its wavelength.", options: ["5.0 m", "2.0 m", "0.5 m", "0.2 m"], correctAnswer: "D" },
+
+        { type: "mcq", question: "The distance between successive crests is 25 cm and wave speed is 20 m s⁻¹. Calculate the frequency.", options: ["0.8 Hz", "5.0 Hz", "50.0 Hz", "80.0 Hz"], correctAnswer: "D" },
+
+        { type: "mcq", question: "Sixty complete waves pass a point in 4 s. If the distance between three successive troughs is 15 m, calculate the wave speed.", options: ["300.0 m s⁻¹", "225.0 m s⁻¹", "112.5 m s⁻¹", "75.0 m s⁻¹"], correctAnswer: "B" },
+
+        { type: "mcq", question: "A ball is projected horizontally at 20 m s⁻¹ and lands after 4 s. Calculate the height of the hill (g = 10 m s⁻²).", options: ["20 m", "40 m", "80 m", "160 m"], correctAnswer: "C" },
+
+        { type: "mcq", question: "The time taken by a projectile to reach maximum height is", options: ["u sinθ / g", "u cosθ / g", "2u sinθ / g", "2u cosθ / g"], correctAnswer: "A" },
+
+        { type: "mcq", question: "A cork travels 4.50 m horizontally in 1.25 s after being projected at 60°. Calculate its initial speed.", options: ["4.2 m s⁻¹", "4.7 m s⁻¹", "5.6 m s⁻¹", "7.1 m s⁻¹"], correctAnswer: "A" },
+
+        { type: "mcq", question: "When a body is thrown vertically upward, its velocity at maximum height is", options: ["maximum", "zero", "double the initial value", "half the initial value"], correctAnswer: "B" },
+
+        { type: "mcq", question: "A body returns to its point of projection after 1.2 s. Calculate the speed of projection (g = 10 m s⁻²).", options: ["0.6 m s⁻¹", "1.2 m s⁻¹", "6.0 m s⁻¹", "12.0 m s⁻¹"], correctAnswer: "C" },
+
+        { type: "mcq", question: "For a body projected horizontally, which statements are correct?", options: ["I only", "II only", "I and III only", "II and III only"], correctAnswer: "D" },
+
+        { type: "mcq", question: "A body is projected horizontally from a 45 m cliff and lands 30 m away. Calculate the speed of projection.", options: ["10 m s⁻¹", "15 m s⁻¹", "20 m s⁻¹", "30 m s⁻¹"], correctAnswer: "A" },
+
+        { type: "mcq", question: "A body can have constant speed but still accelerate if it", options: ["moves in a straight line", "moves in a circle", "oscillates", "is in equilibrium"], correctAnswer: "B" },
+
+        { type: "mcq", question: "The time rate of change of displacement is known as", options: ["speed", "velocity", "impulse", "acceleration"], correctAnswer: "B" },
+
+        { type: "mcq", question: "An orange falls from a tree 45 m high. How long does it take to reach the ground?", options: ["3.0 s", "4.5 s", "6.0 s", "7.5 s"], correctAnswer: "A" },
+
+        { type: "mcq", question: "A bus travelling at 15 m s⁻¹ accelerates uniformly at 4 m s⁻² for 10 s. Calculate the distance covered.", options: ["150 m", "170 m", "350 m", "600 m"], correctAnswer: "C" },
+
+        { type: "mcq", question: "How far will a body move in 4 s if it accelerates uniformly from rest at 2 m s⁻²?", options: ["32 m", "24 m", "16 m", "12 m"], correctAnswer: "C" },
+
+        { type: "mcq", question: "A moving body accelerates when it", options: ["changes direction at constant speed", "maintains constant linear speed", "changes velocity with time", "is acted upon by balanced forces"], correctAnswer: "C" },
+
+        { type: "mcq", question: "Which equation represents the distance travelled at constant speed?", options: ["s = vt", "v = u + at", "v² = u² + 2as", "a = (v-u)/t"], correctAnswer: "A" },
+
+        { type: "mcq", question: "An object falls freely from 25 m onto a roof 5 m high. Calculate the velocity with which it strikes the roof.", options: ["17.3 m s⁻¹", "20.0 m s⁻¹", "24.5 m s⁻¹", "125.0 m s⁻¹"], correctAnswer: "B" },
+
+        { type: "mcq", question: "A ball is thrown vertically upward at 50 m s⁻¹. Calculate the total time spent in the air.", options: ["2.5 s", "5.0 s", "10.0 s", "15.0 s"], correctAnswer: "C" },
+
+        { type: "mcq", question: "The average speed is equal to (initial speed + final speed)/2 only when acceleration is", options: ["changing", "uniform", "increasing", "decreasing"], correctAnswer: "B" },
+
+        { type: "mcq", question: "A car starts from rest and covers 80 m in 10 s. Calculate its acceleration.", options: ["1.25 m s⁻²", "1.60 m s⁻²", "4.00 m s⁻²", "8.00 m s⁻²"], correctAnswer: "B" },
+
+        { type: "mcq", question: "An object is released from rest at a height of 25 m. Calculate the time taken to reach the ground.", options: ["25.0 s", "10.0 s", "2.50 s", "2.24 s"], correctAnswer: "D" },
+
+        { type: "mcq", question: "A body accelerates uniformly from rest at 3 m s⁻² for 8 s. Calculate the distance covered.", options: ["12 m", "24 m", "48 m", "96 m"], correctAnswer: "D" },
+
+        { type: "mcq", question: "A moving object has uniform acceleration if its", options: ["displacement decreases at constant rate", "speed is proportional to time", "velocity increases by equal amounts in equal time intervals", "velocity varies inversely with time"], correctAnswer: "C" },
+
+        { type: "mcq", question: "A motorist travelling at 72 km h⁻¹ closes his eyes for 0.4 s. Calculate the distance covered.", options: ["50.0 m", "28.8 m", "18.0 m", "8.0 m"], correctAnswer: "D" },
+
+        { type: "mcq", question: "A car travelling at 120 km h⁻¹ passes two stations in 4 minutes. Calculate the distance between the stations.", options: ["8 km", "15 km", "22 km", "30 km"], correctAnswer: "A" },
+
+        { type: "mcq", question: "A bird flies at 10 m s⁻¹ for 3 s, 15 m s⁻¹ for 3 s and 20 m s⁻¹ for 4 s. Calculate its average speed.", options: ["4.5 m s⁻¹", "15.0 m s⁻¹", "15.5 m s⁻¹", "51.7 m s⁻¹"], correctAnswer: "C" },
+
+        { type: "mcq", question: "An object is dropped from the top of a tower and takes 4 s to reach the ground. Calculate the height.", options: ["20 m", "40 m", "80 m", "160 m"], correctAnswer: "C" },
+
+        { type: "mcq", question: "A particle starts from rest and accelerates at 0.5 m s⁻². Calculate the time taken to cover 25 m.", options: ["2.5 s", "7.1 s", "10.0 s", "50.0 s"], correctAnswer: "C" },
+
+        { type: "mcq", question: "A body is said to have uniform acceleration if it experiences equal", options: ["increases in velocity at equal time intervals", "decreases in velocity at equal time intervals", "increases in speed at equal time intervals", "decreases in speed at equal time intervals"], correctAnswer: "A" },
+
+        { type: "mcq", question: "A body dropped from a height falls with uniform", options: ["speed", "velocity", "acceleration", "retardation"], correctAnswer: "C" },
+
+        { type: "mcq", question: "A particle accelerates uniformly from rest at 6.0 m s⁻² for 8 s then comes to rest in 5 s. Determine the deceleration.", options: ["9.6 m s⁻²", "24.0 m s⁻²", "30.0 m s⁻²", "48.0 m s⁻²"], correctAnswer: "A" },
+
+        { type: "mcq", question: "The time rate of increase in velocity is called", options: ["force", "momentum", "acceleration", "speed"], correctAnswer: "C" },
+
+        { type: "mcq", question: "A motorcycle accelerates from rest to 72 km h⁻¹ in 10 s. What is its acceleration?", options: ["108 m s⁻²", "86 m s⁻²", "4 m s⁻²", "2 m s⁻²"], correctAnswer: "D" },
+
+        { type: "mcq", question: "Which statement about distance and displacement is NOT correct?", options: ["Displacement is a vector quantity.", "Distance has dimension L.", "Displacement is measured in metres.", "Distance is a vector quantity."], correctAnswer: "D" },
+
+        { type: "mcq", question: "A stone is projected vertically upward at 5 m s⁻¹. Calculate the maximum height reached.", options: ["1.00 m", "1.25 m", "1.50 m", "3.75 m"], correctAnswer: "B" },
+
+        { type: "mcq", question: "A bullet fired vertically upward reaches a height of 500 m. Calculate its initial speed.", options: ["500.0 m s⁻¹", "100.0 m s⁻¹", "70.0 m s⁻¹", "50.0 m s⁻¹"], correctAnswer: "B" },
+
+        { type: "mcq", question: "A ball is projected vertically upward at 15 m s⁻¹. Calculate the time taken to return to the ground.", options: ["1.5 s", "3.0 s", "5.0 s", "7.5 s"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Two blocks of the same dimensions, one steel and one wooden, are dropped simultaneously in vacuum. They", options: ["hit the ground together because they have the same acceleration", "reach the ground together because they have the same dimensions", "the wooden block reaches first", "the steel block reaches first"], correctAnswer: "A" },
+
+        { type: "mcq", question: "The quantity of motion of a body is its", options: ["acceleration", "displacement", "momentum", "force"], correctAnswer: "C" },
+
+        { type: "mcq", question: "The concave meniscus of water in a glass tube is due to", options: ["adhesion between water and glass being greater than cohesion between water molecules", "cohesion being greater than adhesion", "faster movement of molecules near the glass", "attraction towards the centre of the tube"], correctAnswer: "A" },
+
+        { type: "mcq", question: "Capillarity of liquids in narrow tubes is caused by", options: ["viscosity", "surface tension", "osmosis", "Brownian motion"], correctAnswer: "B" },
+
+        { type: "mcq", question: "Knowledge of surface tension is applied in the following except", options: ["manufacturing rain coats", "production of palm oil", "floating a needle on water", "washing plates with soapy water"], correctAnswer: "B" }
+    ]
+},
         {
     subject: "Chemistry",
     timeLimit: 1500,
@@ -2197,7 +2392,7 @@ const studentRegistry = {
         "GGS12299": { name: "Ezeukwu Chidera",           stream: "general" },
         "GGS12291": { name: "Ezeukwu Mmesoma",           stream: "general" },
         "GGS12303": { name: "Hilary Pascal",             stream: "general" },
-        "GGS12295": { name: "Imoh Deborah",              stream: "general" },
+        "GGS12295": { name: "Imo Deborah",               stream: "general" },
         "GGS12290": { name: "Joseph Chidubem",           stream: "general" },
         "GGS12287": { name: "Mbah Adaeze",               stream: "general" },
         "GGS12297": { name: "Michael Chidinma",          stream: "general" },
@@ -2224,14 +2419,13 @@ const studentRegistry = {
         "GGS12388": { name: "Eze Maryann",               stream: "science" },
         "GGS12386": { name: "Eze Goodluck",              stream: "science" },
         "GGS12382": { name: "Chimezie Charity",          stream: "science" },
+        "GGS12401": { name: "Nweke Victoria",            stream: "science" },
         // Art students
         "GGS12149": { name: "Onwuaso Chinenye",          stream: "art" },
-        "GGS00000": { name: "Mr Nnamdi",                 stream: "art" },
         "GGS12391": { name: "Okonkwo Precious",          stream: "art" },
         "GGS12395": { name: "Okoli Precious",            stream: "art" },
         "GGS12397": { name: "Okeke Favour",              stream: "art" },
         "GGS12390": { name: "Nwovu Shedrack",            stream: "art" },
-        "GGS12401": { name: "Nweke Victoria",            stream: "art" },
         "GGS12404": { name: "Michael Miracle",           stream: "art" },
         "GGS12389": { name: "Fedrick Ogbuchie",          stream: "art" },
         "GGS12407": { name: "Ejike Emmanuella",          stream: "art" },
