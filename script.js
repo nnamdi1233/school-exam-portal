@@ -33,7 +33,7 @@ function saveResultToFirebase(className, admissionNumber, subjectName, resultDat
    Subjects stay locked for regular students until this date/time.
    The admin/demo admission number (GGS00000) always bypasses this.
    ============================================================ */
-const EXAM_START_DATE = new Date("2026-07-6T09:00:00"); // 9:00 AM, July 13 2026
+const EXAM_START_DATE = new Date("2026-07-08T00:00:00"); // 9:00 AM, July 6 2026
 
 // Manual override — set to true to force-lock everything regardless
 // of date (e.g. if you need to delay exams last-minute)
