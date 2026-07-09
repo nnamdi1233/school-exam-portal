@@ -33,7 +33,7 @@ function saveResultToFirebase(className, admissionNumber, subjectName, resultDat
    Subjects stay locked for regular students until this date/time.
    The admin/demo admission number (GGS00000) always bypasses this.
    ============================================================ */
-const EXAM_START_DATE = new Date("2026-07-08T00:00:00"); // 9:00 AM, July 6 2026
+const EXAM_START_DATE = new Date("2026-07-13T00:00:00"); // 9:00 AM, July 13 2026
 
 // Manual override — set to true to force-lock everything regardless
 // of date (e.g. if you need to delay exams last-minute)
@@ -1850,7 +1850,7 @@ const examData = {
         { type: "mcq", question: "Which type of mobile app is built specifically for one platform?", options: ["Hybrid app", "Native app", "Web app", "Cloud app"], correctAnswer: "B" },
         { type: "mcq", question: "A web app runs mainly through a ______.", options: ["Platform", "web browser", "Web Platform", "Mobile Application"], correctAnswer: "B" },
         { type: "mcq", question: "Hybrid apps combine features of ______.", options: ["hardware and software", "native and web apps", "Android and Windows", "Platforms and browsers"], correctAnswer: "B" },
-        { type: "mcq", question: "Which of the following is a mobile operating system?", options: ["Android", "Linux Mint", "Ubuntu Server", "MS-DOS"], correctAnswer: "A" },
+        { type: "mcq", question: "Which of the following is a mobile operating system?", options: ["Android", "Linux", "Ubuntu Server", "MS-DOS"], correctAnswer: "A" },
         { type: "mcq", question: "Which development tool is commonly used for Android app development?", options: ["Android Studio", "Adobe Reader", "PowerPoint", "Notepad"], correctAnswer: "A" },
         { type: "mcq", question: "Android Studio is mainly used for ______.", options: ["database management", "mobile app development", "video editing", "computer networking"], correctAnswer: "B" },
         { type: "mcq", question: "One advantage of mobile applications is that they ______.", options: ["are always free", "provide fast access to services", "cannot be hacked", "never require updates"], correctAnswer: "B" },
