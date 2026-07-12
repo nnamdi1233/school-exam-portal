@@ -85,7 +85,7 @@ const examData = {
         { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
         {
     subject: "English Studies",
-    openDate: "2026-07-12T12:54:00",
+    openDate: "2026-07-12T09:00:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -2959,7 +2959,8 @@ checkAndStartExamSession(entered, className, subjectInfo.subject, function (allo
         }
 
         const elapsedSeconds = Math.floor((new Date() - new Date(saved.startedAt)) / 1000);
-        const remaining = saved.timeLimitSeconds - elapsedSeconds;
+        const timeLimitToUse = saved.timeLimitSeconds || subjectInfo.timeLimit;
+        const remaining = timeLimitToUse - elapsedSeconds;
 
         if (remaining <= 0) {
             showModal("Your time for this exam has already expired.");
@@ -2971,6 +2972,10 @@ checkAndStartExamSession(entered, className, subjectInfo.subject, function (allo
         showModal(
             "It looks like " + saved.studentName + " already started this exam on another device.\n\nResume from where you left off?",
             function () {
+                warningsFired = { fiveMin: false, oneMin: false };
+                isNavigating = false;
+                clearInterval(timerInterval);
+                
                 currentQuizQuestions   = saved.questions;
                 studentAnswers         = saved.studentAnswers;
                 currentQuestionIndex   = saved.currentQuestionIndex;
@@ -3191,6 +3196,8 @@ function startQuiz(subjectInfo, className, studentName, admissionNumber) {
     studentAnswers             = new Array(currentQuizQuestions.length).fill(null);
     timeRemaining              = subjectInfo.timeLimit;
     quizSubjectTitle.textContent = subjectInfo.subject;
+
+    saveActiveSessionToFirebase();
 
     switchSection(examSection, quizScreen);
     buildQuestionNavPanel();
