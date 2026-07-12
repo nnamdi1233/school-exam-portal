@@ -2439,7 +2439,7 @@ const studentRegistry = {
         "GGS12296": { name: "Nwaeze Chinaza",            stream: "general" },
         "GGS12289": { name: "Ogbu Amanda",               stream: "general" },
         "GGS00000": { name: "Mr Nnamdi",                 stream: "general" },
-        "GGS12302": { name: "Oguchi Chidiuso",           stream: "general" },
+        "GGS123088": { name: "Oguchi Chidiuso",           stream: "general" },
         "GGS12284": { name: "Okeke Praise",              stream: "general" },
         "GGS12301": { name: "Okelue Munachi",            stream: "general" },
         "GGS12305": { name: "Okoli Miracle",             stream: "general" },
@@ -3399,21 +3399,22 @@ exitQuizButton.addEventListener("click", function () {
 function startTimer() {
     updateTimerDisplay();
 
-    const key = getSessionKey(currentAdmissionNumber, currentClassName, currentSubjectName);
-    db.ref("activeSessions/" + key + "/activeDeviceToken").once("value").then(function (snap) {
-        const liveToken = snap.val();
-        if (liveToken && currentDeviceToken && liveToken !== currentDeviceToken) {
-            clearInterval(timerInterval);
-            quizInProgress = false;
-            showModal(
-                "This exam session has been resumed on another device. This browser can no longer continue.",
-                function () { resetPortal(); }
-            );
-        }
-    });
-
     timerInterval = setInterval(function () {
         if (modalOverlay.style.display === "flex") return;
+
+        // Check if another device has taken over this session
+        const key = getSessionKey(currentAdmissionNumber, currentClassName, currentSubjectName);
+        db.ref("activeSessions/" + key + "/activeDeviceToken").once("value").then(function (snap) {
+            const liveToken = snap.val();
+            if (liveToken && currentDeviceToken && liveToken !== currentDeviceToken) {
+                clearInterval(timerInterval);
+                quizInProgress = false;
+                showModal(
+                    "This exam session has been resumed on another device. This browser can no longer continue.",
+                    function () { resetPortal(); }
+                );
+            }
+        });
 
         timeRemaining--;
         updateTimerDisplay();
