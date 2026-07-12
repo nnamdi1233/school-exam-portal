@@ -27,6 +27,18 @@ function saveResultToFirebase(className, admissionNumber, subjectName, resultDat
     db.ref("results/" + className + "/" + cleanAdmission + "/" + cleanSubject).set(resultData);
 }
 
+function saveActiveSessionToFirebase() {
+    const key = getSessionKey(currentAdmissionNumber, currentClassName, currentSubjectName);
+    db.ref("activeSessions/" + key).set({
+        questions: currentQuizQuestions,
+        studentAnswers: studentAnswers,
+        currentQuestionIndex: currentQuestionIndex,
+        startedAt: quizStartTime.toISOString(),
+        timeLimitSeconds: currentSubjectInfo.timeLimit,
+        studentName: currentStudentName
+    });
+}
+
 /* ============================================================
    EXAM WINDOW CONTROL
    ------------------------------------------------------------
@@ -42,6 +54,11 @@ const FORCE_LOCK_ALL = false;
 function isExamWindowOpen() {
     if (FORCE_LOCK_ALL) return false;
     return new Date() >= EXAM_START_DATE;
+}
+function isSubjectOpen(subjectInfo) {
+    if (FORCE_LOCK_ALL) return false;
+    const openDate = subjectInfo.openDate ? new Date(subjectInfo.openDate) : EXAM_START_DATE;
+    return new Date() >= openDate;
 }
 
 /* ============================================================
@@ -68,6 +85,7 @@ const examData = {
         { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
         {
     subject: "English Studies",
+    openDate: "2026-07-12T12:54:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -107,7 +125,8 @@ const examData = {
 },
         {
     subject: "Digital Literacy",
-    timeLimit: 1500,
+    openDate: "2026-07-13T09:00:00",
+    timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -545,7 +564,8 @@ const examData = {
         { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
         {
     subject: "Digital Literacy",
-    timeLimit: 1500,
+    openDate: "2026-07-13T09:00:00",
+    timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -584,6 +604,7 @@ const examData = {
 },
         {
   subject: "English Studies",
+  openDate: "2026-07-13T09:00:00",
   timeLimit: 1500,
   totalMarks: 60,
   marksPerQuestion: 2,
@@ -1312,7 +1333,8 @@ const examData = {
 },
         {
     subject: "Digital Literacy",
-    timeLimit: 1500,
+    openDate: "2026-07-13T09:00:00",
+    timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1390,7 +1412,7 @@ const examData = {
 },
         {
     subject: "Christian Religious Studies",
-    timeLimit: 1500,
+    timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1540,6 +1562,7 @@ const examData = {
 },
     {
     subject: "English Studies",
+    openDate: "2026-07-13T09:00:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -1762,6 +1785,7 @@ const examData = {
 },
         {
     subject: "English Studies",
+    openDate: "2026-07-13T09:00:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -1840,7 +1864,8 @@ const examData = {
 },
         {
     subject: "Digital Literacy",
-    timeLimit: 1500,
+    openDate: "2026-07-13T09:00:00",
+    timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1957,7 +1982,7 @@ const examData = {
 },
         {
     subject: "Christian Religious Studies",
-    timeLimit: 1500,
+    timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -2865,19 +2890,20 @@ function showSubjects(className) {
     // unless this is the admin/demo key (stream === "all")
     const isAdmin = studentData.stream === "all";
 
-    if (subjectInfo.questions && !isAdmin && !isPracticeSubject(subjectInfo.subject) && !isExamWindowOpen()) {
-        const formattedDate = EXAM_START_DATE.toLocaleString("en-GB", {
-            weekday: "long", year: "numeric", month: "long", day: "numeric",
-            hour: "2-digit", minute: "2-digit"
-        });
-        showModal(
-            "This Exam is not open yet.🔒\n\n" +
-            subjectInfo.subject + " will become available on:\n" +
-            formattedDate +
-            "\n\nPlease check back then."
-        );
-        return;
-    }
+    if (subjectInfo.questions && !isAdmin && !isPracticeSubject(subjectInfo.subject) && !isSubjectOpen(subjectInfo)) {
+    const openDate = subjectInfo.openDate ? new Date(subjectInfo.openDate) : EXAM_START_DATE;
+    const formattedDate = openDate.toLocaleString("en-GB", {
+        weekday: "long", year: "numeric", month: "long", day: "numeric",
+        hour: "2-digit", minute: "2-digit"
+    });
+    showModal(
+        "This Exam is not open yet.🔒\n\n" +
+        subjectInfo.subject + " will become available on:\n" +
+        formattedDate + "\n\nPlease check back then."
+    );
+    return;
+}
+
 
     if (!subjectInfo.questions) {
         window.open(subjectInfo.link, "_blank");
@@ -2912,17 +2938,67 @@ checkAndStartExamSession(entered, className, subjectInfo.subject, function (allo
     subjectCard.textContent = subjectInfo.subject;
 
     if (!allowed) {
-        const statusText = existing && existing.status === "COMPLETED"
-            ? "already completed"
-            : "already started (possibly on another device)";
-
+    if (existing && existing.status === "COMPLETED") {
         showModal(
-            studentData.name + " has " + statusText + " the " +
+            studentData.name + " has already completed the " +
             subjectInfo.subject + " exam for " + className +
             ". If this is a mistake, please contact your exam supervisor."
         );
         return;
     }
+
+    // Status is STARTED — offer to resume on this device
+    const key = getSessionKey(entered, className, subjectInfo.subject);
+    db.ref("activeSessions/" + key).once("value").then(function (snap) {
+        const saved = snap.val();
+        if (!saved) {
+            showModal(
+                studentData.name + " already started this exam but no progress was found. Please contact your exam supervisor."
+            );
+            return;
+        }
+
+        const elapsedSeconds = Math.floor((new Date() - new Date(saved.startedAt)) / 1000);
+        const remaining = saved.timeLimitSeconds - elapsedSeconds;
+
+        if (remaining <= 0) {
+            showModal("Your time for this exam has already expired.");
+            markExamSessionCompleted(entered, className, subjectInfo.subject);
+            db.ref("activeSessions/" + key).remove();
+            return;
+        }
+
+        showModal(
+            "It looks like " + saved.studentName + " already started this exam on another device.\n\nResume from where you left off?",
+            function () {
+                currentQuizQuestions   = saved.questions;
+                studentAnswers         = saved.studentAnswers;
+                currentQuestionIndex   = saved.currentQuestionIndex;
+                currentClassName       = className;
+                currentSubjectName     = subjectInfo.subject;
+                currentSubjectInfo     = subjectInfo;
+                currentStudentName     = saved.studentName;
+                currentAdmissionNumber = entered.toUpperCase();
+                quizStartTime          = new Date(saved.startedAt);
+                timeRemaining          = remaining;
+                quizInProgress         = true;
+                tabSwitchCount         = 0;
+
+                quizSubjectTitle.textContent = subjectInfo.subject;
+                switchSection(examSection, quizScreen);
+                buildQuestionNavPanel();
+                renderQuestion();
+                updateQuestionNavPanel();
+                updateProgressBar();
+                startTimer();
+            },
+            function () {},
+            "Yes, Resume",
+            "Cancel"
+        );
+    });
+    return;
+}
 
     // We've claimed the session — safe to proceed
     showModal(
@@ -3015,11 +3091,11 @@ admissionInput.addEventListener("input", function () {
     const classSubjects = examData[currentSelectedClass] || [];
     const matchingSubject = classSubjects.find(function (s) { return s.subject === subjectName; });
 
-    if (matchingSubject && matchingSubject.questions && !isAdminUser && !isPracticeSubject(matchingSubject.subject) && !isExamWindowOpen()) {
+    if (matchingSubject && matchingSubject.questions && !isAdminUser && !isPracticeSubject(matchingSubject.subject) && !isSubjectOpen(matchingSubject)) {
     card.classList.add("exam-locked");
-    } else {
+} else {
     card.classList.remove("exam-locked");
-    }
+}
 }
     } else {
         admissionFeedback.textContent = "✗ Admission number not found for this class.";
@@ -3191,6 +3267,7 @@ function renderQuestion() {
             updateQuestionNavPanel();
             updateProgressBar();
             saveQuizProgress();
+            saveActiveSessionToFirebase();
         });
 
         optionsContainer.appendChild(input);
@@ -3218,6 +3295,7 @@ function renderQuestion() {
                 updateQuestionNavPanel();
                 updateProgressBar();
                 saveQuizProgress();
+                saveActiveSessionToFirebase();
             });
 
             optionsContainer.appendChild(optionButton);
@@ -3304,6 +3382,7 @@ function startTimer() {
         }
 
         if (timeRemaining % 5 === 0) { saveQuizProgress(); }
+        saveActiveSessionToFirebase();
 
         if (timeRemaining <= 0) {
             clearInterval(timerInterval);
@@ -3477,6 +3556,8 @@ function finishQuiz() {
     try { localStorage.removeItem("examProgress"); } catch (e) {}
     if (currentAdmissionNumber.toUpperCase() !== "GGS00011") {
     markExamSessionCompleted(currentAdmissionNumber, currentClassName, currentSubjectName);
+    const cleanupKey = getSessionKey(currentAdmissionNumber, currentClassName, currentSubjectName);
+    db.ref("activeSessions/" + cleanupKey).remove();
         }
 
     let rawScore = 0;
