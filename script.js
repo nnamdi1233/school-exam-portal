@@ -27,17 +27,31 @@ function saveResultToFirebase(className, admissionNumber, subjectName, resultDat
     db.ref("results/" + className + "/" + cleanAdmission + "/" + cleanSubject).set(resultData);
 }
 
+function isAnswered(value) {
+    return value !== null && value !== "" && value !== undefined;
+}
+
 function saveActiveSessionToFirebase() {
     const key = getSessionKey(currentAdmissionNumber, currentClassName, currentSubjectName);
-    db.ref("activeSessions/" + key).set({
+    const safeAnswers = studentAnswers.map(function (a) { return a === null ? "" : a; });
+
+    db.ref("activeSessions/" + key).update({
         questions: currentQuizQuestions,
-        studentAnswers: studentAnswers,
+        studentAnswers: safeAnswers,
         currentQuestionIndex: currentQuestionIndex,
         startedAt: quizStartTime.toISOString(),
         timeLimitSeconds: currentSubjectInfo.timeLimit,
-        studentName: currentStudentName
+        studentName: currentStudentName,
     });
 }
+
+    function claimDeviceToken() {
+    const key = getSessionKey(currentAdmissionNumber, currentClassName, currentSubjectName);
+    db.ref("activeSessions/" + key).update({
+        activeDeviceToken: currentDeviceToken
+    });
+}
+
 
 /* ============================================================
    EXAM WINDOW CONTROL
@@ -85,7 +99,7 @@ const examData = {
         { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
         {
     subject: "English Studies",
-    openDate: "2026-07-12T13:30:00",
+    openDate: "2026-07-12T17:35:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -604,7 +618,7 @@ const examData = {
 },
         {
   subject: "English Studies",
-  openDate: "2026-07-13T09:00:00",
+  openDate: "2026-07-12T18:25:00",
   timeLimit: 1500,
   totalMarks: 60,
   marksPerQuestion: 2,
@@ -2399,7 +2413,7 @@ const studentRegistry = {
         "GGS12313": { name: "Stanley Blessing",          stream: "general" },
         "GGS12311": { name: "Sunday Precious",           stream: "general" },
         "GGS12375": { name: "Udeze Chidalu",             stream: "general" },
-        "GGS00001": { name: "Mr Nnamdi",                 stream: "general" },
+        "GGS11112": { name: "Mr Nnamdi",                 stream: "general" },
         "GGS12352": { name: "Ugo Chidera",               stream: "general" },
         "GGS12349": { name: "Ugo Ebube",                 stream: "general" },
         "GGS12338": { name: "Uwaezuoke Annabel",         stream: "general" }
@@ -2543,6 +2557,14 @@ function shuffleArray(array) {
     return shuffled;
 }
 
+/* ============================================================
+   UTILITY: generateDeviceToken
+   ============================================================ */
+function generateDeviceToken() {
+    return Date.now().toString(36) + Math.random().toString(36).substring(2);
+}
+let currentDeviceToken = null;
+
 
 /* ============================================================
    UTILITY: showModal
@@ -2558,7 +2580,7 @@ function showModal(message, onOkCallback, onCancelCallback, onOkLabel, onCancelL
     modalOverlay.style.display = "flex";
 
     const currentOkButton     = document.getElementById("modal-ok-button");
-    const currentCancelButton = document.getElementById("modal-cancel-button");
+    const currentCancelButton = document.getElementById("modal-cancel-button"); 
 
     const freshOkButton = currentOkButton.cloneNode(true);
     currentOkButton.parentNode.replaceChild(freshOkButton, currentOkButton);
@@ -2712,7 +2734,7 @@ function markExamSessionCompleted(admissionNumber, className, subjectName) {
    Fills based on answered questions, not current position.
    ============================================================ */
 function updateProgressBar() {
-    const answeredCount = studentAnswers.filter(function (a) { return a !== null; }).length;
+    const answeredCount = studentAnswers.filter(isAnswered).length;
     const progress      = (answeredCount / currentQuizQuestions.length) * 100;
     document.getElementById("progress-bar-fill").style.width = progress + "%";
 }
@@ -2971,39 +2993,41 @@ checkAndStartExamSession(entered, className, subjectInfo.subject, function (allo
 
         showModal(
             "It looks like " + saved.studentName + " already started this exam on another device.\n\nResume from where you left off?",
-            function () {
-                warningsFired = { fiveMin: false, oneMin: false };
-                isNavigating = false;
-                clearInterval(timerInterval);
-                
-                currentQuizQuestions   = saved.questions;
-                studentAnswers         = saved.studentAnswers;
-                currentQuestionIndex   = saved.currentQuestionIndex;
-                currentClassName       = className;
-                currentSubjectName     = subjectInfo.subject;
-                currentSubjectInfo     = subjectInfo;
-                currentStudentName     = saved.studentName;
-                currentAdmissionNumber = entered.toUpperCase();
-                quizStartTime          = new Date(saved.startedAt);
-                timeRemaining          = remaining;
-                quizInProgress         = true;
-                tabSwitchCount         = 0;
+        function () {
+        warningsFired = { fiveMin: false, oneMin: false };
+        isNavigating = false;
+        clearInterval(timerInterval);
+        
+        currentQuizQuestions   = saved.questions;
+        studentAnswers         = saved.studentAnswers;
+        currentQuestionIndex   = saved.currentQuestionIndex;
+        currentClassName       = className;
+        currentSubjectName     = subjectInfo.subject;
+        currentSubjectInfo     = subjectInfo;
+        currentStudentName     = saved.studentName;
+        currentAdmissionNumber = entered.toUpperCase();
+        quizStartTime          = new Date(saved.startedAt);
+        timeRemaining          = remaining;
+        quizInProgress         = true;
+        tabSwitchCount         = 0;
 
-                quizSubjectTitle.textContent = subjectInfo.subject;
-                switchSection(examSection, quizScreen);
-                buildQuestionNavPanel();
-                renderQuestion();
-                updateQuestionNavPanel();
-                updateProgressBar();
-                startTimer();
-            },
+        quizSubjectTitle.textContent = subjectInfo.subject;
+        switchSection(examSection, quizScreen);
+        buildQuestionNavPanel();
+        renderQuestion();
+        updateQuestionNavPanel();
+        updateProgressBar();
+        startTimer();
+        claimDeviceToken();
+        saveActiveSessionToFirebase();
+        },
             function () {},
             "Yes, Resume",
             "Cancel"
-        );
-    });
-    return;
-}
+            );
+        });
+        return;
+        }
 
     // We've claimed the session — safe to proceed
     showModal(
@@ -3196,7 +3220,8 @@ function startQuiz(subjectInfo, className, studentName, admissionNumber) {
     studentAnswers             = new Array(currentQuizQuestions.length).fill(null);
     timeRemaining              = subjectInfo.timeLimit;
     quizSubjectTitle.textContent = subjectInfo.subject;
-
+    currentDeviceToken = generateDeviceToken();
+    claimDeviceToken();
     saveActiveSessionToFirebase();
 
     switchSection(examSection, quizScreen);
@@ -3234,7 +3259,7 @@ function updateQuestionNavPanel() {
     for (let i = 0; i < allNavBtns.length; i++) {
         allNavBtns[i].classList.remove("answered", "current");
         if (i === currentQuestionIndex)    allNavBtns[i].classList.add("current");
-        if (studentAnswers[i] !== null)    allNavBtns[i].classList.add("answered");
+        if (isAnswered(studentAnswers[i])) allNavBtns[i].classList.add("answered");
     }
 }
 
@@ -3373,6 +3398,19 @@ exitQuizButton.addEventListener("click", function () {
    ============================================================ */
 function startTimer() {
     updateTimerDisplay();
+
+    const key = getSessionKey(currentAdmissionNumber, currentClassName, currentSubjectName);
+    db.ref("activeSessions/" + key + "/activeDeviceToken").once("value").then(function (snap) {
+        const liveToken = snap.val();
+        if (liveToken && currentDeviceToken && liveToken !== currentDeviceToken) {
+            clearInterval(timerInterval);
+            quizInProgress = false;
+            showModal(
+                "This exam session has been resumed on another device. This browser can no longer continue.",
+                function () { resetPortal(); }
+            );
+        }
+    });
 
     timerInterval = setInterval(function () {
         if (modalOverlay.style.display === "flex") return;
