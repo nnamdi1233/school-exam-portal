@@ -43,7 +43,7 @@ function saveActiveSessionToFirebase() {
    EXAM WINDOW CONTROL
    ------------------------------------------------------------
    Subjects stay locked for regular students until this date/time.
-   The admin/demo admission number (GGS00000) always bypasses this.
+   The admin/demo admission number (GGS00011) always bypasses this.
    ============================================================ */
 const EXAM_START_DATE = new Date("2026-07-13T00:00:00"); // 9:00 AM, July 13 2026
 
@@ -2399,7 +2399,7 @@ const studentRegistry = {
         "GGS12313": { name: "Stanley Blessing",          stream: "general" },
         "GGS12311": { name: "Sunday Precious",           stream: "general" },
         "GGS12375": { name: "Udeze Chidalu",             stream: "general" },
-        "GGS00000": { name: "Mr Nnamdi",                 stream: "general" },
+        "GGS00001": { name: "Mr Nnamdi",                 stream: "general" },
         "GGS12352": { name: "Ugo Chidera",               stream: "general" },
         "GGS12349": { name: "Ugo Ebube",                 stream: "general" },
         "GGS12338": { name: "Uwaezuoke Annabel",         stream: "general" }
