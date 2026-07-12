@@ -59,7 +59,7 @@ function saveActiveSessionToFirebase() {
    Subjects stay locked for regular students until this date/time.
    The admin/demo admission number (GGS00011) always bypasses this.
    ============================================================ */
-const EXAM_START_DATE = new Date("2026-07-13T00:00:00"); // 9:00 AM, July 13 2026
+const EXAM_START_DATE = new Date("2026-07-17T00:00:00"); // 9:00 AM, July 17 2026
 
 // Manual override — set to true to force-lock everything regardless
 // of date (e.g. if you need to delay exams last-minute)
@@ -99,7 +99,7 @@ const examData = {
         { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
         {
     subject: "English Studies",
-    openDate: "2026-07-12T17:35:00",
+    openDate: "2026-07-13T09:00:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -374,6 +374,7 @@ const examData = {
 },
     {
     subject: "Christian Religious Studies",
+    openDate: "2026-07-13T09:00:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -1027,6 +1028,7 @@ const examData = {
 },
         {
     subject: "Christian Religious Studies",
+    openDate: "2026-07-13T09:00:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 1,
@@ -1426,6 +1428,7 @@ const examData = {
 },
         {
     subject: "Christian Religious Studies",
+    openDate: "2026-07-13T09:00:00",
     timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -1996,6 +1999,7 @@ const examData = {
 },
         {
     subject: "Christian Religious Studies",
+    openDate: "2026-07-13T09:00:00",
     timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -2439,7 +2443,7 @@ const studentRegistry = {
         "GGS12296": { name: "Nwaeze Chinaza",            stream: "general" },
         "GGS12289": { name: "Ogbu Amanda",               stream: "general" },
         "GGS00000": { name: "Mr Nnamdi",                 stream: "general" },
-        "GGS123088": { name: "Oguchi Chidiuso",           stream: "general" },
+        "GGS1230888": { name: "Oguchi Chidiuso",           stream: "general" },
         "GGS12284": { name: "Okeke Praise",              stream: "general" },
         "GGS12301": { name: "Okelue Munachi",            stream: "general" },
         "GGS12305": { name: "Okoli Miracle",             stream: "general" },
