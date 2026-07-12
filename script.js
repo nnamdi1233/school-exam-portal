@@ -85,7 +85,7 @@ const examData = {
         { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
         {
     subject: "English Studies",
-    openDate: "2026-07-12T09:00:00",
+    openDate: "2026-07-12T13:30:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
