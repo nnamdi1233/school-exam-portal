@@ -139,8 +139,8 @@ const examData = {
 },
         {
     subject: "Digital Literacy",
-    openDate: "2026-07-13T09:00:00",
-    timeLimit: 1200,
+    openDate: "2026-07-13T08:30:00",
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -179,7 +179,7 @@ const examData = {
 },
         {
     subject: "Physical & Health Education (PHE) ",
-    timeLimit: 1500,
+    timeLimit: 600,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -296,7 +296,7 @@ const examData = {
 },
         {
     subject: "History",
-    timeLimit: 1500,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -444,9 +444,10 @@ const examData = {
 },
     {
     subject: "Cultural and Creative Arts",
-    timeLimit: 5400,
+    openDate: "2026-07-14T08:30:00",
+    timeLimit: 780,
     totalMarks: 60,
-    marksPerQuestion: 1,
+    marksPerQuestion: 2,
     questions: [
         { type: "mcq", question: "Music is the art of organizing ______ into meaningful patterns.", options: ["Colours", "Sounds", "Pictures", "Letters"], correctAnswer: "B" },
         { type: "mcq", question: "The distance between two musical notes is called ______.", options: ["Pitch", "Tone", "Interval", "Harmony"], correctAnswer: "C" },
@@ -473,104 +474,13 @@ const examData = {
         { type: "mcq", question: "Proper posture helps in ______ instruments correctly.", options: ["Damaging", "Playing", "Hiding", "Storing"], correctAnswer: "B" },
         { type: "mcq", question: "The drum is classified as a ______ instrument.", options: ["Wind", "Brass", "Percussion", "String"], correctAnswer: "C" },
         { type: "mcq", question: "The recorder belongs to the ______ family.", options: ["String", "Wind", "Keyboard", "Percussion"], correctAnswer: "B" },
-        { type: "mcq", question: "The recorder is played by ______.", options: ["Hitting", "Shaking", "Blowing", "Plucking"], correctAnswer: "C" },
-        { type: "mcq", question: "Holes on the recorder are covered with the ______.", options: ["Feet", "Fingers", "Elbows", "Shoulders"], correctAnswer: "B" },
-        { type: "mcq", question: "One use of music is for ______.", options: ["Entertainment", "Punishment", "Fighting", "Destruction"], correctAnswer: "A" },
-        { type: "mcq", question: "Music can be used during ______ worship.", options: ["Religious", "Market", "Farming", "Trading"], correctAnswer: "A" },
-        { type: "mcq", question: "Music promotes ______ among people.", options: ["Division", "Unity", "Hatred", "Quarrel"], correctAnswer: "B" },
-        { type: "mcq", question: "Drama is a story presented through ______.", options: ["Acting", "Singing only", "Reading", "Writing"], correctAnswer: "A" },
-        { type: "mcq", question: "A theatre is a place where ______ are performed.", options: ["Sports", "Dramas", "Debates", "Elections"], correctAnswer: "B" },
-        { type: "mcq", question: "The audience refers to the ______.", options: ["Actors", "Director", "Spectators", "Writers"], correctAnswer: "C" },
-        { type: "mcq", question: "Costume helps to identify a character's ______.", options: ["Role", "Food", "House", "School"], correctAnswer: "A" },
-        { type: "mcq", question: "Makeup is used to improve an actor's ______.", options: ["Appearance", "Voice", "Height", "Weight"], correctAnswer: "A" },
-        { type: "mcq", question: "The person who writes a play is called a ______.", options: ["Director", "Actor", "Playwright", "Producer"], correctAnswer: "C" },
-        { type: "mcq", question: "The sequence of events in a play is known as the ______.", options: ["Plot", "Theme", "Stage", "Costume"], correctAnswer: "A" },
-        { type: "mcq", question: "The central idea of a play is called the ______.", options: ["Character", "Theme", "Scene", "Dialogue"], correctAnswer: "B" },
-        { type: "mcq", question: "The person responsible for coordinating a stage production is the ______.", options: ["Audience", "Director", "Playwright", "Dancer"], correctAnswer: "B" },
-        { type: "mcq", question: "A good director must possess ______ skills.", options: ["Leadership", "Fighting", "Trading", "Driving"], correctAnswer: "A" },
         
         { type: "fill", question: "__________ is the art of organizing sounds.", correctAnswer: "Music" },
         { type: "fill", question: "The __________ clef is also known as the G clef.", correctAnswer: "Treble" },
         { type: "fill", question: "Ear training helps musicians identify different __________.", correctAnswer: "Sounds" },
         { type: "fill", question: "Two or more notes sounded together produce __________.", correctAnswer: "Harmony" },
         { type: "fill", question: "The basic principles of music are called __________.", correctAnswer: "Rudiments" },
-        { type: "fill", question: "The __________ instrument is commonly used to keep rhythm.", correctAnswer: "Drum" },
-        { type: "fill", question: "The recorder belongs to the __________ family.", correctAnswer: "Wind" },
-        { type: "fill", question: "The recorder is played by __________ into it.", correctAnswer: "Blowing" },
-        { type: "fill", question: "Music can be used for __________ and worship.", correctAnswer: "Entertainment" },
-        { type: "fill", question: "Drama is presented through __________.", correctAnswer: "Acting" },
-        { type: "fill", question: "A building where plays are performed is called a __________.", correctAnswer: "Theatre" },
-        { type: "fill", question: "The people who watch a play are known as the __________.", correctAnswer: "Audience" },
-        { type: "fill", question: "The person who writes a play is called a __________.", correctAnswer: "Playwright" },
-        { type: "fill", question: "The sequence of events in a play is known as the __________.", correctAnswer: "Plot" },
-        { type: "fill", question: "The central message of a play is called the __________.", correctAnswer: "Theme" },
-        { type: "fill", question: "Costume helps to identify a character's __________.", correctAnswer: "Role" },
-        { type: "fill", question: "The person who interprets a script for performance is the __________.", correctAnswer: "Director" },
-        { type: "fill", question: "A director must possess good __________ qualities.", correctAnswer: "Leadership" },
-        { type: "fill", question: "Dialogue refers to the __________ spoken by characters.", correctAnswer: "Words" },
-        { type: "fill", question: "The director coordinates all aspects of a stage __________.", correctAnswer: "Production" }
-    ]
-},
-{
-    subject: "General Knowledge",
-    timeLimit: 1500,
-    totalMarks: 60,
-    marksPerQuestion: 2,
-    questions: [
-        { type: "mcq", question: "Which toy company is famous for making interlocking plastic bricks?", options: ["Hasbro", "LEGO", "Mattel", "Playmobil"], correctAnswer: "B" },
-        { type: "mcq", question: "Which doll is one of the world's best-selling toys?", options: ["Elsa", "Barbie", "Peppa", "Dora"], correctAnswer: "A" },
-        { type: "mcq", question: "A Rubik's Cube mainly challenges your ______.", options: ["speed", "memory", "problem-solving skills", "strength"], correctAnswer: "C" },
-        { type: "mcq", question: "Which toy spins using a string or your fingers?", options: ["Top", "Kite", "Puzzle", "Marble"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is a popular building toy?", options: ["LEGO", "Uno", "Chess", "Ludo"], correctAnswer: "A" },
-        { type: "mcq", question: "Which game uses colorful cards with action cards like Reverse and Skip?", options: ["Chess", "Uno", "Monopoly", "Scrabble"], correctAnswer: "B" },
-        { type: "mcq", question: "Which board game is about buying properties?", options: ["Ludo", "Monopoly", "Checkers", "Snakes and Ladders"], correctAnswer: "B" },
-        { type: "mcq", question: "Which toy is usually flown in the sky using wind?", options: ["Drone", "Kite", "Balloon", "Yo-yo"], correctAnswer: "B" },
-        { type: "mcq", question: "Which toy moves up and down on a string?", options: ["Yo-yo", "Top", "Cube", "Marble"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is NOT a toy?", options: ["LEGO", "Barbie", "Keyboard", "Rubik's Cube"], correctAnswer: "C" },
 
-        { type: "mcq", question: "Which singer is known as the 'King of Pop'?", options: ["Bruno Mars", "Michael Jackson", "Ed Sheeran", "Usher"], correctAnswer: "B" },
-        { type: "mcq", question: "Which Nigerian artist sang 'Calm Down'?", options: ["Davido", "Burna Boy", "Rema", "Fireboy DML"], correctAnswer: "C" },
-        { type: "mcq", question: "Which artist released the song 'Rush'?", options: ["Ayra Starr", "Tems", "Simi", "Tiwa Savage"], correctAnswer: "A" },
-        { type: "mcq", question: "Which musical instrument usually has black and white keys?", options: ["Drum", "Guitar", "Piano", "Trumpet"], correctAnswer: "C" },
-        { type: "mcq", question: "A group of singers performing together is called a ______.", options: ["Choir", "Band", "Club", "Crowd"], correctAnswer: "A" },
-        { type: "mcq", question: "Which Nigerian artist is known as the 'African Giant'?", options: ["Burna Boy", "Ruger", "Kizz Daniel", "Asake"], correctAnswer: "A" },
-        { type: "mcq", question: "Which streaming app is mainly used for listening to music?", options: ["Spotify", "Google Maps", "Zoom", "Canva"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is a musical instrument?", options: ["Violin", "Television", "Laptop", "Camera"], correctAnswer: "A" },
-        { type: "mcq", question: "Which artist is famous for the song 'Shape of You'?", options: ["Justin Bieber", "Ed Sheeran", "Shawn Mendes", "Harry Styles"], correctAnswer: "B" },
-        { type: "mcq", question: "Which Nigerian female artist sang 'Bloody Samaritan'?", options: ["Ayra Starr", "Tiwa Savage", "Tems", "Simi"], correctAnswer: "A" },
-
-        { type: "mcq", question: "Which cartoon features a sponge living under the sea?", options: ["Ben 10", "SpongeBob SquarePants", "Bluey", "Tom and Jerry"], correctAnswer: "B" },
-        { type: "mcq", question: "Tom is always chasing ______.", options: ["Scooby", "Jerry", "Tweety", "Oggy"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon dog solves mysteries with friends?", options: ["Scooby-Doo", "Blue", "Brian", "Bolt"], correctAnswer: "A" },
-        { type: "mcq", question: "Ben 10 transforms into different ______.", options: ["cars", "aliens", "robots", "dinosaurs"], correctAnswer: "B" },
-        { type: "mcq", question: "Bluey is a ______.", options: ["cat", "dog", "rabbit", "bear"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon features two brothers spending every summer on adventures?", options: ["Phineas and Ferb", "Adventure Time", "Teen Titans Go!", "Craig of the Creek"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon cat is blue?", options: ["Tom", "Gumball", "Garfield", "Sylvester"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon is famous for Titans like Robin, Starfire and Beast Boy?", options: ["Teen Titans Go!", "The Simpsons", "Peppa Pig", "Bluey"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon pig loves jumping in muddy puddles?", options: ["Peppa Pig", "Olivia", "Babe", "Miss Piggy"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon character wears red shorts and white gloves?", options: ["Mickey Mouse", "Donald Duck", "Goofy", "Bugs Bunny"], correctAnswer: "A" },
-
-        { type: "mcq", question: "Which game character is known for collecting rings?", options: ["Mario", "Sonic", "Kirby", "Crash"], correctAnswer: "B" },
-        { type: "mcq", question: "Mario is a ______ by profession.", options: ["Teacher", "Plumber", "Doctor", "Pilot"], correctAnswer: "B" },
-        { type: "mcq", question: "Which company created Pokémon?", options: ["Nintendo", "Sony", "Microsoft", "Sega"], correctAnswer: "A" },
-        { type: "mcq", question: "Pikachu is an ______-type Pokémon.", options: ["Fire", "Water", "Electric", "Grass"], correctAnswer: "C" },
-        { type: "mcq", question: "Which superhero uses a hammer called Mjolnir?", options: ["Thor", "Iron Man", "Batman", "Captain America"], correctAnswer: "A" },
-        { type: "mcq", question: "Which superhero is known as the Friendly Neighborhood hero?", options: ["Spider-Man", "Superman", "Flash", "Aquaman"], correctAnswer: "A" },
-        { type: "mcq", question: "Which Disney movie features sisters Elsa and Anna?", options: ["Frozen", "Moana", "Tangled", "Encanto"], correctAnswer: "A" },
-        { type: "mcq", question: "Lightning McQueen is a character from which movie?", options: ["Cars", "Planes", "Turbo", "Toy Story"], correctAnswer: "A" },
-        { type: "mcq", question: "Buzz Lightyear appears in which movie series?", options: ["Toy Story", "Cars", "Shrek", "Finding Nemo"], correctAnswer: "A" },
-        { type: "mcq", question: "Which toy cowboy is Buzz Lightyear's best friend?", options: ["Woody", "Jessie", "Forky", "Rex"], correctAnswer: "A" },
-
-        { type: "fill", question: "The famous building brick toy is called __________.", correctAnswer: "LEGO" },
-        { type: "fill", question: "The cat in 'Tom and Jerry' is named __________.", correctAnswer: "Tom" },
-        { type: "fill", question: "The mouse in 'Tom and Jerry' is named __________.", correctAnswer: "Jerry" },
-        { type: "fill", question: "The singer of 'Calm Down' is __________.", correctAnswer: "Rema" },
-        { type: "fill", question: "The King of Pop was __________.", correctAnswer: "Michael Jackson" },
-        { type: "fill", question: "Ben 10 uses the __________ to transform into aliens.", correctAnswer: "Omnitrix" },
-        { type: "fill", question: "Elsa is a character from the movie __________.", correctAnswer: "Frozen" },
-        { type: "fill", question: "The famous electric Pokémon is __________.", correctAnswer: "Pikachu" },
-        { type: "fill", question: "The toy that moves up and down on a string is called a __________.", correctAnswer: "yo-yo" },
-        { type: "fill", question: "The sponge who lives in Bikini Bottom is __________.", correctAnswer: "SpongeBob SquarePants" }
     ]
 },
     ],
@@ -579,8 +489,8 @@ const examData = {
         { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
         {
     subject: "Digital Literacy",
-    openDate: "2026-07-13T09:00:00",
-    timeLimit: 1200,
+    openDate: "2026-07-14T08:30:00",
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -833,7 +743,7 @@ const examData = {
 },
         {
     subject: "Physical & Health Education",
-    timeLimit: 1500,
+    timeLimit: 600,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -950,7 +860,8 @@ const examData = {
 },
         {
     subject: "History",
-    timeLimit: 1500,
+    openDate: "2026-07-14T08:30:00",
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1098,9 +1009,10 @@ const examData = {
 },
         {
     subject: "Cultural and Creative Arts",
-    timeLimit: 1500,
+    openDate: "2026-07-14T08:30:00",
+    timeLimit: 750,
     totalMarks: 60,
-    marksPerQuestion: 1,
+    marksPerQuestion: 2,
     questions: [
         { type: "mcq", question: "The act of producing musical sounds with the voice is called ______.", options: ["Acting", "Singing", "Dancing", "Drawing"], correctAnswer: "B" },
         { type: "mcq", question: "Proper breathing is important for good ______.", options: ["Drawing", "Singing", "Painting", "Acting"], correctAnswer: "B" },
@@ -1127,42 +1039,12 @@ const examData = {
         { type: "mcq", question: "One requirement for a successful dance career is ______.", options: ["Laziness", "Discipline", "Anger", "Carelessness"], correctAnswer: "B" },
         { type: "mcq", question: "Dance can create employment opportunities in the ______ industry.", options: ["Entertainment", "Mining", "Construction", "Agriculture"], correctAnswer: "A" },
         { type: "mcq", question: "A choreographer is a person who ______ dance movements.", options: ["Designs", "Eats", "Buys", "Sells"], correctAnswer: "A" },
-        { type: "mcq", question: "Self-control means the ability to ______ oneself.", options: ["Manage", "Destroy", "Punish", "Ignore"], correctAnswer: "A" },
-        { type: "mcq", question: "A person with self-control avoids making ______ decisions.", options: ["Wise", "Hasty", "Good", "Useful"], correctAnswer: "B" },
-        { type: "mcq", question: "Self-control helps a person to resist ______.", options: ["Temptation", "Education", "Knowledge", "Growth"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these demonstrates self-control?", options: ["Fighting", "Shouting", "Patience", "Stealing"], correctAnswer: "C" },
-        { type: "mcq", question: "Self-control contributes to good ______.", options: ["Character", "Sickness", "Failure", "Confusion"], correctAnswer: "A" },
-        { type: "mcq", question: "Good breathing is important in ______.", options: ["Singing", "Dancing only", "Acting only", "Reading only"], correctAnswer: "A" },
-        { type: "mcq", question: "Costumes are worn by performers during a ______.", options: ["Performance", "Examination", "Market day", "Holiday"], correctAnswer: "A" },
-        { type: "mcq", question: "Repeated practice before a show is called ______.", options: ["Rehearsal", "Dancing", "Singing", "Reading"], correctAnswer: "A" },
-        { type: "mcq", question: "Traditional dances reflect the ______ of a people.", options: ["Culture", "Weather", "Farming", "Business"], correctAnswer: "A" },
-        { type: "mcq", question: "Dance can be used for ______.", options: ["Entertainment", "Exercise", "Communication", "All of the above"], correctAnswer: "D" },
-        { type: "mcq", question: "A singer must take care of his or her ______.", options: ["Voice", "Shoes", "Books", "Bag"], correctAnswer: "A" },
-        { type: "mcq", question: "Theatre design enhances the ______ appeal of a performance.", options: ["Visual", "Financial", "Political", "Social"], correctAnswer: "A" },
-        { type: "mcq", question: "Self-control helps students to focus on their ______.", options: ["Studies", "Quarrels", "Excuses", "Mistakes"], correctAnswer: "A" },
-        { type: "mcq", question: "The person who arranges dance steps is called a ______.", options: ["Choreographer", "Farmer", "Tailor", "Doctor"], correctAnswer: "A" },
-        { type: "mcq", question: "Discipline and self-control are important for success in ______.", options: ["Dance", "Singing", "Education", "All of the above"], correctAnswer: "D" },
-
+        
         { type: "fill", question: "__________ is the act of producing musical sounds with the voice.", correctAnswer: "Singing" },
         { type: "fill", question: "A person who sings is called a __________.", correctAnswer: "Singer" },
         { type: "fill", question: "Proper __________ is necessary for good singing.", correctAnswer: "Breathing" },
         { type: "fill", question: "The design of scenery and stage setting is called __________ design.", correctAnswer: "Scenic" },
         { type: "fill", question: "The person who designs costumes for actors is a __________ designer.", correctAnswer: "Costume" },
-        { type: "fill", question: "__________ is the process of practising a performance before presentation.", correctAnswer: "Rehearsal" },
-        { type: "fill", question: "The person in charge of rehearsals is the __________.", correctAnswer: "Director" },
-        { type: "fill", question: "A rehearsal conducted with full costumes is called a __________ rehearsal.", correctAnswer: "Dress" },
-        { type: "fill", question: "__________ is the movement of the body in response to music.", correctAnswer: "Dance" },
-        { type: "fill", question: "Bata is an example of a __________ dance.", correctAnswer: "Traditional" },
-        { type: "fill", question: "Ballet is a type of __________ dance.", correctAnswer: "Classical" },
-        { type: "fill", question: "A person who arranges dance movements is called a __________.", correctAnswer: "Choreographer" },
-        { type: "fill", question: "Dance can be pursued as a __________.", correctAnswer: "Career" },
-        { type: "fill", question: "Self-control is the ability to __________ oneself.", correctAnswer: "Control" },
-        { type: "fill", question: "Self-control helps people resist __________.", correctAnswer: "Temptation" },
-        { type: "fill", question: "Patience is a sign of good __________.", correctAnswer: "Self-control" },
-        { type: "fill", question: "Theatre __________ includes costumes, lighting and scenery.", correctAnswer: "Design" },
-        { type: "fill", question: "Good singers must protect their __________.", correctAnswer: "Voice" },
-        { type: "fill", question: "Cultural dances help preserve a people's __________.", correctAnswer: "Heritage" },
-        { type: "fill", question: "Discipline and self-control contribute to good __________.", correctAnswer: "Character" }
     ]
 },
         {
@@ -1349,8 +1231,8 @@ const examData = {
 },
         {
     subject: "Digital Literacy",
-    openDate: "2026-07-13T09:00:00",
-    timeLimit: 1200,
+    openDate: "2026-07-13T08:30:00",
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1538,7 +1420,7 @@ const examData = {
 },
         {
     subject: "Government",
-    timeLimit: 1500,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1579,8 +1461,8 @@ const examData = {
 },
     {
     subject: "English Studies",
-    openDate: "2026-07-13T09:00:00",
-    timeLimit: 1500,
+    openDate: "2026-07-14T08:00:00",
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1658,7 +1540,7 @@ const examData = {
 },
         {
     subject: "Economics",
-    timeLimit: 1500,
+    timeLimit: 950,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1802,8 +1684,8 @@ const examData = {
 },
         {
     subject: "English Studies",
-    openDate: "2026-07-13T09:00:00",
-    timeLimit: 1500,
+    openDate: "2026-07-14T08:00:00",
+    timeLimit: 1000,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1881,8 +1763,8 @@ const examData = {
 },
         {
     subject: "Digital Literacy",
-    openDate: "2026-07-13T09:00:00",
-    timeLimit: 1200,
+    openDate: "2026-07-14T08:00:00",
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1999,8 +1881,7 @@ const examData = {
 },
         {
     subject: "Christian Religious Studies",
-    openDate: "2026-07-13T09:00:00",
-    timeLimit: 1200,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -2205,7 +2086,7 @@ const examData = {
 },
         {
     subject: "Economics",
-    timeLimit: 1500,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -2244,7 +2125,7 @@ const examData = {
 },
         {
     subject: "Government",
-    timeLimit: 1500,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -2402,7 +2283,8 @@ const studentRegistry = {
         "GGS12316": { name: "Chukwuagozie Goodness",     stream: "general" },
         "GGS12310": { name: "Chukwurah Chibuike",        stream: "general" },
         "GGS12373": { name: "Esonwune Ngozi",            stream: "general" },
-        "GGS12354": { name: "Ewurum Stephanie",          stream: "general" },
+        "GGS12766": { name: "Torlowei	Alexis ",        stream: "general" },
+        "GGS12765": { name: "Azubuike Chinyere ",        stream: "general" },
         "GGS12347": { name: "Francis Emmanuel",          stream: "general" },
         "GGS12344": { name: "Ifeanyichukwu Chioma",      stream: "general" },
         "GGS12348": { name: "Igboneme Chidera",          stream: "general" },
@@ -2425,6 +2307,7 @@ const studentRegistry = {
 
     "JSS2": {
         "GGS12298": { name: "Adetona Jamiu",             stream: "general" },
+        "GGS12767": { name: "Akunna Adaeze",             stream: "general" },
         "GGS12286": { name: "Amadi Somtochukwu",         stream: "general" },
         "GGS12304": { name: "Aniukwu Kosisochukwu",      stream: "general" },
         "GGS12293": { name: "Anya Esther",               stream: "general" },
@@ -2463,6 +2346,7 @@ const studentRegistry = {
         "GGS12386": { name: "Eze Goodluck",              stream: "science" },
         "GGS12382": { name: "Chimezie Charity",          stream: "science" },
         "GGS12401": { name: "Nweke Victoria",            stream: "science" },
+        "GGS12764": { name: "Ikeokwu Samuel",            stream: "science" },
         // Art students
         "GGS12149": { name: "Onwuaso Chinenye",          stream: "art" },
         "GGS12391": { name: "Okonkwo Precious",          stream: "art" },
@@ -2472,6 +2356,7 @@ const studentRegistry = {
         "GGS12404": { name: "Michael Miracle",           stream: "art" },
         "GGS12389": { name: "Fedrick Ogbuchie",          stream: "art" },
         "GGS12407": { name: "Ejike Emmanuella",          stream: "art" },
+        "GGS12763": { name: "Nwakozor Emmanuel",         stream: "art" },
         "GGS12383": { name: "Ebenyi Beatrice",           stream: "art" }
     },
 
