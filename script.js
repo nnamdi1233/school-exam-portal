@@ -99,7 +99,7 @@ const examData = {
         { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
         {
     subject: "English Studies",
-    openDate: "2026-07-13T09:00:00",
+    openDate: "2026-07-14T08:20:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -139,8 +139,8 @@ const examData = {
 },
         {
     subject: "Digital Literacy",
-    openDate: "2026-07-13T08:30:00",
-    timeLimit: 900,
+    openDate: "2026-07-14T08:20:00",
+    timeLimit: 600,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -218,7 +218,7 @@ const examData = {
 },
         {
     subject: "Literature in English",
-    timeLimit: 1500,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -257,7 +257,7 @@ const examData = {
 },
         {
     subject: "Intermediate Science",
-    timeLimit: 1500,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -296,7 +296,8 @@ const examData = {
 },
         {
     subject: "History",
-    timeLimit: 900,
+    openDate: "2026-07-14T08:20:00",
+    timeLimit: 800,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -335,7 +336,7 @@ const examData = {
 },
         {
     subject: "Social & Citizenship Studies",
-    timeLimit: 1500,
+    timeLimit: 800,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -374,8 +375,8 @@ const examData = {
 },
     {
     subject: "Christian Religious Studies",
-    openDate: "2026-07-13T09:00:00",
-    timeLimit: 1500,
+    openDate: "2026-07-14T08:20:00",
+    timeLimit: 800,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -404,47 +405,17 @@ const examData = {
         { type: "mcq", question: "One duty of community leaders is to:", options: ["Promote peace", "Cause conflicts", "Encourage crime", "Break laws"], correctAnswer: "A" },
         { type: "mcq", question: "Cooperation in the community promotes:", options: ["Development", "Violence", "Hatred", "Division"], correctAnswer: "A" },
         { type: "mcq", question: "Respect for one another helps to:", options: ["Sustain good relationships", "Create conflicts", "Encourage crime", "Promote hatred"], correctAnswer: "A" },
-        { type: "mcq", question: "Religious leaders provide:", options: ["Spiritual guidance", "Road construction", "Electricity", "Transport services"], correctAnswer: "A" },
-        { type: "mcq", question: "\"Bear ye one another's burdens\" is found in:", options: ["Galatians 6:2", "Genesis 1:1", "Matthew 1:1", "Revelation 1:1"], correctAnswer: "A" },
-        { type: "mcq", question: "Peaceful coexistence means:", options: ["Living together in harmony", "Constant fighting", "Disobedience", "Isolation"], correctAnswer: "A" },
-        { type: "mcq", question: "One way to maintain peace in the community is:", options: ["Tolerance", "Violence", "Gossip", "Hatred"], correctAnswer: "A" },
-        { type: "mcq", question: "The king, chief, and elders are examples of:", options: ["Traditional leaders", "Religious leaders", "Youth leaders", "Teachers"], correctAnswer: "A" },
-        { type: "mcq", question: "Fellowship means believers:", options: ["Gathering together in worship", "Fighting one another", "Avoiding one another", "Competing unnecessarily"], correctAnswer: "A" },
-        { type: "mcq", question: "The church is known as the:", options: ["Body of Christ", "House of kings", "School of prophets only", "Kingdom of angels"], correctAnswer: "A" },
-        { type: "mcq", question: "Unity in the church promotes:", options: ["Peace", "Confusion", "Hatred", "Division"], correctAnswer: "A" },
-        { type: "mcq", question: "The early Christians continued steadfastly in:", options: ["Fellowship", "Quarrelling", "Fighting", "Isolation"], correctAnswer: "A" },
-        { type: "mcq", question: "\"How good and pleasant it is for brethren to dwell together in unity\" is found in:", options: ["Psalm 133:1", "John 1:1", "Genesis 12:1", "Matthew 5:1"], correctAnswer: "A" },
-        { type: "mcq", question: "One way to maintain good church relationship is:", options: ["Forgiveness", "Gossip", "Envy", "Hatred"], correctAnswer: "A" },
-        { type: "mcq", question: "The church grows when members:", options: ["Live in unity", "Fight constantly", "Create factions", "Disobey God"], correctAnswer: "A" },
-        { type: "mcq", question: "Christians should show ______ to one another.", options: ["Love", "Hatred", "Jealousy", "Pride"], correctAnswer: "A" },
-        { type: "mcq", question: "Fellowship helps believers to:", options: ["Grow spiritually", "Backslide", "Become enemies", "Reject God's word"], correctAnswer: "A" },
-        { type: "mcq", question: "A united church reflects:", options: ["God's love", "Hatred", "Disobedience", "Confusion"], correctAnswer: "A" },
 
         { type: "fill", question: "__________ is the head of the family.", correctAnswer: "Father" },
         { type: "fill", question: "A family consisting of father, mother, and children is called a __________ family.", correctAnswer: "Nuclear" },
         { type: "fill", question: "The commandment \"Honour thy father and thy mother\" is found in the book of __________.", correctAnswer: "Exodus" },
         { type: "fill", question: "The mother is responsible for __________ the children.", correctAnswer: "Nurturing" },
-        { type: "fill", question: "A family that includes grandparents, uncles, and cousins is called an __________ family.", correctAnswer: "Extended" },
-        { type: "fill", question: "The chief administrator of a secondary school is called the __________.", correctAnswer: "Principal" },
-        { type: "fill", question: "Students are expected to __________ their teachers and school authorities.", correctAnswer: "Respect" },
-        { type: "fill", question: "David and Jonathan are biblical examples of good __________.", correctAnswer: "Friendship" },
-        { type: "fill", question: "\"He that walketh with wise men shall be wise\" is found in the book of __________.", correctAnswer: "Proverbs" },
-        { type: "fill", question: "A student leader who helps maintain discipline in school is called a __________.", correctAnswer: "Prefect" },
-        { type: "fill", question: "A person who guides and directs the affairs of a community is called a community __________.", correctAnswer: "Leader" },
-        { type: "fill", question: "Kings, chiefs, and elders are examples of __________ leaders.", correctAnswer: "Traditional" },
-        { type: "fill", question: "Living peacefully with others in the community is known as peaceful __________.", correctAnswer: "Coexistence" },
-        { type: "fill", question: "\"Bear ye one another's burdens\" is found in the book of __________.", correctAnswer: "Galatians" },
-        { type: "fill", question: "__________ helps to sustain good relationships in the community.", correctAnswer: "Cooperation" },
-        { type: "fill", question: "The church is referred to as the __________ of Christ.", correctAnswer: "Body" },
-        { type: "fill", question: "Christians gathering together for worship and prayer is called __________.", correctAnswer: "Fellowship" },
-        { type: "fill", question: "\"How good and pleasant it is for brethren to dwell together in unity\" is found in __________ 133:1.", correctAnswer: "Psalms" },
-        { type: "fill", question: "__________ promotes peace and growth in the church.", correctAnswer: "Unity" },
         { type: "fill", question: "Christians are expected to show __________ toward one another.", correctAnswer: "Love" }
     ]
 },
     {
     subject: "Cultural and Creative Arts",
-    openDate: "2026-07-14T08:30:00",
+    openDate: "2026-07-14T08:20:00",
     timeLimit: 780,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -489,8 +460,8 @@ const examData = {
         { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
         {
     subject: "Digital Literacy",
-    openDate: "2026-07-14T08:30:00",
-    timeLimit: 900,
+    openDate: "2026-07-14T08:20:00",
+    timeLimit: 800,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -529,8 +500,8 @@ const examData = {
 },
         {
   subject: "English Studies",
-  openDate: "2026-07-13T09:00:00",
-  timeLimit: 1500,
+  openDate: "2026-07-14T08:20:00",
+  timeLimit: 800,
   totalMarks: 60,
   marksPerQuestion: 2,
   questions: [
@@ -782,7 +753,7 @@ const examData = {
 },
         {
     subject: "Literature in English",
-    timeLimit: 1500,
+    timeLimit: 800,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -860,8 +831,8 @@ const examData = {
 },
         {
     subject: "History",
-    openDate: "2026-07-14T08:30:00",
-    timeLimit: 900,
+    openDate: "2026-07-14T08:20:00",
+    timeLimit: 850,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -900,7 +871,7 @@ const examData = {
 },
         {
     subject: "Social and Citizenship Studies",
-    timeLimit: 1500,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -939,10 +910,10 @@ const examData = {
 },
         {
     subject: "Christian Religious Studies",
-    openDate: "2026-07-13T09:00:00",
-    timeLimit: 1500,
+    openDate: "2026-07-14T08:20:00",
+    timeLimit: 700,
     totalMarks: 60,
-    marksPerQuestion: 1,
+    marksPerQuestion: 2,
     questions: [
         { type: "mcq", question: "Jesus entered Jerusalem riding on a ______.", options: ["Horse", "Camel", "Donkey", "Chariot"], correctAnswer: "C" },
         { type: "mcq", question: "The people spread ______ on the road during Jesus' triumphal entry.", options: ["Flowers", "Palm branches", "Garments only", "Leaves"], correctAnswer: "B" },
@@ -969,47 +940,17 @@ const examData = {
         { type: "mcq", question: "A large ______ was rolled across the entrance of the tomb.", options: ["Door", "Tree", "Stone", "Gate"], correctAnswer: "C" },
         { type: "mcq", question: "Jesus rose from the dead on the ______.", options: ["First day of the week", "Second day", "Third day after Sabbath", "Seventh day"], correctAnswer: "A" },
         { type: "mcq", question: "Who was the first to see the risen Jesus?", options: ["Mary the mother of Jesus", "Mary Magdalene", "Martha", "Salome"], correctAnswer: "B" },
-        { type: "mcq", question: "The angel announced, \"He has ______.\"", options: ["Returned", "Ascended", "Risen", "Appeared"], correctAnswer: "B" },
-        { type: "mcq", question: "Jesus appeared to two disciples on the road to ______.", options: ["Jericho", "Bethany", "Emmaus", "Samaria"], correctAnswer: "C" },
-        { type: "mcq", question: "Thomas was known as ______.", options: ["The Fisherman", "The Zealot", "The Doubter", "The Scribe"], correctAnswer: "C" },
-        { type: "mcq", question: "Thomas believed after ______.", options: ["Hearing a sermon", "Seeing Jesus", "Reading a scroll", "Meeting Peter"], correctAnswer: "B" },
-        { type: "mcq", question: "Women followed Jesus and ______.", options: ["Supported His ministry", "Built houses", "Collected taxes", "Led the army"], correctAnswer: "A" },
-        { type: "mcq", question: "Women were present at the ______.", options: ["Crucifixion", "Resurrection", "Burial", "All of the above"], correctAnswer: "D" },
-        { type: "mcq", question: "Mary, the mother of Jesus, stood near the ______.", options: ["Temple", "Sea", "Cross", "Garden"], correctAnswer: "C" },
-        { type: "mcq", question: "Jesus appeared to His disciples after His resurrection for ______.", options: ["20 days", "30 days", "40 days", "50 days"], correctAnswer: "C" },
-        { type: "mcq", question: "The resurrection proves Jesus' ______.", options: ["Weakness", "Divinity", "Poverty", "Age"], correctAnswer: "B" },
-        { type: "mcq", question: "The Last Supper is remembered by Christians through ______.", options: ["Baptism", "Holy Communion", "Confirmation", "Marriage"], correctAnswer: "B" },
-        { type: "mcq", question: "The triumphal entry fulfilled ______.", options: ["A parable", "A prophecy", "A law", "A commandment"], correctAnswer: "B" },
-        { type: "mcq", question: "Judas regretted betraying Jesus and ______.", options: ["Returned the money", "Kept the money", "Gave it to Peter", "Bought food"], correctAnswer: "A" },
-        { type: "mcq", question: "The women went to Jesus' tomb with ______.", options: ["Weapons", "Books", "Spices", "Bread"], correctAnswer: "C" },
-        { type: "mcq", question: "The resurrection of Jesus gives believers hope of ______.", options: ["Wealth", "Eternal life", "Fame", "Power"], correctAnswer: "B" },
-        { type: "mcq", question: "Jesus' death on the cross brought ______.", options: ["Salvation", "Punishment", "Slavery", "Confusion"], correctAnswer: "A" },
 
         { type: "fill", question: "__________ entered Jerusalem riding on a donkey.", correctAnswer: "Jesus" },
         { type: "fill", question: "The crowd shouted __________ during the triumphal entry.", correctAnswer: "Hosanna" },
         { type: "fill", question: "The Last Supper took place during the __________ feast.", correctAnswer: "Passover" },
-        { type: "fill", question: "Jesus said, \"This is my __________\" when He broke the bread.", correctAnswer: "body" },
-        { type: "fill", question: "Judas Iscariot betrayed Jesus for __________ pieces of silver.", correctAnswer: "thirty" },
-        { type: "fill", question: "Jesus was arrested in the Garden of __________.", correctAnswer: "Gethsemane" },
-        { type: "fill", question: "Judas identified Jesus with a __________.", correctAnswer: "kiss" },
-        { type: "fill", question: "__________ denied Jesus three times.", correctAnswer: "Peter" },
-        { type: "fill", question: "Jesus was crucified at a place called __________.", correctAnswer: "Golgotha" },
-        { type: "fill", question: "Jesus was crucified between two __________.", correctAnswer: "thieves" },
-        { type: "fill", question: "\"It is __________\" was one of Jesus' last words on the cross.", correctAnswer: "finished" },
-        { type: "fill", question: "__________ of Arimathea buried the body of Jesus.", correctAnswer: "Joseph" },
-        { type: "fill", question: "A large __________ was rolled over the entrance of the tomb.", correctAnswer: "stone" },
-        { type: "fill", question: "Jesus rose from the dead on the __________ day of the week.", correctAnswer: "first" },
-        { type: "fill", question: "__________ Magdalene was among the first people to see the risen Jesus.", correctAnswer: "Mary" },
-        { type: "fill", question: "The angel announced, \"He has __________.\"", correctAnswer: "risen" },
-        { type: "fill", question: "Jesus appeared to two disciples on the road to __________.", correctAnswer: "Emmaus" },
-        { type: "fill", question: "__________ doubted the resurrection until he saw Jesus.", correctAnswer: "Thomas" },
         { type: "fill", question: "Women played important roles by supporting the __________ of Jesus.", correctAnswer: "ministry" },
         { type: "fill", question: "The resurrection of Jesus gives believers hope of __________ life.", correctAnswer: "eternal" }
     ]
 },
         {
     subject: "Cultural and Creative Arts",
-    openDate: "2026-07-14T08:30:00",
+    openDate: "2026-07-14T08:20:00",
     timeLimit: 750,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -1047,68 +988,7 @@ const examData = {
         { type: "fill", question: "The person who designs costumes for actors is a __________ designer.", correctAnswer: "Costume" },
     ]
 },
-        {
-    subject: "General Knowledge",
-    timeLimit: 1500,
-    totalMarks: 60,
-    marksPerQuestion: 2,
-    questions: [
-        { type: "mcq", question: "Which toy company is famous for making interlocking plastic bricks?", options: ["Hasbro", "LEGO", "Mattel", "Playmobil"], correctAnswer: "B" },
-        { type: "mcq", question: "Which doll is one of the world's best-selling toys?", options: ["Elsa", "Barbie", "Peppa", "Dora"], correctAnswer: "A" },
-        { type: "mcq", question: "A Rubik's Cube mainly challenges your ______.", options: ["speed", "memory", "problem-solving skills", "strength"], correctAnswer: "C" },
-        { type: "mcq", question: "Which toy spins using a string or your fingers?", options: ["Top", "Kite", "Puzzle", "Marble"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is a popular building toy?", options: ["LEGO", "Uno", "Chess", "Ludo"], correctAnswer: "A" },
-        { type: "mcq", question: "Which game uses colorful cards with action cards like Reverse and Skip?", options: ["Chess", "Uno", "Monopoly", "Scrabble"], correctAnswer: "B" },
-        { type: "mcq", question: "Which board game is about buying properties?", options: ["Ludo", "Monopoly", "Checkers", "Snakes and Ladders"], correctAnswer: "B" },
-        { type: "mcq", question: "Which toy is usually flown in the sky using wind?", options: ["Drone", "Kite", "Balloon", "Yo-yo"], correctAnswer: "B" },
-        { type: "mcq", question: "Which toy moves up and down on a string?", options: ["Yo-yo", "Top", "Cube", "Marble"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is NOT a toy?", options: ["LEGO", "Barbie", "Keyboard", "Rubik's Cube"], correctAnswer: "C" },
 
-        { type: "mcq", question: "Which singer is known as the 'King of Pop'?", options: ["Bruno Mars", "Michael Jackson", "Ed Sheeran", "Usher"], correctAnswer: "B" },
-        { type: "mcq", question: "Which Nigerian artist sang 'Calm Down'?", options: ["Davido", "Burna Boy", "Rema", "Fireboy DML"], correctAnswer: "C" },
-        { type: "mcq", question: "Which artist released the song 'Rush'?", options: ["Ayra Starr", "Tems", "Simi", "Tiwa Savage"], correctAnswer: "A" },
-        { type: "mcq", question: "Which musical instrument usually has black and white keys?", options: ["Drum", "Guitar", "Piano", "Trumpet"], correctAnswer: "C" },
-        { type: "mcq", question: "A group of singers performing together is called a ______.", options: ["Choir", "Band", "Club", "Crowd"], correctAnswer: "A" },
-        { type: "mcq", question: "Which Nigerian artist is known as the 'African Giant'?", options: ["Burna Boy", "Ruger", "Kizz Daniel", "Asake"], correctAnswer: "A" },
-        { type: "mcq", question: "Which streaming app is mainly used for listening to music?", options: ["Spotify", "Google Maps", "Zoom", "Canva"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is a musical instrument?", options: ["Violin", "Television", "Laptop", "Camera"], correctAnswer: "A" },
-        { type: "mcq", question: "Which artist is famous for the song 'Shape of You'?", options: ["Justin Bieber", "Ed Sheeran", "Shawn Mendes", "Harry Styles"], correctAnswer: "B" },
-        { type: "mcq", question: "Which Nigerian female artist sang 'Bloody Samaritan'?", options: ["Ayra Starr", "Tiwa Savage", "Tems", "Simi"], correctAnswer: "A" },
-
-        { type: "mcq", question: "Which cartoon features a sponge living under the sea?", options: ["Ben 10", "SpongeBob SquarePants", "Bluey", "Tom and Jerry"], correctAnswer: "B" },
-        { type: "mcq", question: "Tom is always chasing ______.", options: ["Scooby", "Jerry", "Tweety", "Oggy"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon dog solves mysteries with friends?", options: ["Scooby-Doo", "Blue", "Brian", "Bolt"], correctAnswer: "A" },
-        { type: "mcq", question: "Ben 10 transforms into different ______.", options: ["cars", "aliens", "robots", "dinosaurs"], correctAnswer: "B" },
-        { type: "mcq", question: "Bluey is a ______.", options: ["cat", "dog", "rabbit", "bear"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon features two brothers spending every summer on adventures?", options: ["Phineas and Ferb", "Adventure Time", "Teen Titans Go!", "Craig of the Creek"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon cat is blue?", options: ["Tom", "Gumball", "Garfield", "Sylvester"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon is famous for Titans like Robin, Starfire and Beast Boy?", options: ["Teen Titans Go!", "The Simpsons", "Peppa Pig", "Bluey"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon pig loves jumping in muddy puddles?", options: ["Peppa Pig", "Olivia", "Babe", "Miss Piggy"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon character wears red shorts and white gloves?", options: ["Mickey Mouse", "Donald Duck", "Goofy", "Bugs Bunny"], correctAnswer: "A" },
-
-        { type: "mcq", question: "Which game character is known for collecting rings?", options: ["Mario", "Sonic", "Kirby", "Crash"], correctAnswer: "B" },
-        { type: "mcq", question: "Mario is a ______ by profession.", options: ["Teacher", "Plumber", "Doctor", "Pilot"], correctAnswer: "B" },
-        { type: "mcq", question: "Which company created Pokémon?", options: ["Nintendo", "Sony", "Microsoft", "Sega"], correctAnswer: "A" },
-        { type: "mcq", question: "Pikachu is an ______-type Pokémon.", options: ["Fire", "Water", "Electric", "Grass"], correctAnswer: "C" },
-        { type: "mcq", question: "Which superhero uses a hammer called Mjolnir?", options: ["Thor", "Iron Man", "Batman", "Captain America"], correctAnswer: "A" },
-        { type: "mcq", question: "Which superhero is known as the Friendly Neighborhood hero?", options: ["Spider-Man", "Superman", "Flash", "Aquaman"], correctAnswer: "A" },
-        { type: "mcq", question: "Which Disney movie features sisters Elsa and Anna?", options: ["Frozen", "Moana", "Tangled", "Encanto"], correctAnswer: "A" },
-        { type: "mcq", question: "Lightning McQueen is a character from which movie?", options: ["Cars", "Planes", "Turbo", "Toy Story"], correctAnswer: "A" },
-        { type: "mcq", question: "Buzz Lightyear appears in which movie series?", options: ["Toy Story", "Cars", "Shrek", "Finding Nemo"], correctAnswer: "A" },
-        { type: "mcq", question: "Which toy cowboy is Buzz Lightyear's best friend?", options: ["Woody", "Jessie", "Forky", "Rex"], correctAnswer: "A" },
-
-        { type: "fill", question: "The famous building brick toy is called __________.", correctAnswer: "LEGO" },
-        { type: "fill", question: "The cat in 'Tom and Jerry' is named __________.", correctAnswer: "Tom" },
-        { type: "fill", question: "The mouse in 'Tom and Jerry' is named __________.", correctAnswer: "Jerry" },
-        { type: "fill", question: "The singer of 'Calm Down' is __________.", correctAnswer: "Rema" },
-        { type: "fill", question: "The King of Pop was __________.", correctAnswer: "Michael Jackson" },
-        { type: "fill", question: "Ben 10 uses the __________ to transform into aliens.", correctAnswer: "Omnitrix" },
-        { type: "fill", question: "Elsa is a character from the movie __________.", correctAnswer: "Frozen" },
-        { type: "fill", question: "The famous electric Pokémon is __________.", correctAnswer: "Pikachu" },
-        { type: "fill", question: "The toy that moves up and down on a string is called a __________.", correctAnswer: "yo-yo" },
-        { type: "fill", question: "The sponge who lives in Bikini Bottom is __________.", correctAnswer: "SpongeBob SquarePants" }
-    ]
-},
     ],
 
     "SS1": [
@@ -1153,7 +1033,7 @@ const examData = {
 },
         {
     subject: "Literature in English",
-    timeLimit: 1500,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1231,8 +1111,8 @@ const examData = {
 },
         {
     subject: "Digital Literacy",
-    openDate: "2026-07-13T08:30:00",
-    timeLimit: 900,
+    openDate: "2026-07-14T08:20:00",
+    timeLimit: 800,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1310,8 +1190,7 @@ const examData = {
 },
         {
     subject: "Christian Religious Studies",
-    openDate: "2026-07-13T09:00:00",
-    timeLimit: 1200,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1420,6 +1299,7 @@ const examData = {
 },
         {
     subject: "Government",
+    openDate: "2026-07-14T08:20:00",
     timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -1461,7 +1341,7 @@ const examData = {
 },
     {
     subject: "English Studies",
-    openDate: "2026-07-14T08:00:00",
+    openDate: "2026-07-14T08:20:00",
     timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -1540,6 +1420,7 @@ const examData = {
 },
         {
     subject: "Economics",
+    openDate: "2026-07-14T08:00:00",
     timeLimit: 950,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -1578,68 +1459,6 @@ const examData = {
     ]
 },
 
-   {
-    subject: "General Knowledge",
-    timeLimit: 1500,
-    totalMarks: 60,
-    marksPerQuestion: 2,
-    questions: [
-        { type: "mcq", question: "Which toy company is famous for making interlocking plastic bricks?", options: ["Hasbro", "LEGO", "Mattel", "Playmobil"], correctAnswer: "B" },
-        { type: "mcq", question: "Which doll is one of the world's best-selling toys?", options: ["Elsa", "Barbie", "Peppa", "Dora"], correctAnswer: "A" },
-        { type: "mcq", question: "A Rubik's Cube mainly challenges your ______.", options: ["speed", "memory", "problem-solving skills", "strength"], correctAnswer: "C" },
-        { type: "mcq", question: "Which toy spins using a string or your fingers?", options: ["Top", "Kite", "Puzzle", "Marble"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is a popular building toy?", options: ["LEGO", "Uno", "Chess", "Ludo"], correctAnswer: "A" },
-        { type: "mcq", question: "Which game uses colorful cards with action cards like Reverse and Skip?", options: ["Chess", "Uno", "Monopoly", "Scrabble"], correctAnswer: "B" },
-        { type: "mcq", question: "Which board game is about buying properties?", options: ["Ludo", "Monopoly", "Checkers", "Snakes and Ladders"], correctAnswer: "B" },
-        { type: "mcq", question: "Which toy is usually flown in the sky using wind?", options: ["Drone", "Kite", "Balloon", "Yo-yo"], correctAnswer: "B" },
-        { type: "mcq", question: "Which toy moves up and down on a string?", options: ["Yo-yo", "Top", "Cube", "Marble"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is NOT a toy?", options: ["LEGO", "Barbie", "Keyboard", "Rubik's Cube"], correctAnswer: "C" },
-
-        { type: "mcq", question: "Which singer is known as the 'King of Pop'?", options: ["Bruno Mars", "Michael Jackson", "Ed Sheeran", "Usher"], correctAnswer: "B" },
-        { type: "mcq", question: "Which Nigerian artist sang 'Calm Down'?", options: ["Davido", "Burna Boy", "Rema", "Fireboy DML"], correctAnswer: "C" },
-        { type: "mcq", question: "Which artist released the song 'Rush'?", options: ["Ayra Starr", "Tems", "Simi", "Tiwa Savage"], correctAnswer: "A" },
-        { type: "mcq", question: "Which musical instrument usually has black and white keys?", options: ["Drum", "Guitar", "Piano", "Trumpet"], correctAnswer: "C" },
-        { type: "mcq", question: "A group of singers performing together is called a ______.", options: ["Choir", "Band", "Club", "Crowd"], correctAnswer: "A" },
-        { type: "mcq", question: "Which Nigerian artist is known as the 'African Giant'?", options: ["Burna Boy", "Ruger", "Kizz Daniel", "Asake"], correctAnswer: "A" },
-        { type: "mcq", question: "Which streaming app is mainly used for listening to music?", options: ["Spotify", "Google Maps", "Zoom", "Canva"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is a musical instrument?", options: ["Violin", "Television", "Laptop", "Camera"], correctAnswer: "A" },
-        { type: "mcq", question: "Which artist is famous for the song 'Shape of You'?", options: ["Justin Bieber", "Ed Sheeran", "Shawn Mendes", "Harry Styles"], correctAnswer: "B" },
-        { type: "mcq", question: "Which Nigerian female artist sang 'Bloody Samaritan'?", options: ["Ayra Starr", "Tiwa Savage", "Tems", "Simi"], correctAnswer: "A" },
-
-        { type: "mcq", question: "Which cartoon features a sponge living under the sea?", options: ["Ben 10", "SpongeBob SquarePants", "Bluey", "Tom and Jerry"], correctAnswer: "B" },
-        { type: "mcq", question: "Tom is always chasing ______.", options: ["Scooby", "Jerry", "Tweety", "Oggy"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon dog solves mysteries with friends?", options: ["Scooby-Doo", "Blue", "Brian", "Bolt"], correctAnswer: "A" },
-        { type: "mcq", question: "Ben 10 transforms into different ______.", options: ["cars", "aliens", "robots", "dinosaurs"], correctAnswer: "B" },
-        { type: "mcq", question: "Bluey is a ______.", options: ["cat", "dog", "rabbit", "bear"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon features two brothers spending every summer on adventures?", options: ["Phineas and Ferb", "Adventure Time", "Teen Titans Go!", "Craig of the Creek"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon cat is blue?", options: ["Tom", "Gumball", "Garfield", "Sylvester"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon is famous for Titans like Robin, Starfire and Beast Boy?", options: ["Teen Titans Go!", "The Simpsons", "Peppa Pig", "Bluey"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon pig loves jumping in muddy puddles?", options: ["Peppa Pig", "Olivia", "Babe", "Miss Piggy"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon character wears red shorts and white gloves?", options: ["Mickey Mouse", "Donald Duck", "Goofy", "Bugs Bunny"], correctAnswer: "A" },
-
-        { type: "mcq", question: "Which game character is known for collecting rings?", options: ["Mario", "Sonic", "Kirby", "Crash"], correctAnswer: "B" },
-        { type: "mcq", question: "Mario is a ______ by profession.", options: ["Teacher", "Plumber", "Doctor", "Pilot"], correctAnswer: "B" },
-        { type: "mcq", question: "Which company created Pokémon?", options: ["Nintendo", "Sony", "Microsoft", "Sega"], correctAnswer: "A" },
-        { type: "mcq", question: "Pikachu is an ______-type Pokémon.", options: ["Fire", "Water", "Electric", "Grass"], correctAnswer: "C" },
-        { type: "mcq", question: "Which superhero uses a hammer called Mjolnir?", options: ["Thor", "Iron Man", "Batman", "Captain America"], correctAnswer: "A" },
-        { type: "mcq", question: "Which superhero is known as the Friendly Neighborhood hero?", options: ["Spider-Man", "Superman", "Flash", "Aquaman"], correctAnswer: "A" },
-        { type: "mcq", question: "Which Disney movie features sisters Elsa and Anna?", options: ["Frozen", "Moana", "Tangled", "Encanto"], correctAnswer: "A" },
-        { type: "mcq", question: "Lightning McQueen is a character from which movie?", options: ["Cars", "Planes", "Turbo", "Toy Story"], correctAnswer: "A" },
-        { type: "mcq", question: "Buzz Lightyear appears in which movie series?", options: ["Toy Story", "Cars", "Shrek", "Finding Nemo"], correctAnswer: "A" },
-        { type: "mcq", question: "Which toy cowboy is Buzz Lightyear's best friend?", options: ["Woody", "Jessie", "Forky", "Rex"], correctAnswer: "A" },
-
-        { type: "fill", question: "The famous building brick toy is called __________.", correctAnswer: "LEGO" },
-        { type: "fill", question: "The cat in 'Tom and Jerry' is named __________.", correctAnswer: "Tom" },
-        { type: "fill", question: "The mouse in 'Tom and Jerry' is named __________.", correctAnswer: "Jerry" },
-        { type: "fill", question: "The singer of 'Calm Down' is __________.", correctAnswer: "Rema" },
-        { type: "fill", question: "The King of Pop was __________.", correctAnswer: "Michael Jackson" },
-        { type: "fill", question: "Ben 10 uses the __________ to transform into aliens.", correctAnswer: "Omnitrix" },
-        { type: "fill", question: "Elsa is a character from the movie __________.", correctAnswer: "Frozen" },
-        { type: "fill", question: "The famous electric Pokémon is __________.", correctAnswer: "Pikachu" },
-        { type: "fill", question: "The toy that moves up and down on a string is called a __________.", correctAnswer: "yo-yo" },
-        { type: "fill", question: "The sponge who lives in Bikini Bottom is __________.", correctAnswer: "SpongeBob SquarePants" }
-    ]
-},
     ],
 
     "SS2": [
@@ -2086,6 +1905,7 @@ const examData = {
 },
         {
     subject: "Economics",
+    openDate: "2026-07-14T08:00:00",
     timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -2125,6 +1945,7 @@ const examData = {
 },
         {
     subject: "Government",
+    openDate: "2026-07-14T08:00:00",
     timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -2164,68 +1985,6 @@ const examData = {
     ]
 },
 
-{
-    subject: "General Knowledge",
-    timeLimit: 1500,
-    totalMarks: 60,
-    marksPerQuestion: 2,
-    questions: [
-        { type: "mcq", question: "Which toy company is famous for making interlocking plastic bricks?", options: ["Hasbro", "LEGO", "Mattel", "Playmobil"], correctAnswer: "B" },
-        { type: "mcq", question: "Which doll is one of the world's best-selling toys?", options: ["Elsa", "Barbie", "Peppa", "Dora"], correctAnswer: "A" },
-        { type: "mcq", question: "A Rubik's Cube mainly challenges your ______.", options: ["speed", "memory", "problem-solving skills", "strength"], correctAnswer: "C" },
-        { type: "mcq", question: "Which toy spins using a string or your fingers?", options: ["Top", "Kite", "Puzzle", "Marble"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is a popular building toy?", options: ["LEGO", "Uno", "Chess", "Ludo"], correctAnswer: "A" },
-        { type: "mcq", question: "Which game uses colorful cards with action cards like Reverse and Skip?", options: ["Chess", "Uno", "Monopoly", "Scrabble"], correctAnswer: "B" },
-        { type: "mcq", question: "Which board game is about buying properties?", options: ["Ludo", "Monopoly", "Checkers", "Snakes and Ladders"], correctAnswer: "B" },
-        { type: "mcq", question: "Which toy is usually flown in the sky using wind?", options: ["Drone", "Kite", "Balloon", "Yo-yo"], correctAnswer: "B" },
-        { type: "mcq", question: "Which toy moves up and down on a string?", options: ["Yo-yo", "Top", "Cube", "Marble"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is NOT a toy?", options: ["LEGO", "Barbie", "Keyboard", "Rubik's Cube"], correctAnswer: "C" },
-
-        { type: "mcq", question: "Which singer is known as the 'King of Pop'?", options: ["Bruno Mars", "Michael Jackson", "Ed Sheeran", "Usher"], correctAnswer: "B" },
-        { type: "mcq", question: "Which Nigerian artist sang 'Calm Down'?", options: ["Davido", "Burna Boy", "Rema", "Fireboy DML"], correctAnswer: "C" },
-        { type: "mcq", question: "Which artist released the song 'Rush'?", options: ["Ayra Starr", "Tems", "Simi", "Tiwa Savage"], correctAnswer: "A" },
-        { type: "mcq", question: "Which musical instrument usually has black and white keys?", options: ["Drum", "Guitar", "Piano", "Trumpet"], correctAnswer: "C" },
-        { type: "mcq", question: "A group of singers performing together is called a ______.", options: ["Choir", "Band", "Club", "Crowd"], correctAnswer: "A" },
-        { type: "mcq", question: "Which Nigerian artist is known as the 'African Giant'?", options: ["Burna Boy", "Ruger", "Kizz Daniel", "Asake"], correctAnswer: "A" },
-        { type: "mcq", question: "Which streaming app is mainly used for listening to music?", options: ["Spotify", "Google Maps", "Zoom", "Canva"], correctAnswer: "A" },
-        { type: "mcq", question: "Which of these is a musical instrument?", options: ["Violin", "Television", "Laptop", "Camera"], correctAnswer: "A" },
-        { type: "mcq", question: "Which artist is famous for the song 'Shape of You'?", options: ["Justin Bieber", "Ed Sheeran", "Shawn Mendes", "Harry Styles"], correctAnswer: "B" },
-        { type: "mcq", question: "Which Nigerian female artist sang 'Bloody Samaritan'?", options: ["Ayra Starr", "Tiwa Savage", "Tems", "Simi"], correctAnswer: "A" },
-
-        { type: "mcq", question: "Which cartoon features a sponge living under the sea?", options: ["Ben 10", "SpongeBob SquarePants", "Bluey", "Tom and Jerry"], correctAnswer: "B" },
-        { type: "mcq", question: "Tom is always chasing ______.", options: ["Scooby", "Jerry", "Tweety", "Oggy"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon dog solves mysteries with friends?", options: ["Scooby-Doo", "Blue", "Brian", "Bolt"], correctAnswer: "A" },
-        { type: "mcq", question: "Ben 10 transforms into different ______.", options: ["cars", "aliens", "robots", "dinosaurs"], correctAnswer: "B" },
-        { type: "mcq", question: "Bluey is a ______.", options: ["cat", "dog", "rabbit", "bear"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon features two brothers spending every summer on adventures?", options: ["Phineas and Ferb", "Adventure Time", "Teen Titans Go!", "Craig of the Creek"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon cat is blue?", options: ["Tom", "Gumball", "Garfield", "Sylvester"], correctAnswer: "B" },
-        { type: "mcq", question: "Which cartoon is famous for Titans like Robin, Starfire and Beast Boy?", options: ["Teen Titans Go!", "The Simpsons", "Peppa Pig", "Bluey"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon pig loves jumping in muddy puddles?", options: ["Peppa Pig", "Olivia", "Babe", "Miss Piggy"], correctAnswer: "A" },
-        { type: "mcq", question: "Which cartoon character wears red shorts and white gloves?", options: ["Mickey Mouse", "Donald Duck", "Goofy", "Bugs Bunny"], correctAnswer: "A" },
-
-        { type: "mcq", question: "Which game character is known for collecting rings?", options: ["Mario", "Sonic", "Kirby", "Crash"], correctAnswer: "B" },
-        { type: "mcq", question: "Mario is a ______ by profession.", options: ["Teacher", "Plumber", "Doctor", "Pilot"], correctAnswer: "B" },
-        { type: "mcq", question: "Which company created Pokémon?", options: ["Nintendo", "Sony", "Microsoft", "Sega"], correctAnswer: "A" },
-        { type: "mcq", question: "Pikachu is an ______-type Pokémon.", options: ["Fire", "Water", "Electric", "Grass"], correctAnswer: "C" },
-        { type: "mcq", question: "Which superhero uses a hammer called Mjolnir?", options: ["Thor", "Iron Man", "Batman", "Captain America"], correctAnswer: "A" },
-        { type: "mcq", question: "Which superhero is known as the Friendly Neighborhood hero?", options: ["Spider-Man", "Superman", "Flash", "Aquaman"], correctAnswer: "A" },
-        { type: "mcq", question: "Which Disney movie features sisters Elsa and Anna?", options: ["Frozen", "Moana", "Tangled", "Encanto"], correctAnswer: "A" },
-        { type: "mcq", question: "Lightning McQueen is a character from which movie?", options: ["Cars", "Planes", "Turbo", "Toy Story"], correctAnswer: "A" },
-        { type: "mcq", question: "Buzz Lightyear appears in which movie series?", options: ["Toy Story", "Cars", "Shrek", "Finding Nemo"], correctAnswer: "A" },
-        { type: "mcq", question: "Which toy cowboy is Buzz Lightyear's best friend?", options: ["Woody", "Jessie", "Forky", "Rex"], correctAnswer: "A" },
-
-        { type: "fill", question: "The famous building brick toy is called __________.", correctAnswer: "LEGO" },
-        { type: "fill", question: "The cat in 'Tom and Jerry' is named __________.", correctAnswer: "Tom" },
-        { type: "fill", question: "The mouse in 'Tom and Jerry' is named __________.", correctAnswer: "Jerry" },
-        { type: "fill", question: "The singer of 'Calm Down' is __________.", correctAnswer: "Rema" },
-        { type: "fill", question: "The King of Pop was __________.", correctAnswer: "Michael Jackson" },
-        { type: "fill", question: "Ben 10 uses the __________ to transform into aliens.", correctAnswer: "Omnitrix" },
-        { type: "fill", question: "Elsa is a character from the movie __________.", correctAnswer: "Frozen" },
-        { type: "fill", question: "The famous electric Pokémon is __________.", correctAnswer: "Pikachu" },
-        { type: "fill", question: "The toy that moves up and down on a string is called a __________.", correctAnswer: "yo-yo" },
-        { type: "fill", question: "The sponge who lives in Bikini Bottom is __________.", correctAnswer: "SpongeBob SquarePants" }
-    ]
-},
     ]
 };
 
@@ -2284,7 +2043,7 @@ const studentRegistry = {
         "GGS12310": { name: "Chukwurah Chibuike",        stream: "general" },
         "GGS12373": { name: "Esonwune Ngozi",            stream: "general" },
         "GGS12766": { name: "Torlowei	Alexis ",        stream: "general" },
-        "GGS12765": { name: "Azubuike Chinyere ",        stream: "general" },
+        "GGS12766": { name: "Azubuike Chinyere ",        stream: "general" },
         "GGS12347": { name: "Francis Emmanuel",          stream: "general" },
         "GGS12344": { name: "Ifeanyichukwu Chioma",      stream: "general" },
         "GGS12348": { name: "Igboneme Chidera",          stream: "general" },
@@ -2372,7 +2131,6 @@ const studentRegistry = {
         // Art students
         "GGS12704": { name: "Chukwuebuka David",         stream: "art" },
         "GGS12705": { name: "Enuma Chinaemelum",         stream: "art" },
-        "GGS00000": { name: "Mr Nnamdi",                 stream: "art" },
         "GGS12706": { name: "Ewurum Norah",              stream: "art" },
         "GGS12708": { name: "Imo Miracle",               stream: "art" },
         "GGS12709": { name: "John Blessed",              stream: "art" },
