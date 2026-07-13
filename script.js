@@ -619,7 +619,7 @@ const examData = {
 },
         {
   subject: "English Studies",
-  openDate: "2026-07-12T18:25:00",
+  openDate: "2026-07-13T09:00:00",
   timeLimit: 1500,
   totalMarks: 60,
   marksPerQuestion: 2,
