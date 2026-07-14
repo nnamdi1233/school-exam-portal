@@ -180,7 +180,7 @@ const examData = {
         {
     subject: "Physical & Health Education (PHE) ",
     openDate: "2026-07-15T08:20:00",
-    timeLimit: 600,
+    timeLimit: 580,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -756,7 +756,7 @@ const examData = {
 },
         {
     subject: "Literature in English",
-    timeLimit: 800,
+    timeLimit: 700,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1037,7 +1037,8 @@ const examData = {
 },
         {
     subject: "Literature in English",
-    timeLimit: 900,
+    openDate: "2026-07-15T08:20:00",
+    timeLimit: 780,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1194,7 +1195,8 @@ const examData = {
 },
         {
     subject: "Christian Religious Studies",
-    timeLimit: 900,
+    openDate: "2026-07-15T08:20:00",
+    timeLimit: 780,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1234,7 +1236,7 @@ const examData = {
         {
     subject: "Physics",
     openDate: "2026-07-15T08:20:00",
-    timeLimit: 1500,
+    timeLimit: 1320,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1519,7 +1521,8 @@ const examData = {
 },
         {
     subject: "Literature-in-English",
-    timeLimit: 1500,
+    openDate: "2026-07-15T08:20:00",
+    timeLimit: 780,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1637,7 +1640,7 @@ const examData = {
 },
         {
     subject: "Civic Education",
-    timeLimit: 1500,
+    timeLimit: 780,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1676,7 +1679,8 @@ const examData = {
 },
         {
     subject: "Christian Religious Studies",
-    timeLimit: 900,
+    openDate: "2026-07-15T08:20:00",
+    timeLimit: 780,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1716,7 +1720,7 @@ const examData = {
         {
     subject: "Physics",
     openDate: "2026-07-15T08:20:00",
-    timeLimit: 1500,
+    timeLimit: 1320,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
