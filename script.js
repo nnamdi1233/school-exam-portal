@@ -219,6 +219,7 @@ const examData = {
 },
         {
     subject: "Literature in English",
+    openDate: "2026-07-16T08:20:00",
     timeLimit: 700,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -338,7 +339,8 @@ const examData = {
 },
         {
     subject: "Social & Citizenship Studies",
-    timeLimit: 800,
+    openDate: "2026-07-16T08:20:00",
+    timeLimit: 600,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -756,7 +758,8 @@ const examData = {
 },
         {
     subject: "Literature in English",
-    timeLimit: 700,
+    openDate: "2026-07-16T08:20:00",
+    timeLimit: 780,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -875,7 +878,8 @@ const examData = {
 },
         {
     subject: "Social and Citizenship Studies",
-    timeLimit: 900,
+    openDate: "2026-07-16T08:20:00",
+    timeLimit: 700,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1155,8 +1159,9 @@ const examData = {
     ]
 },
         {
-    subject: "Civic Education",
-    timeLimit: 1500,
+    subject: "Citizenship Education",
+    openDate: "2026-07-16T08:20:00",
+    timeLimit: 700,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1639,7 +1644,8 @@ const examData = {
     ]
 },
         {
-    subject: "Civic Education",
+    subject: "Citizenship Education",
+    openDate: "2026-07-16T08:20:00",
     timeLimit: 780,
     totalMarks: 60,
     marksPerQuestion: 2,
