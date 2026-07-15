@@ -1161,7 +1161,7 @@ const examData = {
         {
     subject: "Citizenship Education",
     openDate: "2026-07-16T08:20:00",
-    timeLimit: 700,
+    timeLimit: 800,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1646,7 +1646,7 @@ const examData = {
         {
     subject: "Citizenship Education",
     openDate: "2026-07-16T08:20:00",
-    timeLimit: 780,
+    timeLimit: 800,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
