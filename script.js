@@ -96,7 +96,45 @@ function isPracticeSubject(subjectName) {
 const examData = {
 
     "JSS1": [
-        { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
+        {
+    subject: "Mathematics",
+    timeLimit: 1200,
+    totalMarks: 60,
+    marksPerQuestion: 2,
+    questions: [
+        { type: "mcq", question: "Find the value of x if x + 5 = 19.", options: ["14", "16", "18", "34"], correctAnswer: "A" },
+        { type: "mcq", question: "Solve: x/3 = 6.", options: ["6", "20", "18", "19"], correctAnswer: "C" },
+        { type: "mcq", question: "Solve: 2x = 14.", options: ["6", "7", "8", "9"], correctAnswer: "B" },
+        { type: "mcq", question: "Solve: x – 3 = 2.", options: ["5", "6", "7", "8"], correctAnswer: "A" },
+        { type: "mcq", question: "Solve: x + 4 = 10.", options: ["5", "6", "7", "8"], correctAnswer: "B" },
+        { type: "mcq", question: "Solve: 3x = 21.", options: ["6", "7", "8", "9"], correctAnswer: "B" },
+        { type: "mcq", question: "Find x if x/2 = 3.", options: ["5", "6", "7", "8"], correctAnswer: "B" },
+        { type: "mcq", question: "Find x if 2x + 2 = 10.", options: ["3", "4", "5", "6"], correctAnswer: "B" },
+        { type: "mcq", question: "Solve: x/4 = 2.", options: ["7", "8", "9", "10"], correctAnswer: "B" },
+        { type: "mcq", question: "Solve: 5x = 35.", options: ["5", "6", "7", "8"], correctAnswer: "C" },
+        { type: "mcq", question: "A number increased by 15 gives 40. The number is", options: ["20", "25", "30", "35"], correctAnswer: "B" },
+        { type: "mcq", question: "Twice a number is 36. The number is", options: ["16", "17", "18", "19"], correctAnswer: "C" },
+        { type: "mcq", question: "Three times a number plus 6 is 24. The number is", options: ["4", "5", "6", "7"], correctAnswer: "C" },
+        { type: "mcq", question: "Which of these is equivalent to 1/2?", options: ["2/4", "3/6", "4/8", "All of the above"], correctAnswer: "D" },
+        { type: "mcq", question: "Simplify 3/4 + 1/4.", options: ["1/2", "1", "3/4", "4/4"], correctAnswer: "B" },
+        { type: "mcq", question: "Simplify 5/6 – 1/6.", options: ["4/6", "2/3", "1/3", "1/2"], correctAnswer: "A" },
+        { type: "mcq", question: "Which fraction is greater?", options: ["1/2", "1/3", "2/3", "3/4"], correctAnswer: "D" },
+        { type: "mcq", question: "Find 1/2 + 1/4.", options: ["1/4", "1", "3/4", "2"], correctAnswer: "C" },
+        { type: "mcq", question: "Find 2/3 – 1/3.", options: ["1/3", "2/3", "3/3", "1"], correctAnswer: "A" },
+        { type: "mcq", question: "Find 1/5 + 2/5.", options: ["2/5", "3/5", "4/5", "1"], correctAnswer: "B" },
+        { type: "mcq", question: "Find 3/4 – 1/2.", options: ["1/4", "2/4", "1/2", "3/4"], correctAnswer: "A" },
+        { type: "mcq", question: "What is half of 1/2?", options: ["1/4", "1/2", "3/4", "1"], correctAnswer: "A" },
+        { type: "mcq", question: "Which of these is a proper fraction?", options: ["3/4", "5/4", "7/3", "4/2"], correctAnswer: "A" },
+        { type: "mcq", question: "Which of these is an improper fraction?", options: ["1/2", "3/4", "5/3", "2/5"], correctAnswer: "C" },
+        { type: "mcq", question: "Find 1/3 of 12.", options: ["3", "4", "6", "12"], correctAnswer: "B" },
+        { type: "mcq", question: "Find 2/5 of 10.", options: ["2", "4", "5", "10"], correctAnswer: "B" },
+        { type: "mcq", question: "Find 3/4 of 16.", options: ["4", "8", "12", "16"], correctAnswer: "C" },
+        { type: "mcq", question: "Solve: x/2 + 3 = 8.", options: ["7", "8", "9", "10"], correctAnswer: "D" },
+        { type: "mcq", question: "Solve: 2x – 4 = 14.", options: ["8", "9", "10", "11"], correctAnswer: "B" },
+        { type: "mcq", question: "A triangle has ______ sides.", options: ["2", "3", "4", "5"], correctAnswer: "B" },
+        { type: "fill", question: "What is the difference between a cube and a cuboid?", correctAnswer: "A cube has all edges equal, while a cuboid has rectangular faces and its length, width and height may be different." }
+    ]
+},
         {
     subject: "English Studies",
     openDate: "2026-07-14T08:20:00",
@@ -297,6 +335,205 @@ const examData = {
         { type: "fill", question: "Drawing without instruments is called ______ drawing.", correctAnswer: "Freehand" }
     ]
 },
+{
+    subject: "Asusu Igbo",
+    openDate: "2026-07-17T08:20:00",
+    timeLimit: 900,
+    totalMarks: 60,
+    marksPerQuestion: 3,
+    questions: [
+        {
+            type: "mcq",
+            question: "Akuko a mere n'otu obodo n'ihe dika afo ______ gara aga.",
+            options: ["abuo", "ato", "ise", "iri"],
+            correctAnswer: "D"
+        },
+        {
+            type: "mcq",
+            question: "Obodo nwanyi ahu kwuru na ya ga-akporo nwa agbọghọ ahu bu ______.",
+            options: ["Kaduna", "Kastina", "Kano", "Kafanchan"],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Aka oru nwanyi omekome ahu bu ______.",
+            options: ["Izu ahia", "Igba akwuna", "Ikpa isi", "Isi nri"],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Onye kpogara nwa agbọghọ ahu na nke ndi uwe ojii bu ______.",
+            options: ["Ukochukwu", "Enyi ya", "Nne ya", "Nna ya"],
+            correctAnswer: "A"
+        },
+        {
+            type: "mcq",
+            question: "Omekome bu onye ______.",
+            options: [
+                "na-akpa ezigbo agwa",
+                "na-akpa agwa ojoo",
+                "na-eme omume oma",
+                "na-akporo umu agbọghọ"
+            ],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "______ bu uzo ahu siri gbasie mmadu ike na enweghi oria obula.",
+            options: ["Oria", "Izu ahia", "Akpakolo", "Ahuike"],
+            correctAnswer: "D"
+        },
+        {
+            type: "mcq",
+            question: "______ bu mgbe mmadu na-enweghi ike ime ihe kwesiri ekwesi.",
+            options: ["Oria", "Ahuike", "Izu ahia", "Ura"],
+            correctAnswer: "A"
+        },
+        {
+            type: "mcq",
+            question: "Otu n'ime ndi a bu uzo isi gbochie oria.",
+            options: [
+                "Igba egwu kwa ubochi",
+                "Ichu aja mmiri",
+                "Iti mkpu",
+                "Izere mmeko nwoke na nwaanyi n'uzo ezighi ezi"
+            ],
+            correctAnswer: "D"
+        },
+        {
+            type: "mcq",
+            question: "Nke bu uri nwa bu ______.",
+            options: [
+                "Ero moo ero moo",
+                "Akpakolo",
+                "Onye mere nwa n'ebe akwa",
+                "Nwunye nna mu nda"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Asusu eji mara ndi Igbo bu ______.",
+            options: [
+                "Asusu Igbo",
+                "Asusu Awusa",
+                "Asusu Yoruba",
+                "Asusu ndi ocha"
+            ],
+            correctAnswer: "A"
+        },
+        {
+            type: "mcq",
+            question: "Abidii Igbo di ole?",
+            options: [
+                "Iri abuo na ato",
+                "Iri ato na isii",
+                "Otu iri ato na asaa",
+                "Iri ano na ise"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Ijiri ncha na ogbo na-asa ahu so na otu uzo ______.",
+            options: [
+                "Akwukwo",
+                "Idi ocha",
+                "Ezi na ulo",
+                "Ibi kota onu"
+            ],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Otu n'ime ihe umuaka na-eme n'ubochi nkiti bu ______.",
+            options: [
+                "Igba ara",
+                "Iga n'ohia",
+                "Ihu ogu",
+                "Iga ozi di iche iche"
+            ],
+            correctAnswer: "D"
+        },
+        {
+            type: "mcq",
+            question: "______ bu okwu e kwuru ekwu ma obu nke e dere ede.",
+            options: [
+                "Bia bia",
+                "Rie nri",
+                "Ahiriokwu",
+                "Mkpuruokwu"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "______ bu ahiriokwu nwere otu ngwaa ma na-ekwuputa otu echiche zuru oke.",
+            options: [
+                "Ahirincho",
+                "Ahirinkwe",
+                "Ahiriilu",
+                "Ahirimfe"
+            ],
+            correctAnswer: "D"
+        },
+        {
+            type: "mcq",
+            question: "Hoputa nke gosiri echiche ezi na ulo na ndu ndi Igbo.",
+            options: [
+                "O basara abasa karia",
+                "Ezi na ulo buriri ndi nne yi",
+                "Ezi na ulo bu naani ndi ogo",
+                "Ezi na ulo bu ndi ogo na umunna ha niile"
+            ],
+            correctAnswer: "D"
+        },
+        {
+            type: "mcq",
+            question: "Aha eji akpo umu nwaanyi sitere n'otu agburu bu ______.",
+            options: [
+                "Umu nwaanyi",
+                "Umuada",
+                "Ndi inyom",
+                "O nweghi nke bu ya"
+            ],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Nwoke ga-emezu nke a tupu o nwee ezi na ulo.",
+            options: [
+                "Itopu etopu",
+                "Inwe ego buru ibu",
+                "Ilu nwaanyi",
+                "Ichu nwaanyi"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Uru nrukorita oru bara bu ______.",
+            options: [
+                "Ogu na mgba",
+                "Onwu",
+                "Obi anuri",
+                "Umengwu"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Morning bu ______ n'asusu Igbo.",
+            options: [
+                "Anyasi",
+                "Ehihie",
+                "Ututu",
+                "Abali"
+            ],
+            correctAnswer: "C"
+        }
+    ]
+},
         {
     subject: "History",
     openDate: "2026-07-14T08:20:00",
@@ -461,7 +698,46 @@ const examData = {
     ],
 
     "JSS2": [
-        { subject: "Mathematics",                                    link: "https://forms.gle/7URWF8ysHXk2aSNL6" },
+        {
+    subject: "Mathematics",
+    timeLimit: 1200,
+    totalMarks: 60,
+    marksPerQuestion: 2,
+    questions: [
+        { type: "mcq", question: "The sum of the interior angles of a triangle is", options: ["90°", "180°", "270°", "360°"], correctAnswer: "B" },
+        { type: "mcq", question: "The sum of the interior angles of a quadrilateral is", options: ["180°", "270°", "360°", "540°"], correctAnswer: "C" },
+        { type: "mcq", question: "The sum of the interior angles of a pentagon is", options: ["360°", "540°", "720°", "900°"], correctAnswer: "B" },
+        { type: "mcq", question: "The sum of the interior angles of a hexagon is", options: ["540°", "720°", "900°", "1080°"], correctAnswer: "B" },
+        { type: "mcq", question: "The sum of the interior angles of a heptagon is", options: ["720°", "900°", "1080°", "1260°"], correctAnswer: "B" },
+        { type: "mcq", question: "The sum of the interior angles of an octagon is", options: ["720°", "900°", "1080°", "1260°"], correctAnswer: "D" },
+        { type: "mcq", question: "The sum of the interior angles of a nonagon is", options: ["1080°", "1260°", "1440°", "1620°"], correctAnswer: "B" },
+        { type: "mcq", question: "The sum of the interior angles of a decagon is", options: ["1260°", "1440°", "1620°", "1800°"], correctAnswer: "B" },
+        { type: "mcq", question: "A polygon with 5 sides has interior angles summing to", options: ["360°", "540°", "720°", "900°"], correctAnswer: "B" },
+        { type: "mcq", question: "A polygon with 8 sides has interior angles summing to", options: ["900°", "1080°", "1260°", "1440°"], correctAnswer: "C" },
+        { type: "mcq", question: "Find the sum of the interior angles of a 12-sided polygon.", options: ["1440°", "1620°", "1800°", "1980°"], correctAnswer: "C" },
+        { type: "mcq", question: "Find the sum of the interior angles of an 11-sided polygon.", options: ["1260°", "1440°", "1620°", "1800°"], correctAnswer: "C" },
+        { type: "mcq", question: "The sum of the interior angles of a polygon is 540°. How many sides does it have?", options: ["4", "5", "6", "7"], correctAnswer: "B" },
+        { type: "mcq", question: "The sum of the interior angles of a polygon is 720°. How many sides does it have?", options: ["5", "6", "7", "8"], correctAnswer: "B" },
+        { type: "mcq", question: "The sum of the interior angles of a polygon is 900°. How many sides does it have?", options: ["6", "7", "8", "9"], correctAnswer: "B" },
+        { type: "mcq", question: "The sum of the interior angles of a polygon is 1080°. How many sides does it have?", options: ["7", "8", "9", "10"], correctAnswer: "B" },
+        { type: "mcq", question: "The sum of the interior angles of a polygon is 1260°. How many sides does it have?", options: ["7", "8", "9", "10"], correctAnswer: "C" },
+        { type: "mcq", question: "The sum of the interior angles of a polygon is 1440°. How many sides does it have?", options: ["8", "9", "10", "11"], correctAnswer: "C" },
+        { type: "mcq", question: "The sum of the interior angles of a polygon is 1800°. How many sides does it have?", options: ["10", "11", "12", "13"], correctAnswer: "C" },
+        { type: "fill", question: "The formula for finding the sum of the interior angles of a polygon is __________.", correctAnswer: "(n - 2) × 180°" },
+
+        { type: "mcq", question: "Each interior angle of a regular pentagon is", options: ["90°", "108°", "120°", "135°"], correctAnswer: "B" },
+        { type: "mcq", question: "Each interior angle of a regular hexagon is", options: ["108°", "120°", "135°", "150°"], correctAnswer: "B" },
+        { type: "mcq", question: "Each interior angle of a regular octagon is", options: ["120°", "135°", "140°", "150°"], correctAnswer: "B" },
+        { type: "mcq", question: "A regular polygon has interior angles of 120° each. It is a", options: ["Pentagon", "Hexagon", "Heptagon", "Octagon"], correctAnswer: "B" },
+        { type: "mcq", question: "A regular polygon has interior angles of 135° each. It is an", options: ["Hexagon", "Heptagon", "Octagon", "Nonagon"], correctAnswer: "C" },
+        { type: "mcq", question: "The number of sides of a regular polygon with each angle equal to 108° is", options: ["4", "5", "6", "8"], correctAnswer: "B" },
+        { type: "mcq", question: "The sum of the interior angles of a quadrilateral is", options: ["180°", "270°", "360°", "540°"], correctAnswer: "C" },
+        { type: "mcq", question: "The sum of the interior angles of a triangle and a pentagon together is", options: ["540°", "720°", "900°", "1080°"], correctAnswer: "B" },
+        { type: "mcq", question: "The difference between the sum of the interior angles of a hexagon and a pentagon is", options: ["90°", "120°", "180°", "360°"], correctAnswer: "C" },
+        { type: "mcq", question: "The sum of the interior angles of a 15-sided polygon is", options: ["2160°", "2340°", "2520°", "2700°"], correctAnswer: "B" }
+
+    ]
+},
         {
     subject: "Digital Literacy",
     openDate: "2026-07-14T08:20:00",
@@ -876,6 +1152,8 @@ const examData = {
         { type: "fill", question: "A family made up of parents and their children is called a __________________ family.", correctAnswer: "Nuclear" }
     ]
 },
+
+
         {
     subject: "Social and Citizenship Studies",
     openDate: "2026-07-16T08:20:00",
@@ -916,6 +1194,236 @@ const examData = {
         { type: "fill", question: "The condition in which people cannot find jobs is called __________.", correctAnswer: "Unemployment" }
     ]
 },
+{
+    subject: "Asusu Igbo",
+    timeLimit: 900,
+    openDate: "2026-07-17T08:20:00",
+    totalMarks: 60,
+    marksPerQuestion: 3,
+    questions: [
+        {
+            type: "mcq",
+            question: "Nke a mere nna ukwu Bingo jiri nye ya ezigbo ozuzu.",
+            options: [
+                "Maka o mara nkita",
+                "Maka na o maara azu nkita",
+                "Maka na o nweghi onye ozo na-ekwunyere ya okwu",
+                "Ha niile"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Nke a mere Bingo ji akpa agwa di ka mmadu.",
+            options: [
+                "Oburu ibu",
+                "O nwere ozuzu di ka mmadu",
+                "O bu enyi nna ya ukwu",
+                "Nkita a pere mpe"
+            ],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Otu n'ime ihe Bingo na mmadu yiri bu na ha ______.",
+            options: [
+                "Nwere isi",
+                "Na-aga ije",
+                "Agbaghi oso",
+                "Ha niile"
+            ],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Bingo na nkita ndi ozo na-eme nke a.",
+            options: [
+                "Ije ozi ka mmadu",
+                "Igba uja",
+                "Iji efere eri nri",
+                "Ino n'oche akwa"
+            ],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Hoputa nke bu ezi okwu.",
+            options: [
+                "Bingo na nkita ozo bu enyi",
+                "Bingo na-alota ozi e dunyere ya mgbe o huru okpukpu",
+                "Bingo huru nkita ozo",
+                "Bingo gboro uja wee hu nkita ozo"
+            ],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Nkita ozo e kwuru n'akuko a bu ______.",
+            options: [
+                "Lion",
+                "Jackie",
+                "Bingo n'onwe ya",
+                "Lizzy"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Gini mere Bingo jiri tufuo okpukpu ya?",
+            options: [
+                "Nkita ozo nara ya",
+                "Mmiri bufuru ya",
+                "Ikuku bufuru ya",
+                "O hapuru ya n'ebe o di"
+            ],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Okwu 'N'egbughi oge' putara ______.",
+            options: [
+                "Mgbe emechara",
+                "Mgbe oge ruru",
+                "N'etufughi oge obula",
+                "Oge gachara"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Okpukpu anu funahuru ______ n'akuko a.",
+            options: [
+                "Otu na nwa nkita ibe ya",
+                "Nkita abuo",
+                "Naani otu nkita",
+                "Nkita ano"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Ederede di na aghotaazaa a bu ______.",
+            options: [
+                "Ilu",
+                "Akpalaokwu",
+                "Akuko",
+                "Agwugwa"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Hoputa nke kowara onuogugu 2,000,468.",
+            options: [
+                "Nde abuo puku iri ano nari ano na iri isii na asato",
+                "Puku abuo nari ano na iri isii na asato",
+                "Nde abuo na abuo nari puku asato iri isii na asato",
+                "Nde abuo na nari ano na iri isii na asato"
+            ],
+            correctAnswer: "A"
+        },
+        {
+            type: "mcq",
+            question: "1000th bu ______.",
+            options: [
+                "Nke puku",
+                "Nke nde",
+                "Nke ijeri",
+                "Nke nari"
+            ],
+            correctAnswer: "A"
+        },
+        {
+            type: "mcq",
+            question: "Uzo ole ka e dere akwukwo a si eji mmadu atu mgbere?",
+            options: [
+                "Uzo ato",
+                "Uzo ano",
+                "Uzo ise",
+                "Uzo abuo"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Ndi na-eresi ndi ndorondoro mmadu bu ndi nke ______.",
+            options: [
+                "Mbu",
+                "Ato",
+                "Ano",
+                "Abuo"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Nke ato a kporo aha n'akwukwo a bu ndi na-eresi ______ mmadu.",
+            options: [
+                "Ndi agwu ego",
+                "Ndi ndorondoro",
+                "Ndi choro ohu",
+                "Ndi choro nwa"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Akwukwo agumagu ederede mbu n'asusu Igbo bu ______.",
+            options: [
+                "Omalinze",
+                "Obidiya",
+                "Omenuko",
+                "Odinala ndi Igbo"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Edere otutu akwukwo agumagu ederede n'ala Igbo ______.",
+            options: [
+                "Oge a luru agha",
+                "Oge a luchara agha",
+                "Tupu agha",
+                "N'oge agha"
+            ],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Nkeji asusu aluriokwu akara ihe na-okpuru na-egosi 'Onicha buru ibu' bu ______.",
+            options: [
+                "Ahaaka",
+                "Ahauche",
+                "Ahaigwe",
+                "Ngwaa"
+            ],
+            correctAnswer: "C"
+        },
+        {
+            type: "mcq",
+            question: "Nnam bi ______ Nsuka.",
+            options: [
+                "Na",
+                "N'",
+                "Ana",
+                "Ma"
+            ],
+            correctAnswer: "B"
+        },
+        {
+            type: "mcq",
+            question: "Kedu nkeji asusu ka ahiriokwu a 'Ta! Ibukwa mmadu?' na-egosi?",
+            options: [
+                "Njiko",
+                "Mbuuzo",
+                "Ngwa",
+                "Ntimpu"
+            ],
+            correctAnswer: "D"
+        }
+    ]
+},
+
         {
     subject: "Christian Religious Studies",
     openDate: "2026-07-14T08:20:00",
@@ -1081,7 +1589,8 @@ const examData = {
 },
         {
     subject: "Biology",
-    timeLimit: 1500,
+    openDate: "2026-07-17T08:20:00",
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1606,7 +2115,8 @@ const examData = {
 },
         {
     subject: "Biology",
-    timeLimit: 1500,
+    openDate: "2026-07-17T08:20:00",
+    timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
