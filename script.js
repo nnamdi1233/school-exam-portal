@@ -98,6 +98,7 @@ const examData = {
     "JSS1": [
         {
     subject: "Mathematics",
+    openDate: "2026-07-17T08:20:00",
     timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -700,6 +701,7 @@ const examData = {
     "JSS2": [
         {
     subject: "Mathematics",
+    openDate: "2026-07-17T08:20:00",
     timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
