@@ -1512,6 +1512,7 @@ const examData = {
     "SS1": [
         {
     subject: "Mathematics",
+    openDate: "2026-07-21T08:20:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -1591,7 +1592,7 @@ const examData = {
 },
         {
     subject: "Biology",
-    openDate: "2026-07-17T08:20:00",
+    openDate: "2026-07-21T08:20:00",
     timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -1875,7 +1876,8 @@ const examData = {
 },
         {
     subject: "Chemistry",
-    timeLimit: 1500,
+    openDate: "2026-07-21T08:20:00",
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -1901,7 +1903,7 @@ const examData = {
         { type: "mcq", question: "The general formula of alkynes is ______.", options: ["CnH₂n+₂", "CnH₂n", "CnH₂n−₂", "CnH₂n+₄"], correctAnswer: "C" },
 
         { type: "fill", question: "Organic compounds contain mainly __________.", correctAnswer: "Carbon" },
-        { type: "fill", question: "The general formula of alkenes is __________.", correctAnswer: "CnH₂n" },
+        { type: "fill", question: "The general formula of alkenes is __________.", correctAnswer: "CnH2n" },
         { type: "fill", question: "Methane belongs to the __________ family of hydrocarbons.", correctAnswer: "Alkane" },
         { type: "fill", question: "The process of separating crude oil into fractions is called __________ distillation.", correctAnswer: "Fractional" },
         { type: "fill", question: "A reaction that absorbs heat is called an __________ reaction.", correctAnswer: "Endothermic" },
@@ -1958,6 +1960,7 @@ const examData = {
     "SS2": [
         {
     subject: "Mathematics",
+    openDate: "2026-07-21T08:20:00",
     timeLimit: 1500,
     totalMarks: 60,
     marksPerQuestion: 2,
@@ -2117,8 +2120,8 @@ const examData = {
 },
         {
     subject: "Biology",
-    openDate: "2026-07-17T08:20:00",
-    timeLimit: 1200,
+    openDate: "2026-07-21T08:20:00",
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -2158,7 +2161,7 @@ const examData = {
         {
     subject: "Citizenship Education",
     openDate: "2026-07-16T08:20:00",
-    timeLimit: 800,
+    timeLimit: 900,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
@@ -2307,7 +2310,8 @@ const examData = {
 },
         {
     subject: "Chemistry",
-    timeLimit: 1500,
+    openDate: "2026-07-21T08:20:00",
+    timeLimit: 1200,
     totalMarks: 60,
     marksPerQuestion: 2,
     questions: [
